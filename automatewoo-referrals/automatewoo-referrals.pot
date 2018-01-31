@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2017-11-13 15:20+0100\n"
+"POT-Creation-Date: 2018-01-31 13:33+0100\n"
 "PO-Revision-Date: 2016-06-28 14:08+0930\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -25,35 +25,35 @@ msgstr ""
 msgid "AutomateWoo - Referrals Add-on"
 msgstr ""
 
-#: automatewoo-referrals.php:88
+#: automatewoo-referrals.php:85
 #, php-format
 msgid "<strong>%s</strong> requires PHP version %s+."
 msgstr ""
 
-#: automatewoo-referrals.php:92
+#: automatewoo-referrals.php:89
 #, php-format
 msgid "<strong>%s</strong> requires AutomateWoo to be installed and activated."
 msgstr ""
 
-#: automatewoo-referrals.php:95
+#: automatewoo-referrals.php:92
 #, php-format
 msgid ""
 "<strong>%s</strong> requires AutomateWoo version %s or later. Please update "
 "to the latest version."
 msgstr ""
 
-#: automatewoo-referrals.php:98
+#: automatewoo-referrals.php:95
 #, php-format
 msgid "<strong>%s</strong> - AutomateWoo plugin directory name is not correct."
 msgstr ""
 
-#: automatewoo-referrals.php:102
+#: automatewoo-referrals.php:99
 #, php-format
 msgid "<strong>%s</strong> requires WooCommerce version %s or later."
 msgstr ""
 
-#: includes/account-endpoint.php:31 includes/admin/admin.php:40
-#: includes/admin/reports-tab.php:12 includes/triggers/abstract-base.php:18
+#: includes/account-endpoint.php:31 includes/admin/admin.php:38
+#: includes/admin/reports-tab.php:12
 msgid "Referrals"
 msgstr ""
 
@@ -61,37 +61,63 @@ msgstr ""
 msgid "Refer a friend here."
 msgstr ""
 
-#: includes/admin/admin.php:41
+#: includes/actions/resend-invite-email.php:16
+msgid "Resend Referral Invite Email"
+msgstr ""
+
+#: includes/actions/resend-invite-email.php:17
+msgid ""
+"Resend a referral invite email from the advocate to a specified email "
+"address. For example, this can be used to resend the invite email after a "
+"delay."
+msgstr ""
+
+#: includes/actions/resend-invite-email.php:18
+#: includes/admin/settings-tab.php:24 includes/triggers/abstract-base.php:17
+msgid "Refer A Friend"
+msgstr ""
+
+#: includes/actions/resend-invite-email.php:26
+#: includes/admin/list-tables/invites.php:73
+msgid "Email"
+msgstr ""
+
+#: includes/actions/resend-invite-email.php:50
+#, php-format
+msgid "Successfully sent to %s"
+msgstr ""
+
+#: includes/admin/admin.php:39
 msgid "Referral advocates"
 msgstr ""
 
-#: includes/admin/admin.php:41 includes/admin/list-tables/advocates.php:21
-#: includes/admin/list-tables/advocates.php:22
+#: includes/admin/admin.php:39 includes/admin/list-tables/advocates.php:20
+#: includes/admin/list-tables/advocates.php:21
 msgid "Advocates"
 msgstr ""
 
-#: includes/admin/admin.php:42 includes/admin/list-tables/referral-codes.php:24
+#: includes/admin/admin.php:40 includes/admin/list-tables/referral-codes.php:23
 msgid "Referral codes"
 msgstr ""
 
-#: includes/admin/admin.php:43
+#: includes/admin/admin.php:41
 msgid "Referral invites"
 msgstr ""
 
-#: includes/admin/admin.php:43
+#: includes/admin/admin.php:41
 msgid "Invites"
 msgstr ""
 
-#: includes/admin/admin.php:200
+#: includes/admin/admin.php:194
 msgid "Error! No emails were sent."
 msgstr ""
 
-#: includes/admin/admin.php:204
+#: includes/admin/admin.php:198
 #, php-format
 msgid "Success! Emails sent: %s"
 msgstr ""
 
-#: includes/admin/admin.php:247 includes/referral.php:266
+#: includes/admin/admin.php:241 includes/referral.php:326
 #, php-format
 msgctxt "full name"
 msgid "%1$s %2$s"
@@ -134,7 +160,7 @@ msgid "Please select some items to bulk edit."
 msgstr ""
 
 #: includes/admin/controllers/referrals.php:92
-#: includes/admin/list-tables/referrals.php:83
+#: includes/admin/list-tables/referrals.php:85
 msgid "Status"
 msgstr ""
 
@@ -178,22 +204,22 @@ msgid "All"
 msgstr ""
 
 #: includes/admin/controllers/referrals.php:309
-#: includes/automatewoo-referrals.php:186
+#: includes/automatewoo-referrals.php:187
 msgid "Approved"
 msgstr ""
 
 #: includes/admin/controllers/referrals.php:310
-#: includes/automatewoo-referrals.php:189
+#: includes/automatewoo-referrals.php:190
 msgid "Rejected"
 msgstr ""
 
 #: includes/admin/controllers/referrals.php:311
-#: includes/automatewoo-referrals.php:188
+#: includes/automatewoo-referrals.php:189
 msgid "Pending"
 msgstr ""
 
 #: includes/admin/controllers/referrals.php:312
-#: includes/automatewoo-referrals.php:187
+#: includes/automatewoo-referrals.php:188
 msgid "Potential Fraud"
 msgstr ""
 
@@ -206,77 +232,73 @@ msgstr ""
 msgid "Search for an advocate&hellip;"
 msgstr ""
 
-#: includes/admin/list-tables/advocates.php:35
-#: includes/admin/list-tables/invites.php:75
-#: includes/admin/list-tables/referral-codes.php:40
-#: includes/admin/list-tables/referrals.php:84
-#: includes/admin/views/page-view-referral.php:110 includes/workflows.php:80
+#: includes/admin/list-tables/advocates.php:34
+#: includes/admin/list-tables/invites.php:74
+#: includes/admin/list-tables/referral-codes.php:39
+#: includes/admin/list-tables/referrals.php:86
+#: includes/admin/views/page-view-referral.php:110 includes/workflows.php:96
 msgid "Advocate"
 msgstr ""
 
-#: includes/admin/list-tables/advocates.php:36
+#: includes/admin/list-tables/advocates.php:35
 msgid "Invites sent"
 msgstr ""
 
-#: includes/admin/list-tables/advocates.php:37
+#: includes/admin/list-tables/advocates.php:36
 msgid "Referral count"
 msgstr ""
 
-#: includes/admin/list-tables/advocates.php:38
+#: includes/admin/list-tables/advocates.php:37
 msgid "Referral revenue"
 msgstr ""
 
-#: includes/admin/list-tables/advocates.php:39
+#: includes/admin/list-tables/advocates.php:38
 msgid "Current credit"
 msgstr ""
 
-#: includes/admin/list-tables/advocates.php:40
+#: includes/admin/list-tables/advocates.php:39
 msgid "Total credit"
 msgstr ""
 
-#: includes/admin/list-tables/invites.php:19
+#: includes/admin/list-tables/invites.php:18
 msgid "Referral Invite"
 msgstr ""
 
-#: includes/admin/list-tables/invites.php:20
+#: includes/admin/list-tables/invites.php:19
 msgid "Referral Invites"
 msgstr ""
 
-#: includes/admin/list-tables/invites.php:74
-msgid "Email"
-msgstr ""
-
-#: includes/admin/list-tables/invites.php:76
+#: includes/admin/list-tables/invites.php:75
 #: templates/account-tab-referral-table-row.php:22
 #: templates/account-tab-referral-tables.php:30
 #: templates/account-tab-referral-tables.php:64
 msgid "Date"
 msgstr ""
 
-#: includes/admin/list-tables/invites.php:126
-#: includes/admin/list-tables/referral-codes.php:170
-#: includes/admin/list-tables/referrals.php:270
+#: includes/admin/list-tables/invites.php:125
+#: includes/admin/list-tables/referral-codes.php:169
+#: includes/admin/list-tables/referrals.php:272
 msgid "Delete"
 msgstr ""
 
-#: includes/admin/list-tables/referral-codes.php:23
-#: includes/admin/list-tables/referral-codes.php:39
+#: includes/admin/list-tables/referral-codes.php:22
+#: includes/admin/list-tables/referral-codes.php:38
 msgid "Referral code"
 msgstr ""
 
-#: includes/admin/list-tables/referral-codes.php:27
+#: includes/admin/list-tables/referral-codes.php:26
 msgid "Search referral codes"
 msgstr ""
 
-#: includes/admin/list-tables/referral-codes.php:45
+#: includes/admin/list-tables/referral-codes.php:44
 msgid "Expires"
 msgstr ""
 
-#: includes/admin/list-tables/referral-codes.php:99
+#: includes/admin/list-tables/referral-codes.php:98
 msgid "Expired"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:85
+#: includes/admin/list-tables/referrals.php:87
 #: includes/admin/views/page-view-referral.php:143
 #: templates/account-tab-referral-table-row.php:21
 #: templates/account-tab-referral-tables.php:29
@@ -284,66 +306,66 @@ msgstr ""
 msgid "Customer"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:86
+#: includes/admin/list-tables/referrals.php:88
 #: includes/admin/views/page-view-referral.php:101
 msgid "Order"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:87
+#: includes/admin/list-tables/referrals.php:89
 msgid "Created"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:88
+#: includes/admin/list-tables/referrals.php:90
 msgid "Customer Discount"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:89
+#: includes/admin/list-tables/referrals.php:91
 msgid "Advocate Reward"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:90
+#: includes/admin/list-tables/referrals.php:92
 msgid "Actions"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:171
+#: includes/admin/list-tables/referrals.php:173
 #, php-format
 msgid "#%s - Deleted"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:190
+#: includes/admin/list-tables/referrals.php:192
 #, php-format
 msgid "(%s remaining)"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:193
+#: includes/admin/list-tables/referrals.php:195
 msgid "None"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:237
+#: includes/admin/list-tables/referrals.php:239
 msgid "View"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:240
+#: includes/admin/list-tables/referrals.php:242
 msgid "Approve"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:244
+#: includes/admin/list-tables/referrals.php:246
 msgid "Reject"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:266
+#: includes/admin/list-tables/referrals.php:268
 msgid "Mark as Approved"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:267
+#: includes/admin/list-tables/referrals.php:269
 msgid "Mark as Rejected"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:268
+#: includes/admin/list-tables/referrals.php:270
 msgid "Mark as Pending"
 msgstr ""
 
-#: includes/admin/list-tables/referrals.php:269
+#: includes/admin/list-tables/referrals.php:271
 msgid "Mark as Potential Fraud"
 msgstr ""
 
@@ -363,10 +385,6 @@ msgstr ""
 
 #: includes/admin/referrals-report.php:149
 msgid "Referrals Value"
-msgstr ""
-
-#: includes/admin/settings-tab.php:24
-msgid "Refer A Friend"
 msgstr ""
 
 #: includes/admin/settings-tab.php:30
@@ -730,7 +748,7 @@ msgid "Delete permanently"
 msgstr ""
 
 #: includes/admin/views/page-view-referral.php:62
-msgid "Update"
+msgid "Save"
 msgstr ""
 
 #: includes/admin/views/page-view-referral.php:75
@@ -784,23 +802,23 @@ msgstr ""
 msgid "Customer discount amount"
 msgstr ""
 
-#: includes/automatewoo-referrals.php:155
+#: includes/automatewoo-referrals.php:156
 msgid "Coupon Discount"
 msgstr ""
 
-#: includes/automatewoo-referrals.php:156
+#: includes/automatewoo-referrals.php:157
 msgid "Coupon % Discount"
 msgstr ""
 
-#: includes/automatewoo-referrals.php:166
+#: includes/automatewoo-referrals.php:167
 msgid "Store Credit - Fixed Amount"
 msgstr ""
 
-#: includes/automatewoo-referrals.php:167
+#: includes/automatewoo-referrals.php:168
 msgid "Store Credit - Percentage Of Referral Order"
 msgstr ""
 
-#: includes/automatewoo-referrals.php:168
+#: includes/automatewoo-referrals.php:169
 msgid "No Reward"
 msgstr ""
 
@@ -838,31 +856,31 @@ msgstr ""
 msgid "Please enter some email addresses."
 msgstr ""
 
-#: includes/invite-form-handler.php:109
+#: includes/invite-form-handler.php:106
 msgid "Sorry, your emails failed to send."
 msgstr ""
 
-#: includes/invite-form-handler.php:118
+#: includes/invite-form-handler.php:115
 #, php-format
 msgid "Success! %d referral email%s sent.</strong>"
 msgstr ""
 
-#: includes/invite-form-handler.php:132
+#: includes/invite-form-handler.php:129
 #, php-format
 msgid "%s is not a valid email address."
 msgstr ""
 
-#: includes/invite-form-handler.php:136
+#: includes/invite-form-handler.php:133
 #, php-format
 msgid "Referring your own email (%s) is not allowed."
 msgstr ""
 
-#: includes/invite-form-handler.php:142
+#: includes/invite-form-handler.php:139
 #, php-format
 msgid "<strong>%s</strong> is already a customer."
 msgstr ""
 
-#: includes/invite-form-handler.php:147
+#: includes/invite-form-handler.php:144
 #, php-format
 msgid "<strong>%s</strong> has already been referred."
 msgstr ""
@@ -916,7 +934,7 @@ msgstr ""
 #: includes/rules/customer-potential-fraud-referral-count.php:19
 #: includes/rules/customer-rejected-referral-count.php:19
 #: includes/rules/customer-total-referral-count.php:19
-#: includes/workflows.php:64
+#: includes/workflows.php:80
 msgid "Referral"
 msgstr ""
 
@@ -968,7 +986,7 @@ msgstr ""
 msgid "Referral Credit"
 msgstr ""
 
-#: includes/triggers/abstract-base.php:19
+#: includes/triggers/abstract-base.php:18
 msgid ""
 "This trigger essentially has two customers, the advocate and the friend. All "
 "variables and rules that are 'customer' based are for the 'friend customer' "
@@ -976,38 +994,42 @@ msgid ""
 "'advocate customer'."
 msgstr ""
 
-#: includes/triggers/abstract-base.php:55
+#: includes/triggers/abstract-base.php:54
 msgid "Limit per advocate"
 msgstr ""
 
-#: includes/triggers/abstract-base.php:56
+#: includes/triggers/abstract-base.php:55
 msgid "Limit how many times this workflow will ever run for each advocate."
 msgstr ""
 
-#: includes/triggers/abstract-base.php:57
+#: includes/triggers/abstract-base.php:56
 msgid "Leave blank for no limit"
 msgstr ""
 
-#: includes/triggers/new-referral.php:18
+#: includes/triggers/new-invite.php:18
+msgid "New Invite Email Sent"
+msgstr ""
+
+#: includes/triggers/new-referral.php:20
 msgid "New Referral Created"
 msgstr ""
 
-#: includes/triggers/new-referral.php:29
+#: includes/triggers/new-referral.php:28
 msgid "Initial Status"
 msgstr ""
 
-#: includes/triggers/new-referral.php:31
+#: includes/triggers/new-referral.php:30
 msgid ""
 "The initial status will usually only be either Pending or Potentially "
 "Fraudulent."
 msgstr ""
 
-#: includes/triggers/new-referral.php:32
+#: includes/triggers/new-referral.php:31
 #: includes/triggers/referral-status-changed.php:29
 msgid "Leave blank for any status"
 msgstr ""
 
-#: includes/triggers/referral-status-changed.php:16
+#: includes/triggers/referral-status-changed.php:19
 msgid "Referral Status Changed"
 msgstr ""
 
@@ -1033,6 +1055,14 @@ msgstr ""
 
 #: includes/variables/advocate-lastname.php:16
 msgid "Displays the advocate's last name."
+msgstr ""
+
+#: includes/variables/advocate-referral-coupon.php:16
+msgid "Displays a coupon that the advocate can use to refer their friends."
+msgstr ""
+
+#: includes/variables/advocate-referral-link.php:16
+msgid "Displays a link that the advocate can use to refer their friends."
 msgstr ""
 
 #: includes/variables/customer-referral-coupon.php:16
@@ -1122,7 +1152,7 @@ msgstr ""
 msgid "Login or register"
 msgstr ""
 
-#: templates/share-page.php:40
+#: templates/share-page.php:41
 msgid "Or"
 msgstr ""
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2018-01-31 13:33+0100\n"
-"PO-Revision-Date: 2018-02-01 10:02+0100\n"
+"POT-Creation-Date: 2018-02-09 13:34+0100\n"
+"PO-Revision-Date: 2018-02-09 14:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE\n"
@@ -1089,9 +1089,23 @@ msgstr "Über Facebook teilen"
 msgid "Share via Twitter"
 msgstr "Über Twitter teilen"
 
-#: includes/store-credit.php:27
+#: includes/store-credit.php:29
 msgid "Referral Credit"
 msgstr "Empfehlungs-Guthaben"
+
+#: includes/store-credit.php:190
+#, php-format
+msgid "The minimum spend is %s."
+msgstr "Die Mindest-Bestellsumme beträgt %s."
+
+#: includes/store-credit.php:199
+#, php-format
+msgid ""
+"You have %s referral credit available but it is not valid for your current "
+"cart. %s"
+msgstr ""
+"Sie haben %s verfügbares Empfehlungs-Guthaben, aber es ist nicht auf Ihren "
+"aktuellen Warenkorb anwendbar. %s"
 
 #: includes/triggers/abstract-base.php:18
 msgid ""

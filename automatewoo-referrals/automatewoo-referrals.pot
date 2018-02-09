@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2018-01-31 13:33+0100\n"
+"POT-Creation-Date: 2018-02-09 13:34+0100\n"
 "PO-Revision-Date: 2016-06-28 14:08+0930\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -982,8 +982,20 @@ msgstr ""
 msgid "Share via Twitter"
 msgstr ""
 
-#: includes/store-credit.php:27
+#: includes/store-credit.php:29
 msgid "Referral Credit"
+msgstr ""
+
+#: includes/store-credit.php:190
+#, php-format
+msgid "The minimum spend is %s."
+msgstr ""
+
+#: includes/store-credit.php:199
+#, php-format
+msgid ""
+"You have %s referral credit available but it is not valid for your current "
+"cart. %s"
 msgstr ""
 
 #: includes/triggers/abstract-base.php:18

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2018-02-12 14:43+0100\n"
-"PO-Revision-Date: 2018-02-12 16:44+0100\n"
+"POT-Creation-Date: 2018-02-22 16:03+0100\n"
+"PO-Revision-Date: 2018-02-22 16:19+0100\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE\n"
@@ -442,7 +442,7 @@ msgstr "Workflow mit der höchsten Conversion"
 #: includes/actions/order-update-meta.php:17
 #: includes/rules/order-billing-country.php:19
 #: includes/rules/order-coupons-text-match.php:18
-#: includes/rules/order-coupons.php:18
+#: includes/rules/order-coupons.php:17
 #: includes/rules/order-customer-provided-note.php:19
 #: includes/rules/order-has-cross-sells.php:15
 #: includes/rules/order-is-customers-first.php:15
@@ -456,6 +456,7 @@ msgstr "Workflow mit der höchsten Conversion"
 #: includes/rules/order-shipping-country.php:15
 #: includes/rules/order-shipping-method-string.php:15
 #: includes/rules/order-shipping-method.php:21
+#: includes/rules/order-status.php:17
 #: includes/rules/order-subscription-payment-retry-count.php:21
 #: includes/rules/order-total.php:17
 msgid "Order"
@@ -465,30 +466,34 @@ msgstr "Bestellung"
 #: admin/reports/conversions-list.php:141 admin/reports/logs.php:109
 #: admin/reports/queue.php:130 admin/reports/unsubscribes.php:56
 #: includes/rules/customer-active-membership-plans.php:21
-#: includes/rules/customer-country.php:17 includes/rules/customer-email.php:17
+#: includes/rules/customer-city.php:19 includes/rules/customer-country.php:19
+#: includes/rules/customer-email.php:19
 #: includes/rules/customer-has-active-subscription.php:17
 #: includes/rules/customer-is-guest.php:17
 #: includes/rules/customer-is-mailchimp-subscriber.php:19
 #: includes/rules/customer-meta.php:17
 #: includes/rules/customer-order-count.php:19
 #: includes/rules/customer-order-statuses.php:19
+#: includes/rules/customer-postcode.php:19
 #: includes/rules/customer-purchased-categories.php:21
 #: includes/rules/customer-purchased-products.php:25
 #: includes/rules/customer-review-count.php:19
-#: includes/rules/customer-role.php:17 includes/rules/customer-tags.php:21
+#: includes/rules/customer-role.php:17
+#: includes/rules/customer-state-text-match.php:19
+#: includes/rules/customer-state.php:19 includes/rules/customer-tags.php:21
 #: includes/rules/customer-total-spent.php:19
 msgid "Customer"
 msgstr "Kunde"
 
 #: admin/data-layer-formatter.php:48 admin/reports/guests.php:21
-#: admin/reports/guests.php:40 includes/rules/customer-role.php:34
+#: admin/reports/guests.php:40 includes/rules/customer-role.php:32
 #: includes/rules/guest-email.php:15 includes/rules/guest-order-count.php:20
 msgid "Guest"
 msgstr "Gast"
 
 #: admin/data-layer-formatter.php:57 admin/reports/carts.php:19
 #: admin/reports/carts.php:30 includes/rules/cart-count.php:17
-#: includes/rules/cart-coupons.php:19
+#: includes/rules/cart-coupons.php:17
 #: includes/rules/cart-item-categories.php:21
 #: includes/rules/cart-item-tags.php:21 includes/rules/cart-items.php:26
 #: includes/rules/cart-total.php:18 includes/variables/cart-link.php:16
@@ -874,7 +879,7 @@ msgstr "Durchläufe"
 
 #: admin/reports/unsubscribes.php:17
 #: includes/actions/campaign-monitor-remove-subscriber.php:26
-#: includes/workflow-email.php:162 templates/unsubscribe-form.php:18
+#: includes/workflow-email.php:174 templates/unsubscribe-form.php:18
 msgid "Unsubscribe"
 msgstr "Abmelden"
 
@@ -1942,13 +1947,17 @@ msgstr "Vorname"
 msgid "Last name"
 msgstr "Nachname"
 
-#: includes/actions/active-campaign-abstract.php:69
+#: includes/actions/active-campaign-abstract.php:59
+msgid "Organization"
+msgstr "Unternehmen"
+
+#: includes/actions/active-campaign-abstract.php:75
 #: includes/fields/user-tags.php:23 includes/user-tags.php:78
 #: includes/user-tags.php:80 includes/user-tags.php:293
 msgid "Tags"
 msgstr "Schlagwörter"
 
-#: includes/actions/active-campaign-abstract.php:70
+#: includes/actions/active-campaign-abstract.php:76
 msgid ""
 "Add multiple tags separated by commas. Please note that tags are case-"
 "sensitive."
@@ -2483,14 +2492,26 @@ msgstr ""
 "{{ unsubscribe_url }} einsetzen solltest."
 
 #: includes/actions/send-email-raw.php:32
+msgid "Include AutomateWoo CSS"
+msgstr "Füge AutomateWoo CSS ein"
+
+#: includes/actions/send-email-raw.php:34
+msgid ""
+"Checking this box adds the basic AutomateWoo CSS that is used to style "
+"variables to your custom HTML."
+msgstr ""
+"Dies fügt das grundlegende AutomateWoo CSS zum Formatieren der Variablen zu "
+"deinem HTML hinzu."
+
+#: includes/actions/send-email-raw.php:38
 msgid "Email HTML"
 msgstr "E-Mail-HTML"
 
-#: includes/actions/send-email-raw.php:33
+#: includes/actions/send-email-raw.php:39
 msgid "Any CSS included in the HTML will be automatically inlined."
 msgstr "Jegliches CSS im HTML wird automatisch inline eingebunden."
 
-#: includes/actions/send-email-raw.php:118 includes/actions/send-email.php:194
+#: includes/actions/send-email-raw.php:131 includes/actions/send-email.php:194
 #: includes/actions/send-sms-twilio.php:81
 #, php-format
 msgid "Successfully sent to %s"
@@ -2847,26 +2868,26 @@ msgid "This log was created from manual workflow re-run."
 msgstr ""
 "Dieser Log wurde durch manuelles erneutes Durchlaufen des Workflows erzeugt."
 
-#: includes/mailer.php:162
+#: includes/mailer.php:174
 msgid "The email address is blank."
 msgstr "Die E-Mail-Adresse ist leer."
 
-#: includes/mailer.php:166
+#: includes/mailer.php:178
 #, php-format
 msgid "'%s' is not a valid email address."
 msgstr "„%s“ ist keine gültige E-Mail-Adresse."
 
-#: includes/mailer.php:176
+#: includes/mailer.php:188
 #, php-format
 msgid "The email '%s' is blacklisted."
 msgstr "Die E-Mail-Adresse „%s“ ist blacklisted."
 
-#: includes/mailer.php:230
+#: includes/mailer.php:242
 #, php-format
 msgid "PHP Mailer - %s"
 msgstr "PHP-Mailer - %s"
 
-#: includes/mailer.php:233
+#: includes/mailer.php:245
 msgid "The wp_mail() function returned false."
 msgstr "Die wp_mail()-Funktion hat false zurückgegeben."
 
@@ -2939,24 +2960,24 @@ msgstr "Grund für Fehlschlagen des geplanten Ereignisses unbekannt."
 msgid "Search..."
 msgstr "Suche…"
 
-#: includes/rules/abstract-select.php:31
+#: includes/rules/abstract-select.php:25
 msgid "matches any"
 msgstr "erfüllt eine"
 
-#: includes/rules/abstract-select.php:32
+#: includes/rules/abstract-select.php:26
 msgid "matches all"
 msgstr "erfüllt alle"
 
-#: includes/rules/abstract-select.php:33
+#: includes/rules/abstract-select.php:27
 msgid "matches none"
 msgstr "erfüllt keine"
 
-#: includes/rules/abstract-select.php:38 includes/rules/product.php:26
+#: includes/rules/abstract-select.php:32 includes/rules/product.php:26
 #: includes/rules/rule.php:84 includes/rules/rule.php:112
 msgid "is"
 msgstr "ist"
 
-#: includes/rules/abstract-select.php:39 includes/rules/product.php:27
+#: includes/rules/abstract-select.php:33 includes/rules/product.php:27
 #: includes/rules/rule.php:85 includes/rules/rule.php:113
 msgid "is not"
 msgstr "ist nicht"
@@ -2965,7 +2986,7 @@ msgstr "ist nicht"
 msgid "Cart Item Count"
 msgstr "Anzahl der Warenkorb-Artikel"
 
-#: includes/rules/cart-coupons.php:18
+#: includes/rules/cart-coupons.php:16
 msgid "Cart Coupons"
 msgstr "Warenkorb-Gutscheine"
 
@@ -3007,13 +3028,17 @@ msgstr "Warenkorb-Summe"
 msgid "Customer's Active Memberships Plans"
 msgstr "Aktive Membership-Pläne des Kunden"
 
-#: includes/rules/customer-country.php:16
+#: includes/rules/customer-city.php:18
+msgid "Customer City"
+msgstr "Stadt des Kunden"
+
+#: includes/rules/customer-country.php:18
 msgid "Customer Country"
 msgstr "Land des Kunden"
 
-#: includes/rules/customer-email.php:16
+#: includes/rules/customer-email.php:18
 msgid "Customer Email"
-msgstr "Kunden-E-Mail-Adresse"
+msgstr "E-Mail-Adresse des Kunden"
 
 #: includes/rules/customer-has-active-subscription.php:16
 msgid "Customer Has Active Subscription?"
@@ -3043,6 +3068,10 @@ msgstr "Anzahl Bestellungen des Kunden"
 msgid "Customer's Current Order Statuses"
 msgstr "Status der Bestellungen des Kunden"
 
+#: includes/rules/customer-postcode.php:18
+msgid "Customer Postcode"
+msgstr "PLZ des Kunden"
+
 #: includes/rules/customer-purchased-categories.php:20
 msgid "Customer's Purchased Categories - All Time"
 msgstr "Kategorien der gekauften Produkte des Kunden (insgesamt)"
@@ -3062,6 +3091,14 @@ msgstr "Kunden-Nutzerrolle"
 #: includes/rules/customer-run-count.php:18
 msgid "This Workflow's Run Count For Customer"
 msgstr "Durchlauf-Zähler dieses Workflows für Kunde"
+
+#: includes/rules/customer-state-text-match.php:18
+msgid "Customer State - Text Match"
+msgstr "Staat des Kunden – Namens-Übereinstimmung"
+
+#: includes/rules/customer-state.php:18
+msgid "Customer State"
+msgstr "Staat des Kunden"
 
 #: includes/rules/customer-tags.php:20
 msgid "Customer User Tags"
@@ -3091,7 +3128,7 @@ msgstr "Bestellung: Land der Rechnungsadresse"
 msgid "Order Coupons - Text Match"
 msgstr "Bestellung: Gutscheine – Namens-Übereinstimmung"
 
-#: includes/rules/order-coupons.php:17
+#: includes/rules/order-coupons.php:16
 msgid "Order Coupons"
 msgstr "Bestellung: Gutscheine"
 
@@ -3183,6 +3220,10 @@ msgstr "Bestellung: Versandmethode – Namens-Übereinstimmung"
 #: includes/rules/order-shipping-method.php:20
 msgid "Order Shipping Method"
 msgstr "Bestellung: Versandmethode"
+
+#: includes/rules/order-status.php:16
+msgid "Order Status"
+msgstr "Bestellstatus"
 
 #: includes/rules/order-subscription-payment-retry-count.php:20
 msgid "Order Subscription Payment Retry Count"
@@ -4981,11 +5022,11 @@ msgstr "Zeigt die Anzahl Artikel auf der Wunschliste."
 msgid "Displays a link to the wishlist."
 msgstr "Zeigt einen Link zur Wunschliste."
 
-#: includes/workflow-email.php:194
+#: includes/workflow-email.php:206
 msgid "Workflow was not defined for email."
 msgstr "Workflow wurde nicht für E-Mail definiert."
 
-#: includes/workflow-email.php:207
+#: includes/workflow-email.php:219
 #, php-format
 msgid "The email '%s' is unsubscribed from this workflow."
 msgstr "Die E-Mail „%s“ ist von diesem Workflow abgemeldet."

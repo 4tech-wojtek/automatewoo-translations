@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2018-02-09 13:34+0100\n"
-"PO-Revision-Date: 2018-02-09 14:03+0100\n"
+"POT-Creation-Date: 2018-03-13 15:03+0100\n"
+"PO-Revision-Date: 2018-03-13 16:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE\n"
@@ -20,42 +20,40 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#. Plugin Name of the plugin/theme
 #: automatewoo-referrals.php:35
-msgid "AutomateWoo - Referrals Add-on"
-msgstr "AutomateWoo - Referrals Add-On"
+msgid "AutomateWoo - Refer A Friend"
+msgstr "AutomateWoo - Refer A Friend"
 
-#: automatewoo-referrals.php:85
+#: automatewoo-referrals.php:84
 #, php-format
-msgid "<strong>%s</strong> requires PHP version %s+."
-msgstr "<strong>%s</strong> benötigt PHP-Version %s+."
+msgid "%s is inactive."
+msgstr "%s ist inaktiv."
 
-#: automatewoo-referrals.php:89
+#: automatewoo-referrals.php:87
 #, php-format
-msgid "<strong>%s</strong> requires AutomateWoo to be installed and activated."
+msgid "%s The plugin requires PHP version %s or newer."
+msgstr "%s Das Plugin benötigt PHP Version %s oder neuer."
+
+#: automatewoo-referrals.php:91
+#, php-format
+msgid "%s The plugin requires AutomateWoo to be installed and activated."
 msgstr ""
-"<strong>%s</strong> benötigt installiertes und aktiviertes AutomateWoo-"
-"Plugin."
+"%s Das Plugin benötigt installiertes und aktiviertes AutomateWoo-Plugin."
 
-#: automatewoo-referrals.php:92
+#: automatewoo-referrals.php:94
 #, php-format
-msgid ""
-"<strong>%s</strong> requires AutomateWoo version %s or later. Please update "
-"to the latest version."
-msgstr ""
-"<strong>%s</strong> benötigt AutomateWoo Version %s oder neuer. Bitte "
-"aktualisiere auf die neueste Version."
+msgid "%s The plugin requires AutomateWoo version %s or newer."
+msgstr "%s Das Plugin benötigt AutomateWoo Version %s oder neuer."
 
-#: automatewoo-referrals.php:95
+#: automatewoo-referrals.php:97
 #, php-format
-msgid "<strong>%s</strong> - AutomateWoo plugin directory name is not correct."
-msgstr ""
-"<strong>%s</strong> - AutomateWoo Plugin-Ordner-Name ist nicht korrekt."
+msgid "%s AutomateWoo plugin directory name is not correct."
+msgstr "%s AutomateWoo Plugin-Ordner-Name ist nicht korrekt."
 
-#: automatewoo-referrals.php:99
+#: automatewoo-referrals.php:101
 #, php-format
-msgid "<strong>%s</strong> requires WooCommerce version %s or later."
-msgstr "<strong>%s</strong> benötigt WooCommerce Version %s oder neuer."
+msgid "%s The plugin requires WooCommerce version %s or newer."
+msgstr "%s Das Plugin benötigt WooCommerce Version %s oder neuer."
 
 #: includes/account-endpoint.php:31 includes/admin/admin.php:38
 #: includes/admin/reports-tab.php:12
@@ -228,22 +226,22 @@ msgid "All"
 msgstr "Alle"
 
 #: includes/admin/controllers/referrals.php:309
-#: includes/automatewoo-referrals.php:187
+#: includes/automatewoo-referrals.php:192
 msgid "Approved"
 msgstr "Genehmigt"
 
 #: includes/admin/controllers/referrals.php:310
-#: includes/automatewoo-referrals.php:190
+#: includes/automatewoo-referrals.php:195
 msgid "Rejected"
 msgstr "Abgelehnt"
 
 #: includes/admin/controllers/referrals.php:311
-#: includes/automatewoo-referrals.php:189
+#: includes/automatewoo-referrals.php:194
 msgid "Pending"
 msgstr "Ausstehend"
 
 #: includes/admin/controllers/referrals.php:312
-#: includes/automatewoo-referrals.php:188
+#: includes/automatewoo-referrals.php:193
 msgid "Potential Fraud"
 msgstr "Möglicher Betrug"
 
@@ -540,35 +538,40 @@ msgstr ""
 msgid "Offer type"
 msgstr "Angebots-Art"
 
-#: includes/admin/settings-tab.php:104
+#: includes/admin/settings-tab.php:103
+msgid "Make this field blank if you do not want coupons to expire."
+msgstr ""
+"Lasse dieses Feld leer, wenn du nicht willst, dass Gutscheine ablaufen."
+
+#: includes/admin/settings-tab.php:106
 msgid "Offer amount"
 msgstr "Angebots-Betrag"
 
-#: includes/admin/settings-tab.php:109 includes/admin/settings-tab.php:165
+#: includes/admin/settings-tab.php:111 includes/admin/settings-tab.php:169
 msgid "Minimum purchase amount"
 msgstr "Mindestbestellsumme"
 
-#: includes/admin/settings-tab.php:110
+#: includes/admin/settings-tab.php:112
 msgid "The minimum purchase amount that the referral offer is valid for."
 msgstr "Die Mindestbestellsumme, ab der das Empfehlungs-Angebot gültig ist."
 
-#: includes/admin/settings-tab.php:115
+#: includes/admin/settings-tab.php:117
 msgid "Coupon expiry"
 msgstr "Gutschein-Gültigkeitsdauer"
 
-#: includes/admin/settings-tab.php:116
-msgid "weeks after creation"
-msgstr "Wochen nach Erstellung"
+#: includes/admin/settings-tab.php:118 includes/admin/settings-tab.php:141
+msgid "weeks"
+msgstr "Wochen"
 
-#: includes/admin/settings-tab.php:117
-msgid "Set this to '0' if you do not want coupons to expire."
-msgstr "Setze dies auf „0“, wenn du nicht willst, dass Gutscheine ablaufen."
+#: includes/admin/settings-tab.php:121 includes/admin/settings-tab.php:144
+msgid "unlimited"
+msgstr "unbegrenzt"
 
-#: includes/admin/settings-tab.php:125
+#: includes/admin/settings-tab.php:128
 msgid "Link options"
 msgstr "Link-Optionen"
 
-#: includes/admin/settings-tab.php:126
+#: includes/admin/settings-tab.php:129
 msgid ""
 "By default share links expire after 4 weeks which means that a single "
 "advocate may own many different unique share links at one time. If you would "
@@ -580,34 +583,26 @@ msgstr ""
 "möchtest, dass Werber für immer einen einzigen Link nutzen, setze die "
 "<b>Empfehlungs-Link-Gültigkeitsdauer</b> auf 0."
 
-#: includes/admin/settings-tab.php:130
+#: includes/admin/settings-tab.php:133
 msgid "Share link parameter"
 msgstr "Werbungs-Link-Paramter"
 
-#: includes/admin/settings-tab.php:131
+#: includes/admin/settings-tab.php:134
 #, php-format
 msgid "This parameter is used when generating unique share links e.g. %s"
 msgstr ""
 "Dieser Parameter wird genutzt, um eindeutige Werbungs-Links zu generieren, z."
 "B. %s"
 
-#: includes/admin/settings-tab.php:137
+#: includes/admin/settings-tab.php:140
 msgid "Share link expiry"
 msgstr "Werbungs-Link-Gültigkeitsdauer"
 
-#: includes/admin/settings-tab.php:138
-msgid "weeks after share"
-msgstr "Wochen nach Teilen"
-
-#: includes/admin/settings-tab.php:139
-msgid "Set this to '0' if you do not want links to expire."
-msgstr "Setze dies auf „0“, wenn du nicht willst, dass Links ablaufen."
-
-#: includes/admin/settings-tab.php:147
+#: includes/admin/settings-tab.php:151
 msgid "Referral reward (for the advocate)"
 msgstr "Werbungs-Belohnung (für den Werber)"
 
-#: includes/admin/settings-tab.php:148
+#: includes/admin/settings-tab.php:152
 msgid ""
 "The reward given to the advocate for each time they successfully refer a "
 "customer. This reward is only granted for the friends first purchase. If you "
@@ -620,11 +615,11 @@ msgstr ""
 "kannst du einen Workflow mit dem <strong>Neue Empfehlung</strong>-Auslöser "
 "verwenden."
 
-#: includes/admin/settings-tab.php:153
+#: includes/admin/settings-tab.php:157
 msgid "Reward type"
 msgstr "Belohnungs-Art"
 
-#: includes/admin/settings-tab.php:156
+#: includes/admin/settings-tab.php:160
 msgid ""
 "By selecting no reward you can instead reward them by using the AutomateWoo "
 "referral triggers and for example you could generate a coupon for the "
@@ -633,19 +628,19 @@ msgstr ""
 "Wenn du „Keine Belohnung“ wählst, kannst du den Werber alternativ über einen "
 "AutomateWoo Empfehlungs-Auslöser belohnen und z.B. einen Gutschein erstellen."
 
-#: includes/admin/settings-tab.php:160
+#: includes/admin/settings-tab.php:164
 msgid "Reward amount"
 msgstr "Belohnung-Betrag"
 
-#: includes/admin/settings-tab.php:166
+#: includes/admin/settings-tab.php:170
 msgid "The minimum purchase amount required for store credit to be used."
 msgstr "Die Mindestbestellsumme, ab der Shop-Guthaben genutzt werden kann."
 
-#: includes/admin/settings-tab.php:175
+#: includes/admin/settings-tab.php:179
 msgid "Share widget"
 msgstr "Teilen-Widget"
 
-#: includes/admin/settings-tab.php:176
+#: includes/admin/settings-tab.php:180
 #, php-format
 msgid ""
 "The share widget is a mini version of the share page that can added to the "
@@ -658,51 +653,51 @@ msgstr ""
 "eingefügt werden. Bitte beachte, dass Kunden aufgefordert werden, ein "
 "Kundenkonto anzulegen, bevor sie ihre Freunde werben können."
 
-#: includes/admin/settings-tab.php:182
+#: includes/admin/settings-tab.php:186
 msgid "Show widget on order confirmation page"
 msgstr "Zeige Widget auf der Bestellbestätigungs-Seite"
 
-#: includes/admin/settings-tab.php:185
+#: includes/admin/settings-tab.php:189
 msgid "Bottom Of Page"
 msgstr "Ende der Seite"
 
-#: includes/admin/settings-tab.php:186
+#: includes/admin/settings-tab.php:190
 msgid "Top Of Page"
 msgstr "Anfang der Seite"
 
-#: includes/admin/settings-tab.php:187
+#: includes/admin/settings-tab.php:191
 msgid "Do Not Display"
 msgstr "Nicht anzeigen"
 
-#: includes/admin/settings-tab.php:192
+#: includes/admin/settings-tab.php:196
 msgid "Show widget on order emails"
 msgstr "Zeige Widget in Bestell-E-Mails"
 
-#: includes/admin/settings-tab.php:197
+#: includes/admin/settings-tab.php:201
 msgid "Widget heading"
 msgstr "Widget-Überschrift"
 
-#: includes/admin/settings-tab.php:202
+#: includes/admin/settings-tab.php:206
 msgid "Widget paragraph text"
 msgstr "Widget-Fließtext"
 
-#: includes/admin/settings-tab.php:213
+#: includes/admin/settings-tab.php:217
 msgid "Social sharing"
 msgstr "Teilen über soziale Netzwerke"
 
-#: includes/admin/settings-tab.php:216
+#: includes/admin/settings-tab.php:220
 msgid "Enable sharing via Facebook"
 msgstr "Teilen über Facebook aktivieren"
 
-#: includes/admin/settings-tab.php:221
+#: includes/admin/settings-tab.php:225
 msgid "Enable sharing via Twitter"
 msgstr "Teilen über Twitter aktivieren"
 
-#: includes/admin/settings-tab.php:226
+#: includes/admin/settings-tab.php:230
 msgid "Default share text"
 msgstr "Standard-Teilen-Text"
 
-#: includes/admin/settings-tab.php:228
+#: includes/admin/settings-tab.php:232
 msgid ""
 "This is the default text used when an advocate shares via Twitter or "
 "Facebook. If you chose 'Coupon Based' you must include the variable "
@@ -712,53 +707,53 @@ msgstr ""
 "du „Gutschein-basiert“ gewählt hast, musst du die Variable {{ coupon_code }} "
 "benutzen. Ein Link zu deinem Shop wird automatisch hinzugefügt."
 
-#: includes/admin/settings-tab.php:232
+#: includes/admin/settings-tab.php:236
 msgid "Twitter default share text (optional)"
 msgstr "Twitter Standard-Teilen-Text (optional)"
 
-#: includes/admin/settings-tab.php:234
+#: includes/admin/settings-tab.php:238
 msgid ""
 "Optionally specify different text for Twitter shares as they are limited to "
-"140 characters. If left blank the default share text will be used."
+"280 characters. If left blank the default share text will be used."
 msgstr ""
-"Setze optional einen abweichenden Text für Twitter, da dort das 140-Zeichen-"
+"Setze optional einen abweichenden Text für Twitter, da dort das 280-Zeichen-"
 "Limit gilt. Wenn leer, wird der Standard-Teilen-Text genutzt."
 
-#: includes/admin/settings-tab.php:243
+#: includes/admin/settings-tab.php:247
 msgid "Email sharing"
 msgstr "Teilen per E-Mail"
 
-#: includes/admin/settings-tab.php:244
+#: includes/admin/settings-tab.php:248
 msgid ""
 "The email template that is sent when an advocate refers a friend view email. "
 msgstr ""
 "Die E-Mail-Vorlage, die gesendet wird, wenn ein Werber einen Freund wirbt. "
 
-#: includes/admin/settings-tab.php:245
+#: includes/admin/settings-tab.php:249
 msgid "You can insert dynamic content with the following variables: "
 msgstr "Du kannst dynamische Inhalte mit den folgenden Variablen einfügen: "
 
-#: includes/admin/settings-tab.php:247
+#: includes/admin/settings-tab.php:251
 msgid "Preview email"
 msgstr "E-Mail-Vorschau"
 
-#: includes/admin/settings-tab.php:251
+#: includes/admin/settings-tab.php:255
 msgid "Enable sharing via Email"
 msgstr "Teilen via E-Mail aktivieren"
 
-#: includes/admin/settings-tab.php:256
+#: includes/admin/settings-tab.php:260
 msgid "Email subject"
 msgstr "E-Mail-Betreff"
 
-#: includes/admin/settings-tab.php:261
+#: includes/admin/settings-tab.php:265
 msgid "Email heading"
 msgstr "E-Mail-Überschrift"
 
-#: includes/admin/settings-tab.php:266
+#: includes/admin/settings-tab.php:270
 msgid "Email template"
 msgstr "E-Mail-Vorlage"
 
-#: includes/admin/settings-tab.php:269
+#: includes/admin/settings-tab.php:273
 msgid ""
 "The template that will be used to send referral share emails. For info on "
 "creating custom templates please refer to the AutomateWoo documentation."
@@ -767,11 +762,11 @@ msgstr ""
 "mehr Informationen über eigene Vorlagen, sieh bitte in die AutomateWoo-"
 "Dokumentation."
 
-#: includes/admin/settings-tab.php:273
+#: includes/admin/settings-tab.php:277
 msgid "Email body"
 msgstr "E-Mail-Inhalt"
 
-#: includes/admin/settings-tab.php:275
+#: includes/admin/settings-tab.php:279
 msgid ""
 "If you chose 'Coupon Based' you must include the variable {{ coupon_code }}. "
 "If you chose 'Link Based' ensure you have at least one link in the email "
@@ -783,15 +778,15 @@ msgstr ""
 "einen Link in der E-Mail nutzt. Tracking-Parameter werden automatisch zu "
 "allen Links der E-Mail hinzugefügt."
 
-#: includes/admin/settings-tab.php:281
+#: includes/admin/settings-tab.php:285
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: includes/admin/settings-tab.php:284
+#: includes/admin/settings-tab.php:288
 msgid "Allow existing customer referrals"
 msgstr "Erlaube werben von Bestandskunden"
 
-#: includes/admin/settings-tab.php:285
+#: includes/admin/settings-tab.php:289
 msgid ""
 "If this is unchecked, existing customers will be blocked from receiving "
 "referrals (default). If checked, existing customers can be referred but they "
@@ -801,11 +796,11 @@ msgstr ""
 "(Standard). Wenn gewählt, können Bestandskunden geworben werden, allerdings "
 "nur ein einziges Mal."
 
-#: includes/admin/settings-tab.php:291
+#: includes/admin/settings-tab.php:295
 msgid "Reward event"
 msgstr "Belohnungs-Ereignis"
 
-#: includes/admin/settings-tab.php:292
+#: includes/admin/settings-tab.php:296
 msgid ""
 "The reward event determines when a referral should be created. E.g. when "
 "setting to 'Purchase' (default) referrals will be created when a friend "
@@ -817,11 +812,11 @@ msgstr ""
 "wenn ein Freund einen Kauf tätigt. Wenn es auf „Registrierung“ gestellt ist, "
 "wird eine Empfehlung erstellt, wenn ein Freund ein Kundenkonto erstellt."
 
-#: includes/admin/settings-tab.php:296
+#: includes/admin/settings-tab.php:300
 msgid "Purchase"
 msgstr "Kauf"
 
-#: includes/admin/settings-tab.php:297
+#: includes/admin/settings-tab.php:301
 msgid "Sign up"
 msgstr "Registrierung"
 
@@ -890,23 +885,23 @@ msgstr "Kunden-Rabatt-Art"
 msgid "Customer discount amount"
 msgstr "Kunden-Rabatt-Betrag"
 
-#: includes/automatewoo-referrals.php:156
+#: includes/automatewoo-referrals.php:161
 msgid "Coupon Discount"
 msgstr "Gutschein-Rabatt"
 
-#: includes/automatewoo-referrals.php:157
+#: includes/automatewoo-referrals.php:162
 msgid "Coupon % Discount"
 msgstr "Prozentualer Gutschein-Rabatt"
 
-#: includes/automatewoo-referrals.php:167
+#: includes/automatewoo-referrals.php:172
 msgid "Store Credit - Fixed Amount"
 msgstr "Shop-Guthaben - fester Betrag"
 
-#: includes/automatewoo-referrals.php:168
+#: includes/automatewoo-referrals.php:173
 msgid "Store Credit - Percentage Of Referral Order"
 msgstr "Shop-Guthaben - prozentual von geworbener Bestellung"
 
-#: includes/automatewoo-referrals.php:169
+#: includes/automatewoo-referrals.php:174
 msgid "No Reward"
 msgstr "Keine Belohnung"
 
@@ -914,20 +909,20 @@ msgstr "Keine Belohnung"
 msgid "Refer A Friend invite emails"
 msgstr "Freunde werben Einladungs-E-Mails"
 
-#: includes/coupons.php:124
+#: includes/coupons.php:125
 msgid "Your coupon is not valid. It may have expired."
 msgstr "Dein Gutschein ist ungültig. Vielleicht ist er abgelaufen."
 
-#: includes/coupons.php:341
+#: includes/coupons.php:338
 msgid "There is a problem with this referral coupon."
 msgstr "Es gibt ein Problem mit diesem Empfehlungs-Gutschein."
 
-#: includes/coupons.php:345
+#: includes/coupons.php:342
 msgid "It appears you are trying to use your own referral coupon."
 msgstr ""
 "Es scheint, als wolltest du deinen eigenen Empfehlungs-Gutschein nutzen."
 
-#: includes/coupons.php:349
+#: includes/coupons.php:346
 msgid ""
 "You don't appear to be a new customer which is required to use a referral "
 "coupon."
@@ -935,11 +930,39 @@ msgstr ""
 "Du scheinst kein Neukunde zu sein, was Voraussetzung für die Nutzung eines "
 "Empfehlungs-Gutscheins ist."
 
-#: includes/coupons.php:353
+#: includes/coupons.php:350
 msgid "It appears you have already used a referral coupon before."
 msgstr ""
 "Es scheint, als hättest du bereits einmal einen Empfehlungs-Gutschein "
 "genutzt."
+
+#: includes/credit.php:32
+msgid "Referral Credit"
+msgstr "Empfehlungs-Guthaben"
+
+#: includes/credit.php:198
+#, php-format
+msgid "The minimum spend is %s."
+msgstr "Die Mindest-Bestellsumme beträgt %s."
+
+#: includes/credit.php:207
+#, php-format
+msgid ""
+"You have %s referral credit available but it is not valid for your current "
+"cart. %s"
+msgstr ""
+"Du hast %s verfügbares Empfehlungs-Guthaben, aber es ist nicht auf deinen "
+"aktuellen Warenkorb anwendbar. %s"
+
+#: includes/credit.php:354
+#, php-format
+msgctxt "Will show the amount of credit"
+msgid ""
+"The %s referral credit used in this order was refunded to the customer's "
+"balance."
+msgstr ""
+"Das in der Bestellung genutzte Empfehlungs-Guthaben von %s wurde dem Kunden-"
+"Guthaben wieder gutgeschrieben."
 
 #: includes/frontend.php:126
 msgid "Referrals are currently disabled."
@@ -1022,6 +1045,18 @@ msgstr ""
 "Du wurdest eingeladen, mit einem 20€ Rabatt bei %s zu shoppen, wenn du mehr "
 "als 100€ ausgibst. Nutze den Code unten, um deinen Gutschein einzulösen."
 
+#: includes/referral-manager.php:388
+msgid "Advocate ID matches the Customer ID."
+msgstr "Empfehler-ID stimmt mit Kunden-ID überein."
+
+#: includes/referral-manager.php:395
+msgid "Customer has already been referred."
+msgstr "Kunde wurde bereits geworben."
+
+#: includes/referral-manager.php:401
+msgid "Customer is not new."
+msgstr "Kunden ist nicht neu."
+
 #: includes/rules/advocate-approved-referral-count.php:18
 msgid "Advocate Approved Referral Count"
 msgstr "Werber: Zähler genehmigte Empfehlungen"
@@ -1083,24 +1118,6 @@ msgstr "Über Facebook teilen"
 #: includes/social-integrations/twitter.php:35
 msgid "Share via Twitter"
 msgstr "Über Twitter teilen"
-
-#: includes/store-credit.php:29
-msgid "Referral Credit"
-msgstr "Empfehlungs-Guthaben"
-
-#: includes/store-credit.php:190
-#, php-format
-msgid "The minimum spend is %s."
-msgstr "Die Mindest-Bestellsumme beträgt %s."
-
-#: includes/store-credit.php:199
-#, php-format
-msgid ""
-"You have %s referral credit available but it is not valid for your current "
-"cart. %s"
-msgstr ""
-"Du hast %s verfügbares Empfehlungs-Guthaben, aber es ist nicht auf deinen "
-"aktuellen Warenkorb anwendbar. %s"
 
 #: includes/triggers/abstract-base.php:18
 msgid ""
@@ -1289,6 +1306,10 @@ msgstr "Oder"
 msgid "Share via Email"
 msgstr "Per E-Mail teilen"
 
+#. Plugin Name of the plugin/theme
+msgid "AutomateWoo - Referrals Add-on"
+msgstr "AutomateWoo - Referrals Add-On"
+
 #. Plugin URI of the plugin/theme
 #. Author URI of the plugin/theme
 msgid "http://automatewoo.com"
@@ -1301,6 +1322,22 @@ msgstr "„Freunde werben“ Add-On für AutomateWoo."
 #. Author of the plugin/theme
 msgid "AutomateWoo"
 msgstr "AutomateWoo"
+
+#~ msgid ""
+#~ "<strong>%s</strong> requires AutomateWoo version %s or later. Please "
+#~ "update to the latest version."
+#~ msgstr ""
+#~ "<strong>%s</strong> benötigt AutomateWoo Version %s oder neuer. Bitte "
+#~ "aktualisiere auf die neueste Version."
+
+#~ msgid "weeks after creation"
+#~ msgstr "Wochen nach Erstellung"
+
+#~ msgid "weeks after share"
+#~ msgstr "Wochen nach Teilen"
+
+#~ msgid "Set this to '0' if you do not want links to expire."
+#~ msgstr "Setze dies auf „0“, wenn du nicht willst, dass Links ablaufen."
 
 #~ msgid "Update"
 #~ msgstr "Aktualisieren"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2018-03-13 14:56+0100\n"
+"POT-Creation-Date: 2018-03-13 15:03+0100\n"
 "PO-Revision-Date: 2016-06-28 14:08+0930\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -864,6 +864,7 @@ msgstr ""
 
 #: includes/credit.php:354
 #, php-format
+msgctxt "Will show the amount of credit"
 msgid ""
 "The %s referral credit used in this order was refunded to the customer's "
 "balance."

@@ -4158,6 +4158,11 @@ msgid ""
 "is checked daily. Please note this doesn't work for guests because their "
 "wishlist data only exists in their session data."
 msgstr ""
+"Den „Erinnerungs-Interval“ auf 30 zu setzen bewirkt, dass alle Benutzer mit "
+"Artikeln auf der Wunschliste alle 30 Tage erinnert werden. Dieser Auslöser "
+"wird täglich geprüft. Bitte beachte, dass dies nicht für Gäste funktioniert, "
+"da ihre Wunschlisten-Daten nur in ihrer Sitzung existieren."
+
 
 #: includes/triggers/wishlist-reminder.php:31
 msgid "Reminder interval (days)"

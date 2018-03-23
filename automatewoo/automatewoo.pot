@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2018-02-22 16:03+0100\n"
+"POT-Creation-Date: 2018-03-23 16:05+0100\n"
 "PO-Revision-Date: 2015-11-03 10:01+1030\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgstr ""
 #: admin/admin.php:101 admin/controllers/licenses.php:73
 #: admin/coupons-list.php:29 admin/licenses-table.php:44 automatewoo.php:31
 #: includes/actions/change-workflow-status.php:17
-#: includes/actions/clear-queued-events.php:16 includes/installer.php:181
+#: includes/actions/clear-queued-events.php:16 includes/installer.php:178
 msgid "AutomateWoo"
 msgstr ""
 
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Tools"
 msgstr ""
 
-#: admin/admin.php:153 includes/installer.php:208
+#: admin/admin.php:153 includes/installer.php:205
 msgid "Settings"
 msgstr ""
 
@@ -82,105 +82,105 @@ msgstr ""
 msgid "Events"
 msgstr ""
 
-#: admin/admin.php:165
+#: admin/admin.php:163 admin/views/action.php:28
+msgid "Preview"
+msgstr ""
+
+#: admin/admin.php:170
 msgid "License"
 msgid_plural "Licenses"
 msgstr[0] ""
 msgstr[1] ""
 
-#: admin/admin.php:170
+#: admin/admin.php:175
 msgid "AutomateWoo Data Update"
 msgstr ""
 
-#: admin/admin.php:235
+#: admin/admin.php:241
 msgid "This field does not support variables."
 msgstr ""
 
-#: admin/admin.php:236
+#: admin/admin.php:242
 #, php-format
 msgid ""
 "Variable '%s' is not available with the selected trigger. Please only use "
 "variables listed in the the variables box."
 msgstr ""
 
-#: admin/admin.php:237
+#: admin/admin.php:243
 #, php-format
 msgid ""
 "Variable '%s' is not a valid. Please only use variables listed in the the "
 "variables box."
 msgstr ""
 
-#: admin/admin.php:467
+#: admin/admin.php:472
 msgid "Your AutomateWoo license has expired."
 msgstr ""
 
-#: admin/admin.php:469
+#: admin/admin.php:474
 #, php-format
 msgid ""
 "<a href=\"%s\" target=\"_blank\">Renew your license</a> to receive updates "
 "and support."
 msgstr ""
 
-#: admin/admin.php:480
+#: admin/admin.php:485
 msgid "AutomateWoo - You have unactivated products."
 msgstr ""
 
-#: admin/admin.php:482
+#: admin/admin.php:487
 msgid "AutomateWoo is not activated."
 msgstr ""
 
-#: admin/admin.php:486
+#: admin/admin.php:491
 #, php-format
 msgid "Please enter your <a href=\"%s\">license here</a>."
 msgstr ""
 
-#: admin/ajax.php:227
+#: admin/ajax.php:226
 #, php-format
 msgid "%s &ndash; %s"
 msgstr ""
 
-#: admin/ajax.php:228 admin/list-table.php:96 includes/format.php:228
+#: admin/ajax.php:227 admin/list-table.php:96 includes/format.php:228
 msgid "[Guest]"
 msgstr ""
 
-#: admin/ajax.php:384
-msgid "Error: Email preview data could not be found."
-msgstr ""
-
-#: admin/ajax.php:428 admin/ajax.php:472
+#: admin/ajax.php:322 admin/ajax.php:366
 msgid "Sorry, this action can not be previewed."
 msgstr ""
 
-#: admin/ajax.php:490
+#: admin/ajax.php:384
 msgid "Error: "
 msgstr ""
 
-#: admin/ajax.php:496
+#: admin/ajax.php:390
 #, php-format
 msgid "Success! %s email%s sent."
 msgstr ""
 
-#: admin/ajax.php:523
+#: admin/ajax.php:417
 msgid "Message sent."
 msgstr ""
 
-#: admin/ajax.php:545
+#: admin/ajax.php:435
 msgid "Permission error."
 msgstr ""
 
-#: admin/ajax.php:566 admin/views/page-data-upgrade.php:20
+#: admin/ajax.php:456 admin/views/page-data-upgrade.php:20
 msgid "Add-on could not be updated"
 msgstr ""
 
-#: admin/ajax.php:656
+#: admin/ajax.php:546
 msgid "No log found."
 msgstr ""
 
-#: admin/ajax.php:670
+#: admin/ajax.php:560
 msgid "No queued event found."
 msgstr ""
 
-#: admin/ajax.php:700
+#: admin/ajax.php:590
 msgid "No cart found."
 msgstr ""
 
@@ -276,6 +276,10 @@ msgstr ""
 
 #: admin/controllers/logs.php:88
 msgid "Please select some logs to bulk edit."
+msgstr ""
+
+#: admin/controllers/preview.php:50
+msgid "Error: Email preview data could not be found."
 msgstr ""
 
 #: admin/controllers/queue.php:50
@@ -475,13 +479,14 @@ msgid "Cart"
 msgstr ""
 
 #: admin/data-layer-formatter.php:66 includes/rules/review-rating.php:19
+#: templates/email/review-grid-3-col.php:44
 msgid "Review"
 msgstr ""
 
 #: admin/data-layer-formatter.php:75 admin/licenses-table.php:67
 #: admin/views/modal-cart-info.php:28 includes/fields/product.php:23
 #: includes/rules/product-categories.php:22 includes/rules/product.php:22
-#: includes/rules/product.php:23 templates/email/cart-table.php:30
+#: includes/rules/product.php:23 templates/email/cart-table.php:32
 msgid "Product"
 msgstr ""
 
@@ -491,6 +496,7 @@ msgstr ""
 #: includes/rules/subscription-meta.php:19
 #: includes/rules/subscription-payment-count.php:17
 #: includes/rules/subscription-payment-method.php:15
+#: includes/rules/subscription-requires-manual-renewal.php:19
 #: includes/rules/subscription-status.php:17
 msgid "Subscription"
 msgstr ""
@@ -619,7 +625,7 @@ msgid "Items"
 msgstr ""
 
 #: admin/reports/carts.php:35 admin/views/modal-cart-info.php:105
-#: templates/email/cart-table.php:108
+#: templates/email/cart-table.php:110
 msgid "Total"
 msgstr ""
 
@@ -1072,7 +1078,7 @@ msgstr ""
 msgid "Enable Twilio Integration"
 msgstr ""
 
-#: admin/settings-tabs/twilio.php:35 admin/views/email-preview-ui.php:50
+#: admin/settings-tabs/twilio.php:35 admin/views/email-preview-ui.php:26
 msgid "From"
 msgstr ""
 
@@ -1091,10 +1097,6 @@ msgstr ""
 
 #: admin/user-tags-export.php:63
 msgid "There are no users with that tag."
-msgstr ""
-
-#: admin/views/action.php:28
-msgid "Preview"
 msgstr ""
 
 #: admin/views/action.php:29 includes/post-types.php:26
@@ -1130,20 +1132,16 @@ msgid ""
 "sure you wish to run the updater now?"
 msgstr ""
 
-#: admin/views/email-preview-loader.php:16 admin/views/email-preview-ui.php:28
-msgid "AutomateWoo Email Preview"
-msgstr ""
-
-#: admin/views/email-preview-ui.php:51
+#: admin/views/email-preview-ui.php:27
 msgid "Subject"
 msgstr ""
 
-#: admin/views/email-preview-ui.php:56
+#: admin/views/email-preview-ui.php:33
 msgid "Comma separate emails..."
 msgstr ""
 
-#: admin/views/email-preview-ui.php:60
-msgid "Send test"
+#: admin/views/email-preview-ui.php:37 admin/views/sms-test-twilio.php:55
+msgid "Send"
 msgstr ""
 
 #: admin/views/js-workflow-templates.php:5
@@ -1378,37 +1376,37 @@ msgstr ""
 msgid "Cart #%s"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:29 templates/email/cart-table.php:31
+#: admin/views/modal-cart-info.php:29 templates/email/cart-table.php:33
 msgid "Quantity"
 msgstr ""
 
 #: admin/views/modal-cart-info.php:30 includes/fields/price.php:20
-#: templates/email/cart-table.php:32
+#: templates/email/cart-table.php:34
 msgid "Price"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:60 templates/email/cart-table.php:63
+#: admin/views/modal-cart-info.php:60 templates/email/cart-table.php:65
 msgid "Subtotal"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:62 templates/email/cart-table.php:65
+#: admin/views/modal-cart-info.php:62 templates/email/cart-table.php:67
 msgid "(incl. tax)"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:75 templates/email/cart-table.php:78
+#: admin/views/modal-cart-info.php:75 templates/email/cart-table.php:80
 #, php-format
 msgid "Coupon: %s"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:82 templates/email/cart-table.php:85
+#: admin/views/modal-cart-info.php:82 templates/email/cart-table.php:87
 msgid "Shipping"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:98 templates/email/cart-table.php:101
+#: admin/views/modal-cart-info.php:98 templates/email/cart-table.php:103
 msgid "Tax"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:107 templates/email/cart-table.php:110
+#: admin/views/modal-cart-info.php:107 templates/email/cart-table.php:112
 #, php-format
 msgid "(includes %s tax)"
 msgstr ""
@@ -1624,10 +1622,6 @@ msgstr ""
 msgid "Sending..."
 msgstr ""
 
-#: admin/views/sms-test-twilio.php:55
-msgid "Send"
-msgstr ""
-
 #: admin/views/welcome-notice.php:12
 msgid "Welcome to AutomateWoo!"
 msgstr ""
@@ -1746,9 +1740,19 @@ msgid_plural "%s weeks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: automatewoo.php:70
+#: automatewoo.php:74
 #, php-format
-msgid "<strong>%s</strong> requires PHP version %s+."
+msgid "%s is inactive."
+msgstr ""
+
+#: automatewoo.php:77
+#, php-format
+msgid "%s The plugin requires PHP version %s or newer."
+msgstr ""
+
+#: automatewoo.php:81
+#, php-format
+msgid "%s The plugin requires WooCommerce version %s or newer."
 msgstr ""
 
 #: includes/abstracts/action.php:80 includes/abstracts/action.php:93
@@ -2036,10 +2040,11 @@ msgstr ""
 #: includes/actions/customer-add-tags.php:17
 #: includes/actions/customer-change-role.php:17
 #: includes/actions/customer-update-meta.php:17
+#: includes/triggers/customer-before-saved-card-expiry.php:19
 #: includes/triggers/customer-new-account.php:17
 #: includes/triggers/customer-order-count-reaches.php:18
 #: includes/triggers/customer-total-spend-reaches.php:20
-#: includes/triggers/customer-win-back.php:20
+#: includes/triggers/customer-win-back.php:18
 msgid "Customers"
 msgstr ""
 
@@ -2651,7 +2656,7 @@ msgstr ""
 msgid "The cart has been filled with the items from your previous order."
 msgstr ""
 
-#: includes/installer.php:208
+#: includes/installer.php:205
 msgid "View AutomateWoo Settings"
 msgstr ""
 
@@ -3113,15 +3118,19 @@ msgstr ""
 msgid "Subscription Payment Method"
 msgstr ""
 
+#: includes/rules/subscription-requires-manual-renewal.php:18
+msgid "Subscription Requires Manual Renewal"
+msgstr ""
+
 #: includes/rules/subscription-status.php:16
 msgid "Subscription Status"
 msgstr ""
 
-#: includes/system-checks.php:83
+#: includes/system-checks.php:88
 msgid "AutomateWoo status check has found issues."
 msgstr ""
 
-#: includes/system-checks.php:84
+#: includes/system-checks.php:89
 #, php-format
 msgid "<a href=\"%s\">View details</a>"
 msgstr ""
@@ -3148,7 +3157,7 @@ msgstr ""
 msgid "Checks the AutomateWoo custom database tables have been installed."
 msgstr ""
 
-#: includes/system-checks/database-tables-exist.php:34
+#: includes/system-checks/database-tables-exist.php:33
 msgid "Tables could not be installed."
 msgstr ""
 
@@ -3371,6 +3380,20 @@ msgid ""
 "that the related subscription is still active just before running."
 msgstr ""
 
+#: includes/triggers/customer-before-saved-card-expiry.php:17
+msgid "Customer Before Saved Card Expiry"
+msgstr ""
+
+#: includes/triggers/customer-before-saved-card-expiry.php:18
+msgid ""
+"This trigger runs a set number of days before a customer's saved card "
+"expires. Cards expire on the last calendar day of their expiry month."
+msgstr ""
+
+#: includes/triggers/customer-before-saved-card-expiry.php:26
+msgid "Days before expiry"
+msgstr ""
+
 #: includes/triggers/customer-new-account.php:16
 msgid "Customer Account Created"
 msgstr ""
@@ -3403,11 +3426,11 @@ msgstr ""
 msgid "Do not add a currency symbol."
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:18
+#: includes/triggers/customer-win-back.php:16
 msgid "Customer Win Back"
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:19
+#: includes/triggers/customer-win-back.php:17
 msgid ""
 "This trigger fires for customers based on their last purchase date. Please "
 "note that it will not start running immediately because it is processed "
@@ -3415,31 +3438,31 @@ msgid ""
 "by this trigger refer to the customer's last successful order."
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:28
+#: includes/triggers/customer-win-back.php:26
 msgid "Minimum days since last purchase"
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:29
+#: includes/triggers/customer-win-back.php:27
 msgid ""
 "Defines the minimum number of days to wait after a customer's last purchase."
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:35
+#: includes/triggers/customer-win-back.php:33
 msgid "Maximum days since last purchase (optional)"
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:36
+#: includes/triggers/customer-win-back.php:34
 msgid ""
 "Defines the maximum number of days after the customer's last purchase that "
 "this trigger will fire. It is a good idea to set this field to avoid sending "
 "emails to excessively old customers when the workflow is first created."
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:40
+#: includes/triggers/customer-win-back.php:38
 msgid "Enable repeats"
 msgstr ""
 
-#: includes/triggers/customer-win-back.php:41
+#: includes/triggers/customer-win-back.php:39
 msgid ""
 "If checked this trigger will repeatedly fire after the minimum last purchase "
 "date passes and the customer has not made a purchase. E.g. if the minimum is "
@@ -3806,7 +3829,7 @@ msgstr ""
 
 #: includes/triggers/wishlist-reminder.php:20
 msgid ""
-"Setting the 'Reminder Interval' field to 30 will mean this trigger will fire "
+"Setting the 'Reminder Interval' field to 30 means this trigger will fire "
 "every 30 days for any users that have items in their wishlist. This trigger "
 "is checked daily. Please note this doesn't work for guests because their "
 "wishlist data only exists in their session data."
@@ -3820,11 +3843,11 @@ msgstr ""
 msgid "E.g. Reminder any customers with items in a Wishlist every 30 days."
 msgstr ""
 
-#: includes/triggers/wishlist-reminder.php:36
+#: includes/triggers/wishlist-reminder.php:37
 msgid "Once per customer"
 msgstr ""
 
-#: includes/triggers/wishlist-reminder.php:37
+#: includes/triggers/wishlist-reminder.php:38
 msgid ""
 "If checked the trigger will fire only once for each customer for each "
 "wishlist they create. Most customers only use the one wishlist so use with "
@@ -4036,21 +4059,49 @@ msgstr ""
 msgid "List - Comma Separated"
 msgstr ""
 
-#: includes/variables/abstract-product-display.php:40
+#: includes/variables/abstract-product-display.php:30
+msgid "Review Product Grid - 2 Column"
+msgstr ""
+
+#: includes/variables/abstract-product-display.php:31
+msgid "Review Product Grid - 3 Column"
+msgstr ""
+
+#: includes/variables/abstract-product-display.php:32
+msgid "Review Product Rows"
+msgstr ""
+
+#: includes/variables/abstract-product-display.php:43
 msgid ""
 "Select which template will be used to display the products. The default is "
 "'Product Grid - 2 Column'. For information on creating custom templates "
 "please refer to the documentation."
 msgstr ""
 
-#: includes/variables/abstract-product-display.php:42
+#: includes/variables/abstract-product-display.php:45
 msgid ""
 "Add a string to the end of each product URL. For example, using '#tab-"
 "reviews' can link customers directly to the review tab on a product page."
 msgstr ""
 
-#: includes/variables/abstract-product-display.php:45
+#: includes/variables/abstract-product-display.php:48
 msgid "Set the maximum number of products that will be displayed."
+msgstr ""
+
+#: includes/variables/card-expiry-month.php:14
+msgid "Displays the expiry month of the card."
+msgstr ""
+
+#: includes/variables/card-expiry-year.php:14
+msgid "Displays the expiry year of the card."
+msgstr ""
+
+#: includes/variables/card-last-four.php:14
+msgid "Displays the last 4 digits of the card."
+msgstr ""
+
+#: includes/variables/card-type.php:14
+msgid "Displays the type of the card e.g. Visa, MasterCard."
 msgstr ""
 
 #: includes/variables/cart-items.php:17
@@ -4617,6 +4668,10 @@ msgstr ""
 #: includes/workflow-email.php:219
 #, php-format
 msgid "The email '%s' is unsubscribed from this workflow."
+msgstr ""
+
+#: templates/email/review-grid-2-col.php:44 templates/email/review-rows.php:38
+msgid "Leave a review"
 msgstr ""
 
 #: templates/unsubscribe-error.php:10

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo\n"
 "POT-Creation-Date: 2018-03-23 16:08+0100\n"
-"PO-Revision-Date: 2018-03-23 16:08+0100\n"
+"PO-Revision-Date: 2018-03-24 08:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE@formal\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: automatewoo.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -3321,7 +3321,7 @@ msgstr "Abonnement-Zahlungsart"
 
 #: includes/rules/subscription-requires-manual-renewal.php:18
 msgid "Subscription Requires Manual Renewal"
-msgstr ""
+msgstr "Abonnement benötigt manuelle Verlängerung"
 
 #: includes/rules/subscription-status.php:16
 msgid "Subscription Status"
@@ -3634,17 +3634,20 @@ msgstr ""
 
 #: includes/triggers/customer-before-saved-card-expiry.php:17
 msgid "Customer Before Saved Card Expiry"
-msgstr ""
+msgstr "Gespeicherte Kreditkarte des Kunden läuft ab"
 
 #: includes/triggers/customer-before-saved-card-expiry.php:18
 msgid ""
 "This trigger runs a set number of days before a customer's saved card "
 "expires. Cards expire on the last calendar day of their expiry month."
 msgstr ""
+"Dieser Auslöser wird gestartet, wenn die gespeicherte Kreditkarte eines "
+"Kunden vor dem Ablauf steht. Kreditkarten laufen am letzten Tag des "
+"Ablaufmonats ab."
 
 #: includes/triggers/customer-before-saved-card-expiry.php:26
 msgid "Days before expiry"
-msgstr ""
+msgstr "Tage vor Ablauf"
 
 #: includes/triggers/customer-new-account.php:16
 msgid "Customer Account Created"
@@ -4419,15 +4422,15 @@ msgstr "Liste - Komma-getrennt"
 
 #: includes/variables/abstract-product-display.php:30
 msgid "Review Product Grid - 2 Column"
-msgstr ""
+msgstr "Produkt-bewerten-Raster - 2 Spalten"
 
 #: includes/variables/abstract-product-display.php:31
 msgid "Review Product Grid - 3 Column"
-msgstr ""
+msgstr "Produkt-bewerten-Raster - 3 Spalten"
 
 #: includes/variables/abstract-product-display.php:32
 msgid "Review Product Rows"
-msgstr ""
+msgstr "Produkt-bewerten-Spalten"
 
 #: includes/variables/abstract-product-display.php:43
 msgid ""
@@ -4455,19 +4458,19 @@ msgstr ""
 
 #: includes/variables/card-expiry-month.php:14
 msgid "Displays the expiry month of the card."
-msgstr ""
+msgstr "Zeigt den Ablaufmonat der Kreditkarte."
 
 #: includes/variables/card-expiry-year.php:14
 msgid "Displays the expiry year of the card."
-msgstr ""
+msgstr "Zeigt das Ablaufjahr der Kreditkarte."
 
 #: includes/variables/card-last-four.php:14
 msgid "Displays the last 4 digits of the card."
-msgstr ""
+msgstr "Zeigt die letzten 4 Stellen der Kreditkartennummer."
 
 #: includes/variables/card-type.php:14
 msgid "Displays the type of the card e.g. Visa, MasterCard."
-msgstr ""
+msgstr "Zeigt die Art der Kreditkarte, z.B. VISA, MasterCard."
 
 #: includes/variables/cart-items.php:17
 msgid "Display a product listing of the items in the cart."
@@ -5090,7 +5093,7 @@ msgstr "Die E-Mail „%s“ ist von diesem Workflow abgemeldet."
 
 #: templates/email/review-grid-2-col.php:44 templates/email/review-rows.php:38
 msgid "Leave a review"
-msgstr ""
+msgstr "Hinterlassen Sie eine Bewertung"
 
 #: templates/unsubscribe-error.php:10
 msgid "There was an error unsubscribing you."

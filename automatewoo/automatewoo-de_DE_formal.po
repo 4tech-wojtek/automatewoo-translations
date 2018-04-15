@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2018-03-23 16:08+0100\n"
-"PO-Revision-Date: 2018-03-24 08:31+0100\n"
+"POT-Creation-Date: 2018-04-13 13:47+0200\n"
+"PO-Revision-Date: 2018-04-15 15:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE@formal\n"
@@ -26,7 +26,7 @@ msgstr ""
 #: admin/admin.php:101 admin/controllers/licenses.php:73
 #: admin/coupons-list.php:29 admin/licenses-table.php:44 automatewoo.php:31
 #: includes/actions/change-workflow-status.php:17
-#: includes/actions/clear-queued-events.php:16 includes/installer.php:178
+#: includes/actions/clear-queued-events.php:16 includes/installer.php:177
 msgid "AutomateWoo"
 msgstr "AutomateWoo"
 
@@ -40,7 +40,7 @@ msgstr "Dashboard"
 msgid "Workflows"
 msgstr "Workflows"
 
-#: admin/admin.php:116 admin/reports/email-tracking.php:330
+#: admin/admin.php:116 admin/reports/email-tracking.php:329
 #: admin/reports/logs.php:18
 msgid "Logs"
 msgstr "Logs"
@@ -51,7 +51,7 @@ msgstr "Warteschlange"
 
 #: admin/admin.php:127 admin/reports/carts.php:20
 #: admin/settings-tabs/carts.php:15
-#: includes/triggers/abstract-abandoned-cart.php:17
+#: includes/triggers/abstract-abandoned-cart.php:20
 msgid "Carts"
 msgstr "Warenkörbe"
 
@@ -60,7 +60,7 @@ msgstr "Warenkörbe"
 msgid "Guests"
 msgstr "Gäste"
 
-#: admin/admin.php:138 admin/reports/email-tracking.php:321
+#: admin/admin.php:138 admin/reports/email-tracking.php:320
 #: admin/reports/unsubscribes.php:18
 msgid "Unsubscribes"
 msgstr "Abmeldungen"
@@ -73,7 +73,7 @@ msgstr "Berichte"
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: admin/admin.php:153 includes/installer.php:205
+#: admin/admin.php:153 includes/installer.php:204
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -148,7 +148,7 @@ msgstr "Bitte geben Sie Ihre <a href=\"%s\">Lizenz hier ein</a>."
 msgid "%s &ndash; %s"
 msgstr "%s &ndash; %s"
 
-#: admin/ajax.php:227 admin/list-table.php:96 includes/format.php:228
+#: admin/ajax.php:227 admin/list-table.php:96 includes/format.php:261
 msgid "[Guest]"
 msgstr "[Gast]"
 
@@ -189,7 +189,7 @@ msgstr "Kein geplantes Ereignis gefunden."
 msgid "No cart found."
 msgstr "Kein Warenkorb gefunden."
 
-#: admin/controllers/carts.php:43
+#: admin/controllers/carts.php:45
 #, php-format
 msgid ""
 "Currently active carts are shown here which includes any cart that has not "
@@ -200,12 +200,12 @@ msgstr ""
 "Bestellung oder vom Benutzer geleert wurden. Warenkörbe werden automatisch "
 "%s Tage nach der letzten Interaktion gelöscht."
 
-#: admin/controllers/carts.php:65
+#: admin/controllers/carts.php:67
 msgid "Please select some carts to bulk edit."
 msgstr ""
 "Bitte wählen Sie mehrere Warenkörbe, um eine Massenbearbeitung zu starten."
 
-#: admin/controllers/carts.php:82 admin/controllers/guests.php:113
+#: admin/controllers/carts.php:90 admin/controllers/guests.php:114
 #: admin/controllers/logs.php:105 admin/controllers/queue.php:114
 #: admin/controllers/unsubscribes.php:85
 #: admin/reports-tabs/conversions-list.php:52
@@ -238,17 +238,21 @@ msgstr "Fehlende Gast-Daten."
 
 #: admin/controllers/guests.php:76
 msgid ""
-"Guests are individuals who have visited your store and their email has been "
-"captured. A guest does not necessarily have a currently active cart."
+"Guest data can be stored here for two reasons. If a customer places an order "
+"but does not to create an account. Or, if a you have enabled pre-submit "
+"capturing, the guest data could have been captured before an order was "
+"placed from a form on your website."
 msgstr ""
-"Gäste sind Personen, die Ihren Shop besucht haben und deren E-Mail erfasst "
-"wurde. Ein Gast muss nicht zwingend einen aktiven Warenkorb haben."
+"Gast-Daten können hier aus zwei Gründen gespeichert werden. Wenn ein Kunde "
+"eine Bestellung aufgibt, aber kein Kundenkonto besitzt. Oder, falls E-Mail-"
+"Erfassung aktiv ist, können die Daten vor Platzierung einer Bestellung über "
+"ein anderes Formular erfasst worden sein."
 
-#: admin/controllers/guests.php:96
+#: admin/controllers/guests.php:97
 msgid "Please select some guests to bulk edit."
 msgstr "Wählen Sie mehrere Gäste, um eine Massenbearbeitung zu starten."
 
-#: admin/controllers/guests.php:130
+#: admin/controllers/guests.php:131
 msgid "Guest successfully deleted."
 msgstr "Gast erfolgreich gelöscht."
 
@@ -417,7 +421,7 @@ msgstr "Neueste Logs"
 msgid "View"
 msgstr "Ansehen"
 
-#: admin/dashboard-widgets/logs.php:72
+#: admin/dashboard-widgets/logs.php:75
 msgid "No workflows have been run yet&hellip;"
 msgstr "Es wurden noch keine Workflows durchlaufen&hellip;"
 
@@ -446,7 +450,7 @@ msgstr "Workflow mit der höchsten Conversion"
 #: includes/actions/order-update-meta.php:17
 #: includes/rules/order-billing-country.php:19
 #: includes/rules/order-coupons-text-match.php:18
-#: includes/rules/order-coupons.php:17
+#: includes/rules/order-coupons.php:17 includes/rules/order-created-via.php:20
 #: includes/rules/order-customer-provided-note.php:19
 #: includes/rules/order-has-cross-sells.php:15
 #: includes/rules/order-is-customers-first.php:15
@@ -469,6 +473,7 @@ msgstr "Bestellung"
 #: admin/data-layer-formatter.php:39 admin/reports/carts.php:32
 #: admin/reports/conversions-list.php:141 admin/reports/logs.php:109
 #: admin/reports/queue.php:130 admin/reports/unsubscribes.php:56
+#: includes/actions/order-resend-email.php:47
 #: includes/rules/customer-active-membership-plans.php:21
 #: includes/rules/customer-city.php:19 includes/rules/customer-country.php:19
 #: includes/rules/customer-email.php:19
@@ -578,16 +583,16 @@ msgctxt "full name"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: admin/list-table.php:174
+#: admin/list-table.php:167
 msgid "Filter"
 msgstr "Filter"
 
-#: admin/list-table.php:231 admin/reports/abstract-graph.php:90
+#: admin/list-table.php:224 admin/reports/abstract-graph.php:90
 #: admin/reports/abstract-graph.php:92
 msgid "Search for a workflow&hellip;"
 msgstr "Einen Workflow suchen&hellip;"
 
-#: admin/list-table.php:272
+#: admin/list-table.php:265
 msgid "Search for a customer&hellip;"
 msgstr "Einen Kunden suchen&hellip;"
 
@@ -659,7 +664,15 @@ msgstr "Summe"
 msgid "Language"
 msgstr "Sprache"
 
-#: admin/reports/carts.php:167 admin/reports/guests.php:181
+#: admin/reports/carts.php:167
+msgid "Change status to active"
+msgstr "Status zu Aktiv ändern"
+
+#: admin/reports/carts.php:168
+msgid "Change status to abandoned"
+msgstr "Status zu Verlassen ändern"
+
+#: admin/reports/carts.php:169 admin/reports/guests.php:181
 #: admin/reports/guests.php:192 admin/reports/logs.php:182
 #: admin/reports/queue.php:204 admin/reports/unsubscribes.php:69
 #: admin/views/action.php:30
@@ -714,12 +727,12 @@ msgstr "%s Conversion-Wert Bestellungen"
 msgid "%s converted orders"
 msgstr "%s konvertierte Bestellungen"
 
-#: admin/reports/conversions.php:134 admin/reports/email-tracking.php:187
+#: admin/reports/conversions.php:134 admin/reports/email-tracking.php:186
 #: admin/reports/runs-by-date.php:88
 msgid "Showing reports for:"
 msgstr "Zeige Berichte für:"
 
-#: admin/reports/conversions.php:168 admin/reports/email-tracking.php:221
+#: admin/reports/conversions.php:168 admin/reports/email-tracking.php:220
 #: admin/reports/runs-by-date.php:122
 msgid "Reset"
 msgstr "Zurücksetzen"
@@ -732,36 +745,36 @@ msgstr "Conversion-Nummer"
 msgid "Conversion Value"
 msgstr "Conversion-Wert"
 
-#: admin/reports/email-tracking.php:141
+#: admin/reports/email-tracking.php:140
 #, php-format
 msgid "%s trackable emails sent"
 msgstr "%s nachverfolgbare E-Mails gesendet"
 
-#: admin/reports/email-tracking.php:147
+#: admin/reports/email-tracking.php:146
 #, php-format
 msgid "%s unique opens"
 msgstr "%s eindeutige Öffnungen"
 
-#: admin/reports/email-tracking.php:149
+#: admin/reports/email-tracking.php:148
 msgid "This value represents unique opens."
 msgstr "Dieser Wert repräsentiert eindeutige Öffnungen."
 
-#: admin/reports/email-tracking.php:154
+#: admin/reports/email-tracking.php:153
 #, php-format
 msgid "%s unique clicks"
 msgstr "%s eindeutige Klicks"
 
-#: admin/reports/email-tracking.php:160
+#: admin/reports/email-tracking.php:159
 #, php-format
 msgid "%s clicks"
 msgstr "%s Klicks"
 
-#: admin/reports/email-tracking.php:166
+#: admin/reports/email-tracking.php:165
 #, php-format
 msgid "%s unsubscribes"
 msgstr "%s Abmeldungen"
 
-#: admin/reports/email-tracking.php:168
+#: admin/reports/email-tracking.php:167
 msgid ""
 "Unsubscribes are recorded against each workflow so users can unsubscribe to "
 "individual workflows."
@@ -769,15 +782,15 @@ msgstr ""
 "Abmeldungen werden für jeden Workflow einzeln gewertet, so dass sich "
 "Benutzer von individuellen Workflows abmelden können."
 
-#: admin/reports/email-tracking.php:339
+#: admin/reports/email-tracking.php:338
 msgid "Unique Clicks"
 msgstr "Eindeutige Klicks"
 
-#: admin/reports/email-tracking.php:348
+#: admin/reports/email-tracking.php:347
 msgid "Clicks"
 msgstr "Klicks"
 
-#: admin/reports/email-tracking.php:357
+#: admin/reports/email-tracking.php:356
 msgid "Opens"
 msgstr "Öffnungen"
 
@@ -807,7 +820,7 @@ msgid "No guests found."
 msgstr "Keine Gäste gefunden."
 
 #: admin/reports/guests.php:41 admin/views/page-guest-details.php:43
-#: includes/actions/order-resend-email.php:38
+#: includes/actions/order-resend-email.php:56
 #: includes/actions/send-email.php:17
 msgid "Email"
 msgstr "E-Mail"
@@ -847,6 +860,7 @@ msgstr ""
 "Informationen."
 
 #: admin/reports/logs.php:110 admin/views/modal-log-info.php:32
+#: includes/fields/time.php:22
 msgid "Time"
 msgstr "Zeit"
 
@@ -889,11 +903,11 @@ msgstr "Durchläufe"
 msgid "Unsubscribe"
 msgstr "Abmelden"
 
-#: admin/settings-tabs/abstract.php:247
+#: admin/settings-tabs/abstract.php:252
 msgid "Select a page&hellip;"
 msgstr "Wählen Sie eine Seite&hellip;"
 
-#: admin/settings-tabs/abstract.php:408
+#: admin/settings-tabs/abstract.php:413
 msgid "Your settings have been saved."
 msgstr "Ihre Einstellungen wurden gesichert."
 
@@ -1360,7 +1374,7 @@ msgstr "Geplant"
 msgid "Fixed"
 msgstr "Festgelegt"
 
-#: admin/views/meta-box-timing.php:32 admin/workflow-list.php:171
+#: admin/views/meta-box-timing.php:32 admin/workflow-list.php:185
 msgid "Schedule with a variable"
 msgstr "Geplant mit Variable"
 
@@ -1416,19 +1430,9 @@ msgstr "Tage"
 msgid "Weeks"
 msgstr "Wochen"
 
-#: admin/views/meta-box-timing.php:171
+#: admin/views/meta-box-timing.php:171 includes/fields/time.php:78
 msgid "(24 hour time)"
 msgstr "(24-Stunden-Format)"
-
-#: admin/views/meta-box-timing.php:202
-msgctxt "time field"
-msgid "HH"
-msgstr "HH"
-
-#: admin/views/meta-box-timing.php:214
-msgctxt "time field"
-msgid "MM"
-msgstr "MM"
 
 #: admin/views/meta-box-trigger.php:19
 #: includes/actions/add-to-campaign-monitor.php:18
@@ -1772,77 +1776,92 @@ msgid_plural "Active <span class=\"count\">(%s)</span>"
 msgstr[0] "Aktiv <span class=\"count\">(%s)</span>"
 msgstr[1] "Aktiv <span class=\"count\">(%s)</span>"
 
-#: admin/workflow-list.php:134
+#: admin/workflow-list.php:141
+msgctxt "timing option"
+msgid "midnight"
+msgstr "Mitternacht"
+
+#: admin/workflow-list.php:144
+#, php-format
+msgctxt "timing option"
+msgid "Daily at %s"
+msgstr "Täglich um %s"
+
+#: admin/workflow-list.php:148
 msgctxt "timing option"
 msgid "Custom"
 msgstr "Eigene"
 
-#: admin/workflow-list.php:142
+#: admin/workflow-list.php:156
 msgctxt "timing option"
 msgid "Immediate"
 msgstr "Sofort"
 
-#: admin/workflow-list.php:145
+#: admin/workflow-list.php:159
 #, php-format
+msgctxt "timing option"
 msgid "Wait for <b>%s</b>"
 msgstr "Warte für <b>%s</b>"
 
-#: admin/workflow-list.php:152
+#: admin/workflow-list.php:166
 #, php-format
+msgctxt "timing option"
 msgid "Schedule for <b>%s</b>"
 msgstr "Plane für <b>%s</b>"
 
-#: admin/workflow-list.php:155
+#: admin/workflow-list.php:169
 #, php-format
+msgctxt "timing option"
 msgid " on  <b>%s</b>"
 msgstr " am  <b>%s</b>"
 
-#: admin/workflow-list.php:159
+#: admin/workflow-list.php:173
 #, php-format
+msgctxt "timing option"
 msgid " after waiting <b>%s</b>"
 msgstr " nach Warten für <b>%s</b>"
 
-#: admin/workflow-list.php:167
+#: admin/workflow-list.php:181
 #, php-format
 msgctxt "timing option"
 msgid "Fixed at %s"
 msgstr "Festgelegt auf %s"
 
-#: admin/workflow-list.php:189
+#: admin/workflow-list.php:203
 msgid "Weekdays"
 msgstr "Wochentage"
 
-#: admin/workflow-list.php:192
+#: admin/workflow-list.php:206
 msgid "Weekends"
 msgstr "Wochenenden"
 
-#: admin/workflow-list.php:200
+#: admin/workflow-list.php:214
 msgctxt "day"
 msgid " or "
 msgstr " oder "
 
-#: admin/workflow-list.php:223
+#: admin/workflow-list.php:237
 #, php-format
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] "%s Stunde"
 msgstr[1] "%s Stunden"
 
-#: admin/workflow-list.php:226
+#: admin/workflow-list.php:240
 #, php-format
 msgid "%s minute"
 msgid_plural "%s minutes"
 msgstr[0] "%s Minute"
 msgstr[1] "%s Minuten"
 
-#: admin/workflow-list.php:229
+#: admin/workflow-list.php:243
 #, php-format
 msgid "%s day"
 msgid_plural "%s days"
 msgstr[0] "%s Tag"
 msgstr[1] "%s Tage"
 
-#: admin/workflow-list.php:232
+#: admin/workflow-list.php:246
 #, php-format
 msgid "%s week"
 msgid_plural "%s weeks"
@@ -1865,7 +1884,7 @@ msgid "%s The plugin requires WooCommerce version %s or newer."
 msgstr "%s Das Plugin benötigt WooCommerce Version %s oder neuer."
 
 #: includes/abstracts/action.php:80 includes/abstracts/action.php:93
-#: includes/abstracts/trigger.php:275
+#: includes/abstracts/trigger.php:283
 #: includes/actions/change-post-status.php:18 includes/deprecated.php:27
 #: includes/rules/rule.php:39
 msgid "Other"
@@ -1879,12 +1898,12 @@ msgstr "DIESE AKTION IST VERALTET UND SOLLTE NICHT VERWENDET WERDEN."
 msgid "Object must be saved before adding meta."
 msgstr "Objekt muss vor dem Hinzufügen von Meta-Daten gesichert werden."
 
-#: includes/abstracts/trigger.php:371 includes/abstracts/trigger.php:401
+#: includes/abstracts/trigger.php:379 includes/abstracts/trigger.php:409
 #: includes/triggers/subscription-status-changed.php:34
 msgid "Recheck status before run"
 msgstr "Prüfe Status vor Durchlauf erneut"
 
-#: includes/abstracts/trigger.php:374
+#: includes/abstracts/trigger.php:382
 msgid ""
 "This is useful for Workflows that are not run immediately as it ensures the "
 "status of the order hasn't changed since initial trigger."
@@ -1893,11 +1912,11 @@ msgstr ""
 "sicherstellt, dass der Bestellstatus sich seit ursprünglichem Auslösen nicht "
 "geändert hat."
 
-#: includes/abstracts/trigger.php:388
+#: includes/abstracts/trigger.php:396
 msgid "Customer pause period (days)"
 msgstr "Pausen-Zeitraum für Benutzer (Tage)"
 
-#: includes/abstracts/trigger.php:389
+#: includes/abstracts/trigger.php:397
 msgid ""
 "Can be used to ensure that this trigger will only send once in a set period "
 "to a user or guest."
@@ -1905,7 +1924,7 @@ msgstr ""
 "Kann genutzt werden, um sicherzustellen, dass dieser Auslöser nur ein mal "
 "pro Benutzer oder Gast in einem gewissen Zeitraum ausgelöst wird."
 
-#: includes/abstracts/trigger.php:404
+#: includes/abstracts/trigger.php:412
 #, php-format
 msgid ""
 "This is useful for workflows that are not run immediately as it ensures the "
@@ -1915,7 +1934,24 @@ msgstr ""
 "sicherstellt, dass sich der Status des %s seit dem ursprünglichen Auslösen "
 "nicht geändert hat."
 
-#: includes/abstracts/trigger.php:549
+#: includes/abstracts/trigger.php:428
+msgid "Time of day"
+msgstr "Uhrzeit"
+
+#: includes/abstracts/trigger.php:429
+msgid ""
+"Set the time during each day for the workflow to be triggered. Your site's "
+"timezone will be used. If no time is set the workflow will run at midnight. "
+"If you set a time that has already passed for today the workflow will not "
+"run until tomorrow. The workflow will never be run twice in the same day."
+msgstr ""
+"Stellen Sie die Uhrzeit ein, zu der der Workflow gestartet werden soll. Die "
+"Zeitzone Ihrer Seite wird genutzt. Wenn keine Uhrzeit festgelegt ist, "
+"startet der Workflow um Mitternacht. Wenn Sie eine Zeit einstellen, die "
+"heute schon war, wird der Workflow erst morgen starten. Der Workflow wird "
+"nie zwei Mal am selben Tag laufen."
+
+#: includes/abstracts/trigger.php:571
 msgid "THIS TRIGGER IS DEPRECATED AND SHOULD NOT BE USED."
 msgstr "DIESER AUSLÖSER IST VERALTET UND SOLLTE NICHT VERWENDET WERDEN."
 
@@ -2181,11 +2217,11 @@ msgstr "Schlagworte zu Kunde hinzufügen"
 #: includes/actions/customer-add-tags.php:17
 #: includes/actions/customer-change-role.php:17
 #: includes/actions/customer-update-meta.php:17
-#: includes/triggers/customer-before-saved-card-expiry.php:19
+#: includes/triggers/customer-before-saved-card-expiry.php:21
 #: includes/triggers/customer-new-account.php:17
 #: includes/triggers/customer-order-count-reaches.php:18
 #: includes/triggers/customer-total-spend-reaches.php:20
-#: includes/triggers/customer-win-back.php:18
+#: includes/triggers/customer-win-back.php:20
 msgid "Customers"
 msgstr "Kunde"
 
@@ -2428,7 +2464,11 @@ msgstr ""
 "Bitte beachten Sie, dass E-Mail-Tracking für diese Aktion aktuell nicht "
 "unterstützt wird."
 
-#: includes/actions/order-resend-email.php:78
+#: includes/actions/order-resend-email.php:44
+msgid "Admin"
+msgstr "Admin"
+
+#: includes/actions/order-resend-email.php:96
 #, php-format
 msgid "%s email notification sent by AutomateWoo workflow #%d"
 msgstr "%s E-Mail-Benachrichtigung gesendet von AutomateWoo-Workflow #%d"
@@ -2632,7 +2672,7 @@ msgstr "Abonnement-Status ändern"
 
 #: includes/actions/subscription-change-status.php:18
 #: includes/actions/subscription-send-invoice.php:19
-#: includes/triggers/abstract-subscriptions.php:31
+#: includes/triggers/abstract-subscriptions.php:30
 msgid "Subscriptions"
 msgstr "Abonnements"
 
@@ -2665,35 +2705,35 @@ msgstr "Verlassen"
 msgid "Generated by AutomateWoo"
 msgstr "Generiert von AutomateWoo"
 
-#: includes/cron.php:204
+#: includes/cron.php:212
 msgid "One minute"
 msgstr "Eine Minute"
 
-#: includes/cron.php:209
+#: includes/cron.php:217
 msgid "Two minutes"
 msgstr "Zwei Minuten"
 
-#: includes/cron.php:214
+#: includes/cron.php:222
 msgid "Five minutes"
 msgstr "Fünf Minuten"
 
-#: includes/cron.php:219
+#: includes/cron.php:227
 msgid "Fifteen minutes"
 msgstr "15 Minuten"
 
-#: includes/cron.php:224
+#: includes/cron.php:232
 msgid "Thirty minutes"
 msgstr "30 Minuten"
 
-#: includes/cron.php:229
+#: includes/cron.php:237
 msgid "Two days"
 msgstr "Zwei Tage"
 
-#: includes/cron.php:234
+#: includes/cron.php:242
 msgid "Four hours"
 msgstr "Vier Stunden"
 
-#: includes/cron.php:239
+#: includes/cron.php:247
 msgid "Once weekly"
 msgstr "Wöchentlich"
 
@@ -2812,23 +2852,33 @@ msgstr "Texteingabefeld"
 msgid "Text Input"
 msgstr "Texteingabe"
 
+#: includes/fields/time.php:58
+msgctxt "time field"
+msgid "HH"
+msgstr "HH"
+
+#: includes/fields/time.php:70
+msgctxt "time field"
+msgid "MM"
+msgstr "MM"
+
 #: includes/fields/user-role.php:21
 msgid "User role"
 msgstr "Nutzerrolle"
 
-#: includes/format.php:84
+#: includes/format.php:108
 #, php-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d Sekunde"
 msgstr[1] "%d Sekunden"
 
-#: includes/format.php:91
+#: includes/format.php:115
 #, php-format
 msgid "%s from now"
 msgstr "in %s"
 
-#: includes/format.php:94
+#: includes/format.php:118
 #, php-format
 msgid "%s ago"
 msgstr "vor %s"
@@ -2852,7 +2902,7 @@ msgid "The cart has been filled with the items from your previous order."
 msgstr ""
 "Der Warenkorb wurde mit den Artikeln Ihrer vorherigen Bestellung gefüllt."
 
-#: includes/installer.php:205
+#: includes/installer.php:204
 msgid "View AutomateWoo Settings"
 msgstr "AutomateWoo-Einstellungen aufrufen"
 
@@ -2869,31 +2919,31 @@ msgid "Could not connect to remote server to check domain status."
 msgstr ""
 "Konnte nicht mit Remote-Server verbinden, um den Domain-Status zu überprüfen."
 
-#: includes/log.php:520
+#: includes/log.php:471
 msgid "This log was created from manual workflow re-run."
 msgstr ""
 "Dieser Log wurde durch manuelles erneutes Durchlaufen des Workflows erzeugt."
 
-#: includes/mailer.php:174
+#: includes/mailer.php:176
 msgid "The email address is blank."
 msgstr "Die E-Mail-Adresse ist leer."
 
-#: includes/mailer.php:178
+#: includes/mailer.php:180
 #, php-format
 msgid "'%s' is not a valid email address."
 msgstr "„%s“ ist keine gültige E-Mail-Adresse."
 
-#: includes/mailer.php:188
+#: includes/mailer.php:190
 #, php-format
 msgid "The email '%s' is blacklisted."
 msgstr "Die E-Mail-Adresse „%s“ ist blacklisted."
 
-#: includes/mailer.php:242
+#: includes/mailer.php:244
 #, php-format
 msgid "PHP Mailer - %s"
 msgstr "PHP-Mailer - %s"
 
-#: includes/mailer.php:245
+#: includes/mailer.php:247
 msgid "The wp_mail() function returned false."
 msgstr "Die wp_mail()-Funktion hat false zurückgegeben."
 
@@ -3138,6 +3188,18 @@ msgstr "Bestellung: Gutscheine – Namens-Übereinstimmung"
 msgid "Order Coupons"
 msgstr "Bestellung: Gutscheine"
 
+#: includes/rules/order-created-via.php:19
+msgid "Order Created Via"
+msgstr "Bestellung erstellt über"
+
+#: includes/rules/order-created-via.php:29 includes/variables/cart-link.php:17
+msgid "Checkout"
+msgstr "Kasse"
+
+#: includes/rules/order-created-via.php:30
+msgid "REST API"
+msgstr "REST-API"
+
 #: includes/rules/order-customer-provided-note.php:18
 msgid "Order Customer Provided Note"
 msgstr "Bestellung: Kundennotiz"
@@ -3346,7 +3408,7 @@ msgstr ""
 "Prüft die Daten der geplanten Ereignisse, um zu sehen, ob sie verarbeitet "
 "werden."
 
-#: includes/system-checks/cron-running.php:43
+#: includes/system-checks/cron-running.php:47
 msgid ""
 "WP Cron does not appear to be running. This function is heavily relied upon "
 "by AutomateWoo. Please contact your hosting provider to resolve the issue."
@@ -3366,6 +3428,14 @@ msgstr "Prüft, ob die AutomateWoo-Datenbanktabellen installiert wurden."
 msgid "Tables could not be installed."
 msgstr "Tabellen konnte nicht installiert werden."
 
+#: includes/tool-background-processed-abstract.php:19
+msgid ""
+"If you are processing a large number of items they will be processed in the "
+"background."
+msgstr ""
+"Wenn Sie viele Elemente auf einmal verarbeiten, werden sie im Hintergrund "
+"verarbeitet."
+
 #: includes/tools/manual-orders-trigger.php:18
 msgid "Manual Orders Trigger"
 msgstr "Auslöser für manuelle Bestellungen"
@@ -3381,39 +3451,30 @@ msgstr ""
 "fertiggestellt“-Auslöser Bestellungen ansprechen, die schon fertiggestellt "
 "wurden."
 
-#: includes/tools/manual-orders-trigger.php:22
-#, php-format
-msgid ""
-"If you are processing a large amount of orders they will be processed in the "
-"background at the rate of %d every %s minutes."
-msgstr ""
-"Wenn Sie eine große Menge Bestellungen verarbeiten, werden im Hintergrund %d "
-"Bestellungen alle %s Minuten verarbeitet."
-
-#: includes/tools/manual-orders-trigger.php:66
+#: includes/tools/manual-orders-trigger.php:59
 msgid "Order Created Date - Range From"
 msgstr "Bestellung erstellt - Zeitspanne von"
 
-#: includes/tools/manual-orders-trigger.php:72
+#: includes/tools/manual-orders-trigger.php:65
 msgid "Order Created Date - Range To"
 msgstr "Bestellung erstellt - Zeitspanne bis"
 
-#: includes/tools/manual-orders-trigger.php:89
-#: includes/tools/manual-subscriptions-trigger.php:77
+#: includes/tools/manual-orders-trigger.php:82
+#: includes/tools/manual-subscriptions-trigger.php:69
 #: includes/tools/unsubscribe-importer.php:64
 msgid "Missing a required field."
 msgstr "Pflichtfeld fehlt."
 
-#: includes/tools/manual-orders-trigger.php:95
-#: includes/tools/manual-subscriptions-trigger.php:83
+#: includes/tools/manual-orders-trigger.php:88
+#: includes/tools/manual-subscriptions-trigger.php:75
 msgid "The selected workflow is not currently active."
 msgstr "Der gewählte Workflow ist zurzeit nicht aktiv."
 
-#: includes/tools/manual-orders-trigger.php:101
+#: includes/tools/manual-orders-trigger.php:94
 msgid "No orders match that date range."
 msgstr "In der Zeitspanne liegen keine Bestellungen."
 
-#: includes/tools/manual-orders-trigger.php:190
+#: includes/tools/manual-orders-trigger.php:187
 #, php-format
 msgid ""
 "Are you sure you want to manually trigger the <strong>%s</strong> workflow "
@@ -3423,7 +3484,7 @@ msgstr ""
 "strong> Bestellungen manuell starten wollen? Dies kann nicht rückgängig "
 "gemacht werden."
 
-#: includes/tools/manual-orders-trigger.php:194
+#: includes/tools/manual-orders-trigger.php:191
 msgid ""
 "<strong>Please note:</strong> This list only indicates the orders that match "
 "your selected date period. These orders have yet to be validated against the "
@@ -3433,11 +3494,11 @@ msgstr ""
 "die in die gewählte Zeitspanne fallen. Diese Bestellungen wurden noch nicht "
 "mit dem gewählten Workflow abgeglichen."
 
-#: includes/tools/manual-subscriptions-trigger.php:18
+#: includes/tools/manual-subscriptions-trigger.php:19
 msgid "Manual Subscriptions Trigger"
 msgstr "Auslöser für manuelle Abonnements"
 
-#: includes/tools/manual-subscriptions-trigger.php:19
+#: includes/tools/manual-subscriptions-trigger.php:20
 msgid ""
 "Manually trigger a workflow for any subscriptions that match a date range. "
 "USE WITH EXTREME CAUTION. For example this tool could be useful if you "
@@ -3456,28 +3517,19 @@ msgstr ""
 "Abonnements zu erstellen, die normalerweise nicht bis zur nächsten "
 "Verlängerung geplant würden. "
 
-#: includes/tools/manual-subscriptions-trigger.php:26
-#, php-format
-msgid ""
-"If you are processing a large amount of subscriptions they will be processed "
-"in the background at the rate of %d every %s minutes."
-msgstr ""
-"Wenn Sie eine große Menge Abonnements verarbeiten, werden im Hintergrund %d "
-"Abonnements alle %s Minuten verarbeitet."
-
-#: includes/tools/manual-subscriptions-trigger.php:54
+#: includes/tools/manual-subscriptions-trigger.php:46
 msgid "Subscription Start Date - Range From"
 msgstr "Abonnement-Startdatum - Zeitspanne von"
 
-#: includes/tools/manual-subscriptions-trigger.php:60
+#: includes/tools/manual-subscriptions-trigger.php:52
 msgid "Subscription Start Date - Range To"
 msgstr "Abonnement-Startdatum - Zeitspanne bis"
 
-#: includes/tools/manual-subscriptions-trigger.php:89
+#: includes/tools/manual-subscriptions-trigger.php:81
 msgid "No subscriptions match that date range."
 msgstr "Kein Abonnement fällt in diese Zeitspanne."
 
-#: includes/tools/manual-subscriptions-trigger.php:156
+#: includes/tools/manual-subscriptions-trigger.php:152
 #, php-format
 msgid ""
 "Are you sure you want to manually trigger the <strong>%s</strong> workflow "
@@ -3487,7 +3539,7 @@ msgstr ""
 "strong> Abonnements starten möchten? Dies kann nicht rückgängig gemacht "
 "werden."
 
-#: includes/tools/manual-subscriptions-trigger.php:160
+#: includes/tools/manual-subscriptions-trigger.php:156
 msgid ""
 "<strong>Please note:</strong> This list only indicates the subscriptions "
 "that match your selected date period. These subscriptions have yet to be "
@@ -3587,11 +3639,11 @@ msgstr ""
 msgid ""
 "Carts are considered abandoned if they are inactive for %d minutes. When a "
 "customer purchases or empties their abandoned cart all queued workflows will "
-"be automatically cleared."
+"be automatically cleared. <%s>View documentation.<%s>"
 msgstr ""
 "Warenkörbe werden als verlassen angesehen, wenn sie für %d Minuten inaktiv "
 "sind. Wenn ein Kunde kauft oder den Warenkorb leert, werden alle geplanten "
-"Workflows automatisch gelöscht."
+"Workflows automatisch gelöscht. <%s>Dokumentation ansehen.<%s>"
 
 #: includes/triggers/abstract-memberships.php:30
 msgid "Membership plans"
@@ -3611,7 +3663,7 @@ msgstr ""
 msgid "Orders"
 msgstr "Bestellungen"
 
-#: includes/triggers/abstract-subscriptions.php:90
+#: includes/triggers/abstract-subscriptions.php:86
 msgid ""
 "Select which subscription products to trigger this workflow for. Leave blank "
 "to apply this trigger to all subscription products."
@@ -3619,11 +3671,11 @@ msgstr ""
 "Wählen Sie, für welche Abonnement-Produkte ausgelöst werden soll. Leer "
 "lassen für alle Abonnement-Produkte."
 
-#: includes/triggers/abstract-subscriptions.php:98
+#: includes/triggers/abstract-subscriptions.php:94
 msgid "Active subscriptions only"
 msgstr "Nur aktive Abonnements"
 
-#: includes/triggers/abstract-subscriptions.php:99
+#: includes/triggers/abstract-subscriptions.php:95
 msgid ""
 "This can be used for workflows that are not run immediately as it will check "
 "that the related subscription is still active just before running."
@@ -3632,11 +3684,11 @@ msgstr ""
 "direkt vor dem Durchlaufen prüft, ob das zugehörige Abonnement noch aktiv "
 "ist."
 
-#: includes/triggers/customer-before-saved-card-expiry.php:17
+#: includes/triggers/customer-before-saved-card-expiry.php:19
 msgid "Customer Before Saved Card Expiry"
 msgstr "Gespeicherte Kreditkarte des Kunden läuft ab"
 
-#: includes/triggers/customer-before-saved-card-expiry.php:18
+#: includes/triggers/customer-before-saved-card-expiry.php:20
 msgid ""
 "This trigger runs a set number of days before a customer's saved card "
 "expires. Cards expire on the last calendar day of their expiry month."
@@ -3645,7 +3697,7 @@ msgstr ""
 "Kunden vor dem Ablauf steht. Kreditkarten laufen am letzten Tag des "
 "Ablaufmonats ab."
 
-#: includes/triggers/customer-before-saved-card-expiry.php:26
+#: includes/triggers/customer-before-saved-card-expiry.php:28
 msgid "Days before expiry"
 msgstr "Tage vor Ablauf"
 
@@ -3683,11 +3735,11 @@ msgstr "Gesamtbestellwert"
 msgid "Do not add a currency symbol."
 msgstr "Kein Währungssymbol hinzufügen."
 
-#: includes/triggers/customer-win-back.php:16
+#: includes/triggers/customer-win-back.php:18
 msgid "Customer Win Back"
 msgstr "Kunden-Rückgewinnung"
 
-#: includes/triggers/customer-win-back.php:17
+#: includes/triggers/customer-win-back.php:19
 msgid ""
 "This trigger fires for customers based on their last purchase date. Please "
 "note that it will not start running immediately because it is processed "
@@ -3700,22 +3752,22 @@ msgstr ""
 "Regeln und Aktionen beziehen sich auf die letzte erfolgreiche Bestellung des "
 "Kunden."
 
-#: includes/triggers/customer-win-back.php:26
+#: includes/triggers/customer-win-back.php:28
 msgid "Minimum days since last purchase"
 msgstr "Mindestanzahl Tage seit letzter Bestellung"
 
-#: includes/triggers/customer-win-back.php:27
+#: includes/triggers/customer-win-back.php:29
 msgid ""
 "Defines the minimum number of days to wait after a customer's last purchase."
 msgstr ""
 "Legt fest, wie viele Tage mindestens nach der letzten Bestellung eines "
 "Kunden gewartet wird."
 
-#: includes/triggers/customer-win-back.php:33
+#: includes/triggers/customer-win-back.php:35
 msgid "Maximum days since last purchase (optional)"
 msgstr "Höchstzahl Tage seit letzter Bestellung (optional)"
 
-#: includes/triggers/customer-win-back.php:34
+#: includes/triggers/customer-win-back.php:36
 msgid ""
 "Defines the maximum number of days after the customer's last purchase that "
 "this trigger will fire. It is a good idea to set this field to avoid sending "
@@ -3726,11 +3778,11 @@ msgstr ""
 "damit beim ersten Erstellen dieses Workflows nicht sehr alte Kunden "
 "miteinbezogen werden."
 
-#: includes/triggers/customer-win-back.php:38
+#: includes/triggers/customer-win-back.php:40
 msgid "Enable repeats"
 msgstr "Aktiviere Wiederholungen"
 
-#: includes/triggers/customer-win-back.php:39
+#: includes/triggers/customer-win-back.php:41
 msgid ""
 "If checked this trigger will repeatedly fire after the minimum last purchase "
 "date passes and the customer has not made a purchase. E.g. if the minimum is "
@@ -3783,11 +3835,11 @@ msgstr ""
 msgid "MailChimp for WordPress"
 msgstr "MailChimp für WordPress"
 
-#: includes/triggers/mc4wp-form-submission.php:38
+#: includes/triggers/mc4wp-form-submission.php:32
 msgid "Form"
 msgstr "Formular"
 
-#: includes/triggers/mc4wp-form-submission.php:41
+#: includes/triggers/mc4wp-form-submission.php:35
 msgid ""
 "Choose which MailChimp for WordPress form this workflow should trigger for."
 msgstr ""
@@ -3978,15 +4030,15 @@ msgstr ""
 "Dieser Auslöser prüft alle 24 Stunden, ob Abonnements enden/ablaufen. Die "
 "genaue Auslösezeit kann variieren."
 
-#: includes/triggers/subscription-before-end.php:27
+#: includes/triggers/subscription-before-end.php:24
 msgid "Days before end"
 msgstr "Tage vor Ablauf"
 
-#: includes/triggers/subscription-before-renewal.php:16
+#: includes/triggers/subscription-before-renewal.php:18
 msgid "Subscription Before Renewal"
 msgstr "Abonnement vor Verlängerung"
 
-#: includes/triggers/subscription-before-renewal.php:17
+#: includes/triggers/subscription-before-renewal.php:19
 msgid ""
 "This trigger checks for upcoming subscription renewals once every 24 hours. "
 "The exact trigger time will vary."
@@ -3994,7 +4046,7 @@ msgstr ""
 "Dieser Auslöser prüft alle 24 Stunden, ob Abonnement-Verlängerungen "
 "anstehen. Die genaue Auslösezeit kann variieren."
 
-#: includes/triggers/subscription-before-renewal.php:28
+#: includes/triggers/subscription-before-renewal.php:27
 msgid "Days before renewal"
 msgstr "Tage vor Verlängerung"
 
@@ -4045,7 +4097,7 @@ msgstr ""
 "dem Durchlaufen sicherstellt, dass der zugehörige Abonnement-Status sich "
 "nicht geändert hat."
 
-#: includes/triggers/subscription-trial-end.php:18
+#: includes/triggers/subscription-trial-end.php:16
 msgid "Subscription Trial End"
 msgstr "Abonnement-Testphasenende"
 
@@ -4131,7 +4183,7 @@ msgstr "Kunde fügt Produkt hinzu (%s)"
 
 #: includes/triggers/wishlist-item-added.php:18
 #: includes/triggers/wishlist-item-goes-on-sale.php:19
-#: includes/triggers/wishlist-reminder.php:19
+#: includes/triggers/wishlist-reminder.php:21
 msgid "Wishlists"
 msgstr "Wunschlisten"
 
@@ -4151,12 +4203,12 @@ msgstr ""
 "dies nicht für Gäste funktioniert, weil ihre Wunschlisten-Daten nur in ihrer "
 "Sitzung existieren."
 
-#: includes/triggers/wishlist-reminder.php:18
+#: includes/triggers/wishlist-reminder.php:20
 #, php-format
 msgid "Wishlist Reminder (%s)"
 msgstr "Wunschliste-Erinnerung (%s)"
 
-#: includes/triggers/wishlist-reminder.php:20
+#: includes/triggers/wishlist-reminder.php:22
 msgid ""
 "Setting the 'Reminder Interval' field to 30 means this trigger will fire "
 "every 30 days for any users that have items in their wishlist. This trigger "
@@ -4168,20 +4220,20 @@ msgstr ""
 "wird täglich geprüft. Bitte beachten Sie, dass dies nicht für Gäste "
 "funktioniert, da ihre Wunschlisten-Daten nur in ihrer Sitzung existieren."
 
-#: includes/triggers/wishlist-reminder.php:31
+#: includes/triggers/wishlist-reminder.php:33
 msgid "Reminder interval (days)"
 msgstr "Erinnerungs-Interval (Tage)"
 
-#: includes/triggers/wishlist-reminder.php:32
+#: includes/triggers/wishlist-reminder.php:34
 msgid "E.g. Reminder any customers with items in a Wishlist every 30 days."
 msgstr ""
 "Erinnere z.B. alle 30 Tage alle Kunden mit Artikeln auf der Wunschliste."
 
-#: includes/triggers/wishlist-reminder.php:37
+#: includes/triggers/wishlist-reminder.php:39
 msgid "Once per customer"
 msgstr "Einmal pro Kunde"
 
-#: includes/triggers/wishlist-reminder.php:38
+#: includes/triggers/wishlist-reminder.php:40
 msgid ""
 "If checked the trigger will fire only once for each customer for each "
 "wishlist they create. Most customers only use the one wishlist so use with "
@@ -4488,10 +4540,6 @@ msgstr ""
 msgid "Sets which page the link will direct the customer to when clicked."
 msgstr ""
 "Lege fest, auf welche Seite der Kunde bei Klick weitergeleitet werden soll."
-
-#: includes/variables/cart-link.php:17
-msgid "Checkout"
-msgstr "Kasse"
 
 #: includes/variables/cart-total.php:14
 msgid "Displays the formatted total of the cart."
@@ -5123,6 +5171,20 @@ msgstr "http://automatewoo.com"
 #. Description of the plugin/theme
 msgid "Powerful marketing automation for your WooCommerce store."
 msgstr "Leistungsstarke Marketing-Automation für Ihren WooCommerce-Shop."
+
+#~ msgid ""
+#~ "Guests are individuals who have visited your store and their email has "
+#~ "been captured. A guest does not necessarily have a currently active cart."
+#~ msgstr ""
+#~ "Gäste sind Personen, die Ihren Shop besucht haben und deren E-Mail "
+#~ "erfasst wurde. Ein Gast muss nicht zwingend einen aktiven Warenkorb haben."
+
+#~ msgid ""
+#~ "If you are processing a large amount of subscriptions they will be "
+#~ "processed in the background at the rate of %d every %s minutes."
+#~ msgstr ""
+#~ "Wenn Sie eine große Menge Abonnements verarbeiten, werden im Hintergrund "
+#~ "%d Abonnements alle %s Minuten verarbeitet."
 
 #~ msgid "AutomateWoo Email Preview"
 #~ msgstr "AutomateWoo E-Mail-Vorschau"

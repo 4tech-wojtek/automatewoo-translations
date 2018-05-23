@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2018-05-23 23:28+0930\n"
+"POT-Creation-Date: 2018-05-24 08:23+0930\n"
 "PO-Revision-Date: 2015-11-03 10:01+1030\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -3866,19 +3866,17 @@ msgid ""
 msgstr ""
 
 #: includes/tools/guest-eraser.php:69
+msgid ""
+"Are you sure you want to permanently delete the guests who have not placed "
+"an order? Any workflow logs for deleted guests will be anonymized."
+msgstr ""
+
+#: includes/tools/guest-eraser.php:70
 #, php-format
-msgid "%s guest"
-msgid_plural "%s guests"
+msgid "%s guest will be deleted."
+msgid_plural "%s guests will be deleted."
 msgstr[0] ""
 msgstr[1] ""
-
-#: includes/tools/guest-eraser.php:72
-#, php-format
-msgid ""
-"Are you sure you want to delete the guests who have not placed an order? %s "
-"will be deleted. Any workflow logs for the deleted guests will be "
-"anonymized. This can not be undone."
-msgstr ""
 
 #: includes/tools/manual-orders-trigger.php:18
 msgid "Manual Orders Trigger"
@@ -3979,7 +3977,7 @@ msgstr ""
 
 #: includes/tools/optin-importer.php:34
 #, php-format
-msgid "Are you sure you want to opt-in <strong>%s customers</strong>."
+msgid "Are you sure you want to opt-in <strong>%s customers</strong>?"
 msgstr ""
 
 #: includes/tools/optout-importer.php:18
@@ -4009,7 +4007,7 @@ msgstr ""
 
 #: includes/tools/optout-importer.php:110
 #, php-format
-msgid "Are you sure you want to opt-out <strong>%s customers</strong>."
+msgid "Are you sure you want to opt-out <strong>%s customers</strong>?"
 msgstr ""
 
 #: includes/tools/optout-importer.php:132
@@ -5409,7 +5407,7 @@ msgstr ""
 #: templates/communication-preferences/communication-form-no-customer.php:18
 #, php-format
 msgid ""
-"<%s>Sign in to your account to <%s> manage your communication preferences."
+"<%s>Sign in to your account<%s> to manage your communication preferences."
 msgstr ""
 
 #: templates/communication-preferences/communication-form.php:25

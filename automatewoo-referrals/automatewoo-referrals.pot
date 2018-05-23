@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2018-05-15 12:37+0930\n"
+"POT-Creation-Date: 2018-05-23 12:46+0930\n"
 "PO-Revision-Date: 2016-06-28 14:08+0930\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: automatewoo-referrals.php:35
+#: automatewoo-referrals.php:35 includes/privacy.php:25
 msgid "AutomateWoo - Refer A Friend"
 msgstr ""
 
@@ -55,7 +55,8 @@ msgid "%s The plugin requires WooCommerce version %s or newer."
 msgstr ""
 
 #: includes/account-endpoint.php:31 includes/admin/admin.php:38
-#: includes/admin/reports-tab.php:12
+#: includes/admin/reports-tab.php:12 includes/privacy.php:29
+#: includes/privacy.php:33
 msgid "Referrals"
 msgstr ""
 
@@ -98,10 +99,11 @@ msgid "Advocates"
 msgstr ""
 
 #: includes/admin/admin.php:40 includes/admin/list-tables/referral-codes.php:23
+#: includes/privacy.php:28 includes/privacy.php:35
 msgid "Referral codes"
 msgstr ""
 
-#: includes/admin/admin.php:41
+#: includes/admin/admin.php:41 includes/privacy.php:30 includes/privacy.php:34
 msgid "Referral invites"
 msgstr ""
 
@@ -165,7 +167,7 @@ msgid "Please select some items to bulk edit."
 msgstr ""
 
 #: includes/admin/controllers/referrals.php:93
-#: includes/admin/list-tables/referrals.php:85
+#: includes/admin/list-tables/referrals.php:85 includes/privacy.php:269
 msgid "Status"
 msgstr ""
 
@@ -273,7 +275,7 @@ msgstr ""
 msgid "Referral Invites"
 msgstr ""
 
-#: includes/admin/list-tables/invites.php:75
+#: includes/admin/list-tables/invites.php:75 includes/privacy.php:342
 #: templates/account-tab-referral-table-row.php:22
 #: templates/account-tab-referral-tables.php:30
 #: templates/account-tab-referral-tables.php:64
@@ -287,7 +289,7 @@ msgid "Delete"
 msgstr ""
 
 #: includes/admin/list-tables/referral-codes.php:22
-#: includes/admin/list-tables/referral-codes.php:38
+#: includes/admin/list-tables/referral-codes.php:38 includes/privacy.php:395
 msgid "Referral code"
 msgstr ""
 
@@ -492,11 +494,27 @@ msgid ""
 "%s."
 msgstr ""
 
-#: includes/admin/settings-tab.php:101
-msgid "Referral offer (for the friend)"
+#: includes/admin/settings-tab.php:99
+msgid "Privacy"
 msgstr ""
 
 #: includes/admin/settings-tab.php:102
+msgid "Anonymize invited email data"
+msgstr ""
+
+#: includes/admin/settings-tab.php:103
+msgid ""
+"GDPR requires consent to be given before personal data is stored. Since it "
+"is impossible for invited emails to give consent it is recommended to "
+"anonymize these emails. Once enabled any existing stored emails will be "
+"anonymized."
+msgstr ""
+
+#: includes/admin/settings-tab.php:111
+msgid "Referral offer (for the friend)"
+msgstr ""
+
+#: includes/admin/settings-tab.php:112
 msgid ""
 "The coupon discount that advocates can offer to their friends. This coupon "
 "will only be valid for new customers. By default referral coupons expire "
@@ -505,35 +523,35 @@ msgid ""
 "coupon for all time set the <b>Coupon Expiry</b> to 0."
 msgstr ""
 
-#: includes/admin/settings-tab.php:106
+#: includes/admin/settings-tab.php:116 includes/privacy.php:277
 msgid "Offer type"
 msgstr ""
 
-#: includes/admin/settings-tab.php:111
+#: includes/admin/settings-tab.php:121
 msgid "Make this field blank if you do not want coupons to expire."
 msgstr ""
 
-#: includes/admin/settings-tab.php:114
+#: includes/admin/settings-tab.php:124 includes/privacy.php:278
 msgid "Offer amount"
 msgstr ""
 
-#: includes/admin/settings-tab.php:119
+#: includes/admin/settings-tab.php:129
 msgid "Coupon expiry"
 msgstr ""
 
-#: includes/admin/settings-tab.php:120 includes/admin/settings-tab.php:143
+#: includes/admin/settings-tab.php:130 includes/admin/settings-tab.php:153
 msgid "weeks"
 msgstr ""
 
-#: includes/admin/settings-tab.php:123 includes/admin/settings-tab.php:146
+#: includes/admin/settings-tab.php:133 includes/admin/settings-tab.php:156
 msgid "unlimited"
 msgstr ""
 
-#: includes/admin/settings-tab.php:130
+#: includes/admin/settings-tab.php:140
 msgid "Link options"
 msgstr ""
 
-#: includes/admin/settings-tab.php:131
+#: includes/admin/settings-tab.php:141
 msgid ""
 "By default share links expire after 4 weeks which means that a single "
 "advocate may own many different unique share links at one time. If you would "
@@ -541,70 +559,70 @@ msgid ""
 "Link Expiry</b> to 0."
 msgstr ""
 
-#: includes/admin/settings-tab.php:135
+#: includes/admin/settings-tab.php:145
 msgid "Share link parameter"
 msgstr ""
 
-#: includes/admin/settings-tab.php:136
+#: includes/admin/settings-tab.php:146
 #, php-format
 msgid "This parameter is used when generating unique share links e.g. %s"
 msgstr ""
 
-#: includes/admin/settings-tab.php:142
+#: includes/admin/settings-tab.php:152
 msgid "Share link expiry"
 msgstr ""
 
-#: includes/admin/settings-tab.php:154
+#: includes/admin/settings-tab.php:164
 msgid "Referral requirements"
 msgstr ""
 
-#: includes/admin/settings-tab.php:155
+#: includes/admin/settings-tab.php:165
 msgid ""
 "These are the requirements of referred purchases, if these are not met the "
 "advocate does not receive a reward and the friend does not get a discount."
 msgstr ""
 
-#: includes/admin/settings-tab.php:159 includes/admin/settings-tab.php:205
+#: includes/admin/settings-tab.php:169 includes/admin/settings-tab.php:215
 msgid "Minimum purchase amount"
 msgstr ""
 
-#: includes/admin/settings-tab.php:160
+#: includes/admin/settings-tab.php:170
 msgid "The minimum purchase amount that the referral offer is valid for."
 msgstr ""
 
-#: includes/admin/settings-tab.php:169
+#: includes/admin/settings-tab.php:179
 msgid "Product categories"
 msgstr ""
 
-#: includes/admin/settings-tab.php:171
+#: includes/admin/settings-tab.php:181
 msgid "All categories"
 msgstr ""
 
-#: includes/admin/settings-tab.php:173
+#: includes/admin/settings-tab.php:183
 msgid ""
 "Only allow referrals for orders that contain at least one product from one "
 "of these categories."
 msgstr ""
 
-#: includes/admin/settings-tab.php:177
+#: includes/admin/settings-tab.php:187
 msgid "Excluded categories"
 msgstr ""
 
-#: includes/admin/settings-tab.php:179
+#: includes/admin/settings-tab.php:189
 msgid "No categories"
 msgstr ""
 
-#: includes/admin/settings-tab.php:181
+#: includes/admin/settings-tab.php:191
 msgid ""
 "Don't allow referrals for orders that only contain products from these "
 "categories."
 msgstr ""
 
-#: includes/admin/settings-tab.php:187
+#: includes/admin/settings-tab.php:197
 msgid "Referral reward (for the advocate)"
 msgstr ""
 
-#: includes/admin/settings-tab.php:188
+#: includes/admin/settings-tab.php:198
 msgid ""
 "The reward given to the advocate for each time they successfully refer a "
 "customer. This reward is only granted for the friends first purchase. If you "
@@ -612,30 +630,30 @@ msgid ""
 "should create a workflow with the <strong>New Referral</strong> trigger."
 msgstr ""
 
-#: includes/admin/settings-tab.php:193
+#: includes/admin/settings-tab.php:203 includes/privacy.php:271
 msgid "Reward type"
 msgstr ""
 
-#: includes/admin/settings-tab.php:196
+#: includes/admin/settings-tab.php:206
 msgid ""
 "By selecting no reward you can instead reward them by using the AutomateWoo "
 "referral triggers and for example you could generate a coupon for the "
 "advocate."
 msgstr ""
 
-#: includes/admin/settings-tab.php:200
+#: includes/admin/settings-tab.php:210 includes/privacy.php:272
 msgid "Reward amount"
 msgstr ""
 
-#: includes/admin/settings-tab.php:206
+#: includes/admin/settings-tab.php:216
 msgid "The minimum purchase amount required for store credit to be used."
 msgstr ""
 
-#: includes/admin/settings-tab.php:215
+#: includes/admin/settings-tab.php:225
 msgid "Share widget"
 msgstr ""
 
-#: includes/admin/settings-tab.php:216
+#: includes/admin/settings-tab.php:226
 #, php-format
 msgid ""
 "The share widget is a mini version of the share page that can added to the "
@@ -644,115 +662,115 @@ msgid ""
 "before they can refer their friends."
 msgstr ""
 
-#: includes/admin/settings-tab.php:222
+#: includes/admin/settings-tab.php:232
 msgid "Show widget on order confirmation page"
 msgstr ""
 
-#: includes/admin/settings-tab.php:225
+#: includes/admin/settings-tab.php:235
 msgid "Bottom Of Page"
 msgstr ""
 
-#: includes/admin/settings-tab.php:226
+#: includes/admin/settings-tab.php:236
 msgid "Top Of Page"
 msgstr ""
 
-#: includes/admin/settings-tab.php:227
+#: includes/admin/settings-tab.php:237
 msgid "Do Not Display"
 msgstr ""
 
-#: includes/admin/settings-tab.php:232
+#: includes/admin/settings-tab.php:242
 msgid "Show widget on order emails"
 msgstr ""
 
-#: includes/admin/settings-tab.php:237
+#: includes/admin/settings-tab.php:247
 msgid "Show widget on new account email"
 msgstr ""
 
-#: includes/admin/settings-tab.php:242
+#: includes/admin/settings-tab.php:252
 msgid "Widget heading"
 msgstr ""
 
-#: includes/admin/settings-tab.php:247
+#: includes/admin/settings-tab.php:257
 msgid "Widget paragraph text"
 msgstr ""
 
-#: includes/admin/settings-tab.php:258
+#: includes/admin/settings-tab.php:268
 msgid "Social sharing"
 msgstr ""
 
-#: includes/admin/settings-tab.php:261
+#: includes/admin/settings-tab.php:271
 msgid "Enable sharing via Facebook"
 msgstr ""
 
-#: includes/admin/settings-tab.php:266
+#: includes/admin/settings-tab.php:276
 msgid "Enable sharing via Twitter"
 msgstr ""
 
-#: includes/admin/settings-tab.php:271
+#: includes/admin/settings-tab.php:281
 msgid "Default share text"
 msgstr ""
 
-#: includes/admin/settings-tab.php:273
+#: includes/admin/settings-tab.php:283
 msgid ""
 "This is the default text used when an advocate shares via Twitter or "
 "Facebook. If you chose 'Coupon Based' you must include the variable "
 "{{ coupon_code }}. A link to your shop will be added automatically."
 msgstr ""
 
-#: includes/admin/settings-tab.php:277
+#: includes/admin/settings-tab.php:287
 msgid "Twitter default share text (optional)"
 msgstr ""
 
-#: includes/admin/settings-tab.php:279
+#: includes/admin/settings-tab.php:289
 msgid ""
 "Optionally specify different text for Twitter shares as they are limited to "
 "280 characters. If left blank the default share text will be used."
 msgstr ""
 
-#: includes/admin/settings-tab.php:288
+#: includes/admin/settings-tab.php:298
 msgid "Email sharing"
 msgstr ""
 
-#: includes/admin/settings-tab.php:289
+#: includes/admin/settings-tab.php:299
 msgid ""
 "The email template that is sent when an advocate refers a friend view email. "
 msgstr ""
 
-#: includes/admin/settings-tab.php:290
+#: includes/admin/settings-tab.php:300
 msgid "You can insert dynamic content with the following variables: "
 msgstr ""
 
-#: includes/admin/settings-tab.php:292
+#: includes/admin/settings-tab.php:302
 msgid "Preview email"
 msgstr ""
 
-#: includes/admin/settings-tab.php:296
+#: includes/admin/settings-tab.php:306
 msgid "Enable sharing via Email"
 msgstr ""
 
-#: includes/admin/settings-tab.php:301
+#: includes/admin/settings-tab.php:311
 msgid "Email subject"
 msgstr ""
 
-#: includes/admin/settings-tab.php:306
+#: includes/admin/settings-tab.php:316
 msgid "Email heading"
 msgstr ""
 
-#: includes/admin/settings-tab.php:311
+#: includes/admin/settings-tab.php:321
 msgid "Email template"
 msgstr ""
 
-#: includes/admin/settings-tab.php:314
+#: includes/admin/settings-tab.php:324
 msgid ""
 "The template that will be used to send referral share emails. For info on "
 "creating custom templates please refer to the AutomateWoo documentation."
 msgstr ""
 
-#: includes/admin/settings-tab.php:318
+#: includes/admin/settings-tab.php:328
 msgid "Email body"
 msgstr ""
 
-#: includes/admin/settings-tab.php:320
+#: includes/admin/settings-tab.php:330
 msgid ""
 "If you chose 'Coupon Based' you must include the variable {{ coupon_code }}. "
 "If you chose 'Link Based' ensure you have at least one link in the email "
@@ -760,42 +778,26 @@ msgid ""
 "email."
 msgstr ""
 
-#: includes/admin/settings-tab.php:326
-msgid "Privacy"
-msgstr ""
-
-#: includes/admin/settings-tab.php:329
-msgid "Anonymize invited email data"
-msgstr ""
-
-#: includes/admin/settings-tab.php:330
-msgid ""
-"GDPR requires consent to be given before personal data is stored. Since it "
-"is impossible for invited emails to give consent it is recommended to "
-"anonymize these emails. Once enabled any existing stored emails will be "
-"anonymized."
-msgstr ""
-
-#: includes/admin/settings-tab.php:337
+#: includes/admin/settings-tab.php:336
 msgid "Advanced"
 msgstr ""
 
-#: includes/admin/settings-tab.php:340
+#: includes/admin/settings-tab.php:339
 msgid "Allow existing customer referrals"
 msgstr ""
 
-#: includes/admin/settings-tab.php:341
+#: includes/admin/settings-tab.php:340
 msgid ""
 "If this is unchecked, existing customers will be blocked from receiving "
 "referrals (default). If checked, existing customers can be referred but they "
 "can only be referred a single time."
 msgstr ""
 
-#: includes/admin/settings-tab.php:347
+#: includes/admin/settings-tab.php:346
 msgid "Reward event"
 msgstr ""
 
-#: includes/admin/settings-tab.php:348
+#: includes/admin/settings-tab.php:347
 msgid ""
 "The reward event determines when a referral should be created. When setting "
 "to 'Purchase' (default) referrals will be created when a friend makes a "
@@ -803,11 +805,11 @@ msgid ""
 "creates a customer account and no purchase is required."
 msgstr ""
 
-#: includes/admin/settings-tab.php:352
+#: includes/admin/settings-tab.php:351
 msgid "Purchase"
 msgstr ""
 
-#: includes/admin/settings-tab.php:353
+#: includes/admin/settings-tab.php:352
 msgid "Sign up"
 msgstr ""
 
@@ -837,7 +839,8 @@ msgstr ""
 msgid "Referral ID"
 msgstr ""
 
-#: includes/admin/views/page-view-referral.php:94
+#: includes/admin/views/page-view-referral.php:94 includes/privacy.php:270
+#: includes/privacy.php:396
 msgid "Date created"
 msgstr ""
 
@@ -846,7 +849,7 @@ msgstr ""
 msgid "(Status:  %s)"
 msgstr ""
 
-#: includes/admin/views/page-view-referral.php:118
+#: includes/admin/views/page-view-referral.php:118 includes/privacy.php:212
 msgid "Advocate IP address"
 msgstr ""
 
@@ -1020,26 +1023,157 @@ msgid ""
 "for you when you spend $100. Use the coupon code below to claim your offer."
 msgstr ""
 
-#: includes/referral-validator.php:77
-msgid "Advocate ID matches the Customer ID."
+#: includes/privacy-policy-guide.php:21
+msgid "What we collect and store"
 msgstr ""
 
-#: includes/referral-validator.php:127
-msgid "Customer is not new."
+#: includes/privacy-policy-guide.php:22
+msgid "Cookies"
 msgstr ""
 
-#: includes/referral-validator.php:162
-msgid "Order items were not valid."
+#: includes/privacy-policy-guide.php:23
+msgid ""
+"Refer A Friend uses one cookie if your store is configured to use link-based "
+"referrals. This cookie is added when a user clicks on a referral link and "
+"stores a code that is unique to the advocate who shared the link."
 msgstr ""
 
-#: includes/referral-validator.php:205
-msgid "Customer has already been referred."
+#: includes/privacy-policy-guide.php:24
+msgid ""
+"We use one cookie to enable the function of our customer referral program. "
+"This cookie stores a unique code that cannot identify you as a website "
+"visitor. This unique code can only identify the person who shared the coupon "
+"code or referral link."
 msgstr ""
 
-#: includes/rules/advocate-approved-referral-count.php:20
-msgid "Advocate Approved Referral Count"
+#: includes/privacy-policy-guide.php:25
+#, php-format
+msgid ""
+"%s - Enables the function of our referral program - Expires after 1 year"
 msgstr ""
 
+#: includes/privacy-policy-guide.php:26
+msgid "IP Addresses"
+msgstr ""
+
+#: includes/privacy-policy-guide.php:27
+msgid ""
+"Customers who use the referral program will have their IP address stored "
+"each time they share. Depending on your settings the IP address of referred "
+"customers may also be stored for the purpose of fraud prevention. This may "
+"not need to be included in your privacy policy since WooCommerce also tracks "
+"IP addresses."
+msgstr ""
+
+#: includes/privacy-policy-guide.php:28
+msgid "Customer referral data"
+msgstr ""
+
+#: includes/privacy-policy-guide.php:29
+msgid ""
+"Refer A Friend stores a record of all referred orders and creates unique "
+"referral codes that can identify each advocate. The plugin keeps a record "
+"each time the advocate shares via email. The invited emails may be "
+"anonymized depending on your settings."
+msgstr ""
+
+#: includes/privacy-policy-guide.php:30
+msgid ""
+"To enable our customer referral program we may create and store unique codes "
+"that are linked to your account on our website. These codes will not be "
+"shared with anyone unless you choose to. We also keep a record when you "
+"share our store with a friend via email with our customer referral program. "
+"The email address is anonymized before it is stored."
+msgstr ""
+
+#: includes/privacy-policy-guide.php:31
+msgid ""
+"When an order is placed which is the result of a customer referral, we store "
+"a record of the details of this referral. Your IP address and other personal "
+"data supplied for the order may also be used to prevent fraud."
+msgstr ""
+
+#: includes/privacy-policy-guide.php:32
+msgid ""
+"Referral codes, referral details and email invite logs are retained until "
+"you request removal of your data."
+msgstr ""
+
+#: includes/privacy-policy-guide.php:33
+msgid "What we share with others"
+msgstr ""
+
+#: includes/privacy-policy-guide.php:34
+msgid ""
+"Refer A Friend allows advocates to share via email, Facebook or Twitter. "
+"Their personal data may be used in this process."
+msgstr ""
+
+#: includes/privacy-policy-guide.php:35
+msgid ""
+"If you choose to use our customer referral program, your personal data, such "
+"as your name and your unique referral code, may be shared with those you "
+"choose to share with. This data may be shared via Facebook, Twitter or email "
+"if you click on the share buttons or submit the share via email form."
+msgstr ""
+
+#: includes/privacy.php:73
+msgid "Erased user's referral codes."
+msgstr ""
+
+#: includes/privacy.php:116
+msgid "Erased user's invite records."
+msgstr ""
+
+#: includes/privacy.php:161
+msgid "Anonymized user's referrals."
+msgstr ""
+
+#: includes/privacy.php:213
+msgid "Customer signup IP address"
+msgstr ""
+
+#: includes/privacy.php:249
+msgid "Refer A Friend referrals"
+msgstr ""
+
+#: includes/privacy.php:268 includes/privacy.php:340
+msgid "ID"
+msgstr ""
+
+#: includes/privacy.php:273
+msgid "Reward amount remaining"
+msgstr ""
+
+#: includes/privacy.php:274
+msgid "Order ID"
+msgstr ""
+
+#: includes/privacy.php:283
+msgid "Advocate ID"
+msgstr ""
+
+#: includes/privacy.php:287
+msgid "Friend ID"
+msgstr ""
+
+#: includes/privacy.php:322
+msgid "Refer A Friend invites"
+msgstr ""
+
+#: includes/privacy.php:341
+msgid "Invited email"
+msgstr ""
+
+#: includes/privacy.php:376
+msgid "Refer A Friend referral codes"
+msgstr ""
+
+#: includes/privacy.php:394
+msgid "Referral code ID"
+msgstr ""
+
+#: includes/privacy.php:419
 #: includes/rules/advocate-approved-referral-count.php:21
 #: includes/rules/advocate-pending-referral-count.php:21
 #: includes/rules/advocate-potential-fraud-referral-count.php:21
@@ -1052,6 +1186,26 @@ msgstr ""
 #: includes/rules/customer-total-referral-count.php:21
 #: includes/workflows.php:80
 msgid "Referral"
+msgstr ""
+
+#: includes/referral-validator.php:77
+msgid "Advocate ID matches the Customer ID."
+msgstr ""
+
+#: includes/referral-validator.php:127
+msgid "Customer is not new."
+msgstr ""
+
+#: includes/referral-validator.php:162
+msgid "Order items were not valid."
+msgstr ""
+
+#: includes/referral-validator.php:208
+msgid "Customer has already been referred."
+msgstr ""
+
+#: includes/rules/advocate-approved-referral-count.php:20
+msgid "Advocate Approved Referral Count"
 msgstr ""
 
 #: includes/rules/advocate-pending-referral-count.php:20
@@ -1120,6 +1274,12 @@ msgstr ""
 
 #: includes/triggers/new-invite.php:22
 msgid "New Invite Email Sent"
+msgstr ""
+
+#: includes/triggers/new-invite.php:26
+msgid ""
+"Customer data is not available with this trigger due to your privacy "
+"settings."
 msgstr ""
 
 #: includes/triggers/new-referral.php:20

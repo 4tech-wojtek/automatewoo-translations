@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2018-05-23 16:23+0930\n"
+"POT-Creation-Date: 2018-05-23 22:37+0930\n"
 "PO-Revision-Date: 2015-11-03 10:01+1030\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -575,7 +575,7 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: admin/list-table.php:79 includes/customer.php:284 includes/guest.php:176
+#: admin/list-table.php:79 includes/customer.php:289 includes/guest.php:173
 #: includes/variables/customer-full-name.php:26
 #, php-format
 msgctxt "full name"
@@ -1118,7 +1118,7 @@ msgstr ""
 #: admin/settings-tabs/general.php:113
 msgid ""
 "Capture guest customer data before forms are submitted e.g. during checkout. "
-"We recommend leaving this disabled this to comply with GDPR."
+"We recommend leaving this disabled to comply with GDPR."
 msgstr ""
 
 #: admin/settings-tabs/general.php:125
@@ -1152,7 +1152,7 @@ msgstr ""
 msgid ""
 "The communication preferences page is where customers can opt-in or opt-out "
 "of workflows. It must contain the shortcode %s. To set up a signup page use "
-"the shortcode %s and specific the page in the setting below."
+"the shortcode %s and specify the page in the setting below."
 msgstr ""
 
 #: admin/settings-tabs/general.php:153
@@ -1184,8 +1184,8 @@ msgstr ""
 #: admin/settings-tabs/general.php:171
 #, php-format
 msgid ""
-"This text is show above the form submit button. Use the following shortcodes "
-"to add dynamic content: %s"
+"This text is shown above the form submit button. Use the following "
+"shortcodes to add dynamic content: %s"
 msgstr ""
 
 #: admin/settings-tabs/general.php:183
@@ -1628,7 +1628,7 @@ msgid "Opened"
 msgstr ""
 
 #: admin/views/modal-log-info.php:38 admin/views/modal-log-info.php:39
-#: includes/format.php:285 includes/rules/abstract-bool.php:20
+#: includes/format.php:287 includes/rules/abstract-bool.php:20
 msgid "No"
 msgstr ""
 
@@ -2895,7 +2895,7 @@ msgstr ""
 msgid "%s ago"
 msgstr ""
 
-#: includes/format.php:285 includes/rules/abstract-bool.php:19
+#: includes/format.php:287 includes/rules/abstract-bool.php:19
 msgid "Yes"
 msgstr ""
 

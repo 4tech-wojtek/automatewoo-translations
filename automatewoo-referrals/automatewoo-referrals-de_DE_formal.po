@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2018-05-15 12:37+0930\n"
-"PO-Revision-Date: 2018-05-15 07:56+0200\n"
+"POT-Creation-Date: 2018-05-23 12:46+0930\n"
+"PO-Revision-Date: 2018-05-25 08:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: automatewoo-referrals.php:35
+#: automatewoo-referrals.php:35 includes/privacy.php:25
 msgid "AutomateWoo - Refer A Friend"
 msgstr "AutomateWoo - Refer A Friend"
 
@@ -56,7 +56,8 @@ msgid "%s The plugin requires WooCommerce version %s or newer."
 msgstr "%s Das Plugin benötigt WooCommerce Version %s oder neuer."
 
 #: includes/account-endpoint.php:31 includes/admin/admin.php:38
-#: includes/admin/reports-tab.php:12
+#: includes/admin/reports-tab.php:12 includes/privacy.php:29
+#: includes/privacy.php:33
 msgid "Referrals"
 msgstr "Empfehlungen"
 
@@ -102,10 +103,11 @@ msgid "Advocates"
 msgstr "Werber"
 
 #: includes/admin/admin.php:40 includes/admin/list-tables/referral-codes.php:23
+#: includes/privacy.php:28 includes/privacy.php:35
 msgid "Referral codes"
 msgstr "Empfehlungs-Codes"
 
-#: includes/admin/admin.php:41
+#: includes/admin/admin.php:41 includes/privacy.php:30 includes/privacy.php:34
 msgid "Referral invites"
 msgstr "Empfehlungs-Einladungen"
 
@@ -184,7 +186,7 @@ msgstr ""
 "Bitte wählen Sie mehrere Einträge, um eine Massenbearbeitung durchzuführen."
 
 #: includes/admin/controllers/referrals.php:93
-#: includes/admin/list-tables/referrals.php:85
+#: includes/admin/list-tables/referrals.php:85 includes/privacy.php:269
 msgid "Status"
 msgstr "Status"
 
@@ -296,7 +298,7 @@ msgstr "Empfehlungs-Einladung"
 msgid "Referral Invites"
 msgstr "Empfehlungs-Einladungen"
 
-#: includes/admin/list-tables/invites.php:75
+#: includes/admin/list-tables/invites.php:75 includes/privacy.php:342
 #: templates/account-tab-referral-table-row.php:22
 #: templates/account-tab-referral-tables.php:30
 #: templates/account-tab-referral-tables.php:64
@@ -310,7 +312,7 @@ msgid "Delete"
 msgstr "Löschen"
 
 #: includes/admin/list-tables/referral-codes.php:22
-#: includes/admin/list-tables/referral-codes.php:38
+#: includes/admin/list-tables/referral-codes.php:38 includes/privacy.php:395
 msgid "Referral code"
 msgstr "Empfehlungs-Code"
 
@@ -536,11 +538,31 @@ msgstr ""
 "nur mit Zahlungs-Gateways, die die %s Anpassung der Gesamtsumme%s "
 "unterstützen."
 
-#: includes/admin/settings-tab.php:101
+#: includes/admin/settings-tab.php:99
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: includes/admin/settings-tab.php:102
+msgid "Anonymize invited email data"
+msgstr "Anonymisiere Einladungs-E-Mail-Daten"
+
+#: includes/admin/settings-tab.php:103
+msgid ""
+"GDPR requires consent to be given before personal data is stored. Since it "
+"is impossible for invited emails to give consent it is recommended to "
+"anonymize these emails. Once enabled any existing stored emails will be "
+"anonymized."
+msgstr ""
+"Die GDPR / DSGVO fordert das Einverständnis zum Verarbeiten persönlicher "
+"Daten. Da es unmöglich ist, Einverständnis für Einladungen einzuholen, wird "
+"empfohlen, diese E-Mails zu anonymisieren. Wenn aktiviert, werden alle "
+"gespeicherten E-Mails anonymisiert."
+
+#: includes/admin/settings-tab.php:111
 msgid "Referral offer (for the friend)"
 msgstr "Werbungs-Angebot (für den Freund)"
 
-#: includes/admin/settings-tab.php:102
+#: includes/admin/settings-tab.php:112
 msgid ""
 "The coupon discount that advocates can offer to their friends. This coupon "
 "will only be valid for new customers. By default referral coupons expire "
@@ -555,36 +577,36 @@ msgstr ""
 "Werber für immer einen einzigen Gutschein nutzen, setzen Sie die "
 "<b>Gutschein-Gültigkeitsdauer</b> auf 0."
 
-#: includes/admin/settings-tab.php:106
+#: includes/admin/settings-tab.php:116 includes/privacy.php:277
 msgid "Offer type"
 msgstr "Angebots-Art"
 
-#: includes/admin/settings-tab.php:111
+#: includes/admin/settings-tab.php:121
 msgid "Make this field blank if you do not want coupons to expire."
 msgstr ""
 "Lassen Sie dieses Feld leer, wenn Sie nicht wollen, dass Gutscheine ablaufen."
 
-#: includes/admin/settings-tab.php:114
+#: includes/admin/settings-tab.php:124 includes/privacy.php:278
 msgid "Offer amount"
 msgstr "Angebots-Betrag"
 
-#: includes/admin/settings-tab.php:119
+#: includes/admin/settings-tab.php:129
 msgid "Coupon expiry"
 msgstr "Gutschein-Gültigkeitsdauer"
 
-#: includes/admin/settings-tab.php:120 includes/admin/settings-tab.php:143
+#: includes/admin/settings-tab.php:130 includes/admin/settings-tab.php:153
 msgid "weeks"
 msgstr "Wochen"
 
-#: includes/admin/settings-tab.php:123 includes/admin/settings-tab.php:146
+#: includes/admin/settings-tab.php:133 includes/admin/settings-tab.php:156
 msgid "unlimited"
 msgstr "unbegrenzt"
 
-#: includes/admin/settings-tab.php:130
+#: includes/admin/settings-tab.php:140
 msgid "Link options"
 msgstr "Link-Optionen"
 
-#: includes/admin/settings-tab.php:131
+#: includes/admin/settings-tab.php:141
 msgid ""
 "By default share links expire after 4 weeks which means that a single "
 "advocate may own many different unique share links at one time. If you would "
@@ -596,26 +618,26 @@ msgstr ""
 "möchten, dass Werber für immer einen einzigen Link nutzen, setzen Sie die "
 "<b>Empfehlungs-Link-Gültigkeitsdauer</b> auf 0."
 
-#: includes/admin/settings-tab.php:135
+#: includes/admin/settings-tab.php:145
 msgid "Share link parameter"
 msgstr "Werbungs-Link-Paramter"
 
-#: includes/admin/settings-tab.php:136
+#: includes/admin/settings-tab.php:146
 #, php-format
 msgid "This parameter is used when generating unique share links e.g. %s"
 msgstr ""
 "Dieser Parameter wird genutzt, um eindeutige Werbungs-Links zu generieren, z."
 "B. %s"
 
-#: includes/admin/settings-tab.php:142
+#: includes/admin/settings-tab.php:152
 msgid "Share link expiry"
 msgstr "Werbungs-Link-Gültigkeitsdauer"
 
-#: includes/admin/settings-tab.php:154
+#: includes/admin/settings-tab.php:164
 msgid "Referral requirements"
 msgstr "Empfehlungs-Voraussetzungen"
 
-#: includes/admin/settings-tab.php:155
+#: includes/admin/settings-tab.php:165
 msgid ""
 "These are the requirements of referred purchases, if these are not met the "
 "advocate does not receive a reward and the friend does not get a discount."
@@ -624,23 +646,23 @@ msgstr ""
 "erfüllt werden wird der Werber nicht belohnt und der Käufer erhält keinen "
 "Rabatt."
 
-#: includes/admin/settings-tab.php:159 includes/admin/settings-tab.php:205
+#: includes/admin/settings-tab.php:169 includes/admin/settings-tab.php:215
 msgid "Minimum purchase amount"
 msgstr "Mindestbestellsumme"
 
-#: includes/admin/settings-tab.php:160
+#: includes/admin/settings-tab.php:170
 msgid "The minimum purchase amount that the referral offer is valid for."
 msgstr "Die Mindestbestellsumme, ab der das Empfehlungs-Angebot gültig ist."
 
-#: includes/admin/settings-tab.php:169
+#: includes/admin/settings-tab.php:179
 msgid "Product categories"
 msgstr "Produkt-Kategorien"
 
-#: includes/admin/settings-tab.php:171
+#: includes/admin/settings-tab.php:181
 msgid "All categories"
 msgstr "Alle Kategorien"
 
-#: includes/admin/settings-tab.php:173
+#: includes/admin/settings-tab.php:183
 msgid ""
 "Only allow referrals for orders that contain at least one product from one "
 "of these categories."
@@ -648,15 +670,15 @@ msgstr ""
 "Erlaube Empfehlungen nur für Bestellungen, die mindestens ein Produkt aus "
 "diesen Kategorien enthalten."
 
-#: includes/admin/settings-tab.php:177
+#: includes/admin/settings-tab.php:187
 msgid "Excluded categories"
 msgstr "Ausgeschlossene Kategorien"
 
-#: includes/admin/settings-tab.php:179
+#: includes/admin/settings-tab.php:189
 msgid "No categories"
 msgstr "Keine Kategorien"
 
-#: includes/admin/settings-tab.php:181
+#: includes/admin/settings-tab.php:191
 msgid ""
 "Don't allow referrals for orders that only contain products from these "
 "categories."
@@ -664,11 +686,11 @@ msgstr ""
 "Erlaube keine Empfehlungen für Bestellungen, die nur Produkte aus diesen "
 "Kategorien enthalten."
 
-#: includes/admin/settings-tab.php:187
+#: includes/admin/settings-tab.php:197
 msgid "Referral reward (for the advocate)"
 msgstr "Werbungs-Belohnung (für den Werber)"
 
-#: includes/admin/settings-tab.php:188
+#: includes/admin/settings-tab.php:198
 msgid ""
 "The reward given to the advocate for each time they successfully refer a "
 "customer. This reward is only granted for the friends first purchase. If you "
@@ -681,11 +703,11 @@ msgstr ""
 "kannst du einen Workflow mit dem <strong>Neue Empfehlung</strong>-Auslöser "
 "verwenden."
 
-#: includes/admin/settings-tab.php:193
+#: includes/admin/settings-tab.php:203 includes/privacy.php:271
 msgid "Reward type"
 msgstr "Belohnungs-Art"
 
-#: includes/admin/settings-tab.php:196
+#: includes/admin/settings-tab.php:206
 msgid ""
 "By selecting no reward you can instead reward them by using the AutomateWoo "
 "referral triggers and for example you could generate a coupon for the "
@@ -695,19 +717,19 @@ msgstr ""
 "einen AutomateWoo Empfehlungs-Auslöser belohnen und z.B. einen Gutschein "
 "erstellen."
 
-#: includes/admin/settings-tab.php:200
+#: includes/admin/settings-tab.php:210 includes/privacy.php:272
 msgid "Reward amount"
 msgstr "Belohnung-Betrag"
 
-#: includes/admin/settings-tab.php:206
+#: includes/admin/settings-tab.php:216
 msgid "The minimum purchase amount required for store credit to be used."
 msgstr "Die Mindestbestellsumme, ab der Shop-Guthaben genutzt werden kann."
 
-#: includes/admin/settings-tab.php:215
+#: includes/admin/settings-tab.php:225
 msgid "Share widget"
 msgstr "Teilen-Widget"
 
-#: includes/admin/settings-tab.php:216
+#: includes/admin/settings-tab.php:226
 #, php-format
 msgid ""
 "The share widget is a mini version of the share page that can added to the "
@@ -720,55 +742,55 @@ msgstr ""
 "eingefügt werden. Bitte beachten Sie, dass Kunden aufgefordert werden, ein "
 "Kundenkonto anzulegen, bevor sie ihre Freunde werben können."
 
-#: includes/admin/settings-tab.php:222
+#: includes/admin/settings-tab.php:232
 msgid "Show widget on order confirmation page"
 msgstr "Zeige Widget auf der Bestellbestätigungs-Seite"
 
-#: includes/admin/settings-tab.php:225
+#: includes/admin/settings-tab.php:235
 msgid "Bottom Of Page"
 msgstr "Ende der Seite"
 
-#: includes/admin/settings-tab.php:226
+#: includes/admin/settings-tab.php:236
 msgid "Top Of Page"
 msgstr "Anfang der Seite"
 
-#: includes/admin/settings-tab.php:227
+#: includes/admin/settings-tab.php:237
 msgid "Do Not Display"
 msgstr "Nicht anzeigen"
 
-#: includes/admin/settings-tab.php:232
+#: includes/admin/settings-tab.php:242
 msgid "Show widget on order emails"
 msgstr "Zeige Widget in Bestell-E-Mails"
 
-#: includes/admin/settings-tab.php:237
+#: includes/admin/settings-tab.php:247
 msgid "Show widget on new account email"
 msgstr "Zeige Widget in Neues-Konto-E-Mail"
 
-#: includes/admin/settings-tab.php:242
+#: includes/admin/settings-tab.php:252
 msgid "Widget heading"
 msgstr "Widget-Überschrift"
 
-#: includes/admin/settings-tab.php:247
+#: includes/admin/settings-tab.php:257
 msgid "Widget paragraph text"
 msgstr "Widget-Fließtext"
 
-#: includes/admin/settings-tab.php:258
+#: includes/admin/settings-tab.php:268
 msgid "Social sharing"
 msgstr "Teilen über soziale Netzwerke"
 
-#: includes/admin/settings-tab.php:261
+#: includes/admin/settings-tab.php:271
 msgid "Enable sharing via Facebook"
 msgstr "Teilen über Facebook aktivieren"
 
-#: includes/admin/settings-tab.php:266
+#: includes/admin/settings-tab.php:276
 msgid "Enable sharing via Twitter"
 msgstr "Teilen über Twitter aktivieren"
 
-#: includes/admin/settings-tab.php:271
+#: includes/admin/settings-tab.php:281
 msgid "Default share text"
 msgstr "Standard-Teilen-Text"
 
-#: includes/admin/settings-tab.php:273
+#: includes/admin/settings-tab.php:283
 msgid ""
 "This is the default text used when an advocate shares via Twitter or "
 "Facebook. If you chose 'Coupon Based' you must include the variable "
@@ -779,11 +801,11 @@ msgstr ""
 "{{ coupon_code }} benutzen. Ein Link zu Ihrem Shop wird automatisch "
 "hinzugefügt."
 
-#: includes/admin/settings-tab.php:277
+#: includes/admin/settings-tab.php:287
 msgid "Twitter default share text (optional)"
 msgstr "Twitter Standard-Teilen-Text (optional)"
 
-#: includes/admin/settings-tab.php:279
+#: includes/admin/settings-tab.php:289
 msgid ""
 "Optionally specify different text for Twitter shares as they are limited to "
 "280 characters. If left blank the default share text will be used."
@@ -791,41 +813,41 @@ msgstr ""
 "Setzen Sie optional einen abweichenden Text für Twitter, da dort das 280-"
 "Zeichen-Limit gilt. Wenn leer, wird der Standard-Teilen-Text genutzt."
 
-#: includes/admin/settings-tab.php:288
+#: includes/admin/settings-tab.php:298
 msgid "Email sharing"
 msgstr "Teilen per E-Mail"
 
-#: includes/admin/settings-tab.php:289
+#: includes/admin/settings-tab.php:299
 msgid ""
 "The email template that is sent when an advocate refers a friend view email. "
 msgstr ""
 "Die E-Mail-Vorlage, die gesendet wird, wenn ein Werber einen Freund wirbt. "
 
-#: includes/admin/settings-tab.php:290
+#: includes/admin/settings-tab.php:300
 msgid "You can insert dynamic content with the following variables: "
 msgstr "Sie können dynamische Inhalte mit den folgenden Variablen einfügen: "
 
-#: includes/admin/settings-tab.php:292
+#: includes/admin/settings-tab.php:302
 msgid "Preview email"
 msgstr "E-Mail-Vorschau"
 
-#: includes/admin/settings-tab.php:296
+#: includes/admin/settings-tab.php:306
 msgid "Enable sharing via Email"
 msgstr "Teilen via E-Mail aktivieren"
 
-#: includes/admin/settings-tab.php:301
+#: includes/admin/settings-tab.php:311
 msgid "Email subject"
 msgstr "E-Mail-Betreff"
 
-#: includes/admin/settings-tab.php:306
+#: includes/admin/settings-tab.php:316
 msgid "Email heading"
 msgstr "E-Mail-Überschrift"
 
-#: includes/admin/settings-tab.php:311
+#: includes/admin/settings-tab.php:321
 msgid "Email template"
 msgstr "E-Mail-Vorlage"
 
-#: includes/admin/settings-tab.php:314
+#: includes/admin/settings-tab.php:324
 msgid ""
 "The template that will be used to send referral share emails. For info on "
 "creating custom templates please refer to the AutomateWoo documentation."
@@ -834,11 +856,11 @@ msgstr ""
 "mehr Informationen über eigene Vorlagen, sehen Sie bitte in die AutomateWoo-"
 "Dokumentation."
 
-#: includes/admin/settings-tab.php:318
+#: includes/admin/settings-tab.php:328
 msgid "Email body"
 msgstr "E-Mail-Inhalt"
 
-#: includes/admin/settings-tab.php:320
+#: includes/admin/settings-tab.php:330
 msgid ""
 "If you chose 'Coupon Based' you must include the variable {{ coupon_code }}. "
 "If you chose 'Link Based' ensure you have at least one link in the email "
@@ -850,35 +872,15 @@ msgstr ""
 "sicher, dass Sie mindestens einen Link in der E-Mail nutzen. Tracking-"
 "Parameter werden automatisch zu allen Links der E-Mail hinzugefügt."
 
-#: includes/admin/settings-tab.php:326
-msgid "Privacy"
-msgstr "Datenschutz"
-
-#: includes/admin/settings-tab.php:329
-msgid "Anonymize invited email data"
-msgstr "Anonymisiere Einladungs-E-Mail-Daten"
-
-#: includes/admin/settings-tab.php:330
-msgid ""
-"GDPR requires consent to be given before personal data is stored. Since it "
-"is impossible for invited emails to give consent it is recommended to "
-"anonymize these emails. Once enabled any existing stored emails will be "
-"anonymized."
-msgstr ""
-"Die GDPR / DSGVO fordert das Einverständnis zum Verarbeiten persönlicher "
-"Daten. Da es unmöglich ist, Einverständnis für Einladungen einzuholen, wird "
-"empfohlen, diese E-Mails zu anonymisieren. Wenn aktiviert, werden alle "
-"gespeicherten E-Mails anonymisiert."
-
-#: includes/admin/settings-tab.php:337
+#: includes/admin/settings-tab.php:336
 msgid "Advanced"
 msgstr "Erweitert"
 
-#: includes/admin/settings-tab.php:340
+#: includes/admin/settings-tab.php:339
 msgid "Allow existing customer referrals"
 msgstr "Erlaube werben von Bestandskunden"
 
-#: includes/admin/settings-tab.php:341
+#: includes/admin/settings-tab.php:340
 msgid ""
 "If this is unchecked, existing customers will be blocked from receiving "
 "referrals (default). If checked, existing customers can be referred but they "
@@ -888,11 +890,11 @@ msgstr ""
 "(Standard). Wenn gewählt, können Bestandskunden geworben werden, allerdings "
 "nur ein einziges Mal."
 
-#: includes/admin/settings-tab.php:347
+#: includes/admin/settings-tab.php:346
 msgid "Reward event"
 msgstr "Belohnungs-Ereignis"
 
-#: includes/admin/settings-tab.php:348
+#: includes/admin/settings-tab.php:347
 msgid ""
 "The reward event determines when a referral should be created. When setting "
 "to 'Purchase' (default) referrals will be created when a friend makes a "
@@ -905,11 +907,11 @@ msgstr ""
 "wird eine Empfehlung erstellt, wenn ein Freund ein Kundenkonto erstellt, "
 "ohne dass ein Kauf nötig ist."
 
-#: includes/admin/settings-tab.php:352
+#: includes/admin/settings-tab.php:351
 msgid "Purchase"
 msgstr "Kauf"
 
-#: includes/admin/settings-tab.php:353
+#: includes/admin/settings-tab.php:352
 msgid "Sign up"
 msgstr "Registrierung"
 
@@ -941,7 +943,8 @@ msgstr ""
 msgid "Referral ID"
 msgstr "Empfehlungs-ID"
 
-#: includes/admin/views/page-view-referral.php:94
+#: includes/admin/views/page-view-referral.php:94 includes/privacy.php:270
+#: includes/privacy.php:396
 msgid "Date created"
 msgstr "Erstell-Datum"
 
@@ -950,7 +953,7 @@ msgstr "Erstell-Datum"
 msgid "(Status:  %s)"
 msgstr "(Status:  %s)"
 
-#: includes/admin/views/page-view-referral.php:118
+#: includes/admin/views/page-view-referral.php:118 includes/privacy.php:212
 msgid "Advocate IP address"
 msgstr "Werber-IP-Adresse"
 
@@ -1142,26 +1145,196 @@ msgstr ""
 "Sie wurden eingeladen, mit einem 20€ Rabatt bei %s zu shoppen, wenn Sie mehr "
 "als 100€ ausgeben. Nutzen Sie den Code unten, um Ihren Gutschein einzulösen."
 
-#: includes/referral-validator.php:77
-msgid "Advocate ID matches the Customer ID."
-msgstr "Empfehler-ID stimmt mit Kunden-ID überein."
+#: includes/privacy-policy-guide.php:21
+msgid "What we collect and store"
+msgstr "Was wir erfassen und speichern"
 
-#: includes/referral-validator.php:127
-msgid "Customer is not new."
-msgstr "Kunden ist nicht neu."
+#: includes/privacy-policy-guide.php:22
+msgid "Cookies"
+msgstr "Cookies"
 
-#: includes/referral-validator.php:162
-msgid "Order items were not valid."
-msgstr "Bestellte Artikel waren ungültig."
+#: includes/privacy-policy-guide.php:23
+msgid ""
+"Refer A Friend uses one cookie if your store is configured to use link-based "
+"referrals. This cookie is added when a user clicks on a referral link and "
+"stores a code that is unique to the advocate who shared the link."
+msgstr ""
+"Refer A Friend benutzt ein Cookie, falls Ihr Shop für link-basierte "
+"Empfehlungen eingerichtet ist. Dieses Cookie wird gesetzt, wenn ein Benutzer "
+"auf einen Empfehlungs-Link klickt und enthält einen einzigartigen Code des "
+"Werbers, der den Link geteilt hat."
 
-#: includes/referral-validator.php:205
-msgid "Customer has already been referred."
-msgstr "Kunde wurde bereits geworben."
+#: includes/privacy-policy-guide.php:24
+msgid ""
+"We use one cookie to enable the function of our customer referral program. "
+"This cookie stores a unique code that cannot identify you as a website "
+"visitor. This unique code can only identify the person who shared the coupon "
+"code or referral link."
+msgstr ""
+"Wir benutzen ein Cookie, um die Funktionalität unseres Kunden-Werben-"
+"Programms zu ermöglichen. Dieses Cookie enthält einen einzigartigen Code, "
+"der Sie nicht als Website-Besucher identifizierbar macht. Dieser "
+"einzigartige Code kann nur die Person identifizieren, die den Gutschein-Code "
+"oder Empfehlungs-Link geteilt hat."
 
-#: includes/rules/advocate-approved-referral-count.php:20
-msgid "Advocate Approved Referral Count"
-msgstr "Werber: Zähler genehmigte Empfehlungen"
+#: includes/privacy-policy-guide.php:25
+#, php-format
+msgid ""
+"%s - Enables the function of our referral program - Expires after 1 year"
+msgstr ""
+"%s - Ermöglicht die Funktion unseres Kunden-Werben-Programms - Läuft nach 1 "
+"Jahr ab"
 
+#: includes/privacy-policy-guide.php:26
+msgid "IP Addresses"
+msgstr "IP-Adressen"
+
+#: includes/privacy-policy-guide.php:27
+msgid ""
+"Customers who use the referral program will have their IP address stored "
+"each time they share. Depending on your settings the IP address of referred "
+"customers may also be stored for the purpose of fraud prevention. This may "
+"not need to be included in your privacy policy since WooCommerce also tracks "
+"IP addresses."
+msgstr ""
+"Von Kunden, die das Kunden-Werben-Programm nutzen, wird die IP-Adresse "
+"gespeichert, wenn sie ihren Link teilen. Je nach Ihren Einstellungen wird "
+"auch die IP-Adresse von geworbenen Kunden gespeichert, um Betrug zu "
+"vermeiden. Dies muss gegebenenfalls nicht separat in Ihrer "
+"Datenschutzerklärung genannt werden, da auch WooCommerce IP-Adressen "
+"speichert."
+
+#: includes/privacy-policy-guide.php:28
+msgid "Customer referral data"
+msgstr "Kunden-Empfehlungs-Daten"
+
+#: includes/privacy-policy-guide.php:29
+msgid ""
+"Refer A Friend stores a record of all referred orders and creates unique "
+"referral codes that can identify each advocate. The plugin keeps a record "
+"each time the advocate shares via email. The invited emails may be "
+"anonymized depending on your settings."
+msgstr ""
+"Refer A Friend speichert Aufzeichnungen von allen Bestellungen über "
+"Empfehlungen und erstellt einzigartige Empfehlungs-Codes, die den Werbern "
+"zugeordnet werden können. Das Plugin zeichnet auf, wenn Empfehlungen via E-"
+"Mail getätigt werden. Die Einladungs-E-Mails können je nach Einstellung "
+"anonymisiert werden."
+
+#: includes/privacy-policy-guide.php:30
+msgid ""
+"To enable our customer referral program we may create and store unique codes "
+"that are linked to your account on our website. These codes will not be "
+"shared with anyone unless you choose to. We also keep a record when you "
+"share our store with a friend via email with our customer referral program. "
+"The email address is anonymized before it is stored."
+msgstr ""
+"Um unser Kunden-Werben-Programm zu ermöglichen erstellen und speichern wir "
+"einzigartige Codes, die mit Ihrem Konto auf unserer Website verbunden "
+"werden. Diese Codes werden mit niemandem geteilt, wenn Sie sie nicht teilen. "
+"Wir zeichnen auf, wenn Sie Ihren Code per E-Mail teilen. Die E-Mail-Adressen "
+"werden anonymisiert, bevor sie gespeichert werden."
+
+#: includes/privacy-policy-guide.php:31
+msgid ""
+"When an order is placed which is the result of a customer referral, we store "
+"a record of the details of this referral. Your IP address and other personal "
+"data supplied for the order may also be used to prevent fraud."
+msgstr ""
+"Wenn eine Bestellung getätigt wird, die durch eine Empfehlung zustande "
+"kommt, zeichnen wir die Details der Empfehlung auf. Ihre IP-Adresse und "
+"andere durch die Bestellung mitgeteilte Daten können verwendet werden, um "
+"Betrug zu erkennen."
+
+#: includes/privacy-policy-guide.php:32
+msgid ""
+"Referral codes, referral details and email invite logs are retained until "
+"you request removal of your data."
+msgstr ""
+"Empfehlungs-Codes, Empfehlungs-Daten und Logs von E-Mail-Einladungen werden "
+"gespeichert, bis Sie die Löschung der Daten beantragen."
+
+#: includes/privacy-policy-guide.php:33
+msgid "What we share with others"
+msgstr "Was wir mit anderen teilen"
+
+#: includes/privacy-policy-guide.php:34
+msgid ""
+"Refer A Friend allows advocates to share via email, Facebook or Twitter. "
+"Their personal data may be used in this process."
+msgstr ""
+"Refer A Friend erlaubt es Werbern, den Shop über E-Mail, Facebook oder "
+"Twitter zu teilen. Hierbei können persönliche Daten verwendet werden."
+
+#: includes/privacy-policy-guide.php:35
+msgid ""
+"If you choose to use our customer referral program, your personal data, such "
+"as your name and your unique referral code, may be shared with those you "
+"choose to share with. This data may be shared via Facebook, Twitter or email "
+"if you click on the share buttons or submit the share via email form."
+msgstr ""
+"Wenn Sie unser Kunden-Werben-Programm nutzen, werden persönliche Daten wie "
+"Ihr Name und Ihr einzigartiger Empfehlungs-Code über die Kanäle geteilt, die "
+"Sie wählen. Diese Daten können über Facebook, Twitter oder E-Mail geteilt "
+"werden, wenn Sie die entsprechenden Funktionen nutzen."
+
+#: includes/privacy.php:73
+msgid "Erased user's referral codes."
+msgstr "Empfehlungs-Codes des Nutzers wurden gelöscht."
+
+#: includes/privacy.php:116
+msgid "Erased user's invite records."
+msgstr "Einladungs-Logs des Nutzers wurden gelöscht."
+
+#: includes/privacy.php:161
+msgid "Anonymized user's referrals."
+msgstr "Empfehlungen des Nutzers wurden anonymisiert."
+
+#: includes/privacy.php:213
+msgid "Customer signup IP address"
+msgstr "Kunden-IP-Adresse zum Anmelde-Zeitpunkt"
+
+#: includes/privacy.php:249
+msgid "Refer A Friend referrals"
+msgstr "Refer A Friend Empfehlungen"
+
+#: includes/privacy.php:268 includes/privacy.php:340
+msgid "ID"
+msgstr "ID"
+
+#: includes/privacy.php:273
+msgid "Reward amount remaining"
+msgstr "Verbleibender Belohnungs-Betrag"
+
+#: includes/privacy.php:274
+msgid "Order ID"
+msgstr "Bestell-ID"
+
+#: includes/privacy.php:283
+msgid "Advocate ID"
+msgstr "Werber-ID"
+
+#: includes/privacy.php:287
+msgid "Friend ID"
+msgstr "Freundes-ID"
+
+#: includes/privacy.php:322
+msgid "Refer A Friend invites"
+msgstr "Refer A Friend Einladungen"
+
+#: includes/privacy.php:341
+msgid "Invited email"
+msgstr "Eingeladene E-Mail"
+
+#: includes/privacy.php:376
+msgid "Refer A Friend referral codes"
+msgstr "Refer A Friend Empfehlungs-Codes"
+
+#: includes/privacy.php:394
+msgid "Referral code ID"
+msgstr "Empfehlungs-Code-ID"
+
+#: includes/privacy.php:419
 #: includes/rules/advocate-approved-referral-count.php:21
 #: includes/rules/advocate-pending-referral-count.php:21
 #: includes/rules/advocate-potential-fraud-referral-count.php:21
@@ -1175,6 +1348,26 @@ msgstr "Werber: Zähler genehmigte Empfehlungen"
 #: includes/workflows.php:80
 msgid "Referral"
 msgstr "Empfehlung"
+
+#: includes/referral-validator.php:77
+msgid "Advocate ID matches the Customer ID."
+msgstr "Empfehler-ID stimmt mit Kunden-ID überein."
+
+#: includes/referral-validator.php:127
+msgid "Customer is not new."
+msgstr "Kunden ist nicht neu."
+
+#: includes/referral-validator.php:162
+msgid "Order items were not valid."
+msgstr "Bestellte Artikel waren ungültig."
+
+#: includes/referral-validator.php:208
+msgid "Customer has already been referred."
+msgstr "Kunde wurde bereits geworben."
+
+#: includes/rules/advocate-approved-referral-count.php:20
+msgid "Advocate Approved Referral Count"
+msgstr "Werber: Zähler genehmigte Empfehlungen"
 
 #: includes/rules/advocate-pending-referral-count.php:20
 msgid "Advocate Pending Referral Count"
@@ -1248,6 +1441,14 @@ msgstr "Leer lassen für kein Limit"
 #: includes/triggers/new-invite.php:22
 msgid "New Invite Email Sent"
 msgstr "Neue Einladungs-E-Mail gesendet"
+
+#: includes/triggers/new-invite.php:26
+msgid ""
+"Customer data is not available with this trigger due to your privacy "
+"settings."
+msgstr ""
+"Kunden-Daten sind mit diesem Auslöser aufgrund Ihrer Datenschutz-"
+"Einstellungen nicht verfügbar."
 
 #: includes/triggers/new-referral.php:20
 msgid "New Referral Created"

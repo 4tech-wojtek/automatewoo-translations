@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2018-05-24 08:23+0930\n"
+"POT-Creation-Date: 2018-05-28 15:31+0930\n"
 "PO-Revision-Date: 2015-11-03 10:01+1030\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -62,11 +62,11 @@ msgstr ""
 msgid "Guests"
 msgstr ""
 
-#: admin/admin.php:138 admin/reports/opt-ins.php:18
+#: admin/admin.php:138 admin/reports/opt-ins.php:20
 msgid "Opt-ins"
 msgstr ""
 
-#: admin/admin.php:138 admin/reports/opt-ins.php:18
+#: admin/admin.php:138 admin/reports/opt-ins.php:20
 msgid "Opt-outs"
 msgstr ""
 
@@ -201,7 +201,7 @@ msgid "Please select some carts to bulk edit."
 msgstr ""
 
 #: admin/controllers/carts.php:90 admin/controllers/guests.php:114
-#: admin/controllers/logs.php:105 admin/controllers/opt-ins.php:102
+#: admin/controllers/logs.php:105 admin/controllers/opt-ins.php:99
 #: admin/controllers/queue.php:114 admin/reports-tabs/conversions-list.php:52
 msgid "Bulk edit completed."
 msgstr ""
@@ -283,30 +283,30 @@ msgstr ""
 msgid "Please select some logs to bulk edit."
 msgstr ""
 
-#: admin/controllers/opt-ins.php:46
+#: admin/controllers/opt-ins.php:47
 msgid "Import"
 msgstr ""
 
-#: admin/controllers/opt-ins.php:50
+#: admin/controllers/opt-ins.php:51
 msgid ""
 "Your store is set to require customers to opt-in before non-transactional "
 "workflows will run for them."
 msgstr ""
 
-#: admin/controllers/opt-ins.php:53
+#: admin/controllers/opt-ins.php:54
 msgid ""
 "Your store is set to automatically opt-in customers for workflows but they "
 "can opt-out with the unsubscribe link in emails and SMS."
 msgstr ""
 
-#: admin/controllers/opt-ins.php:57
+#: admin/controllers/opt-ins.php:58
 #, php-format
 msgid ""
 "More information on opt-ins and opt-outs is available <%s>in the "
 "documentation.<%s>"
 msgstr ""
 
-#: admin/controllers/opt-ins.php:79
+#: admin/controllers/opt-ins.php:80
 msgid "Please select some items to bulk edit."
 msgstr ""
 
@@ -470,7 +470,7 @@ msgstr ""
 
 #: admin/data-layer-formatter.php:39 admin/reports/carts.php:32
 #: admin/reports/conversions-list.php:139 admin/reports/logs.php:109
-#: admin/reports/opt-ins.php:55 admin/reports/queue.php:130
+#: admin/reports/opt-ins.php:58 admin/reports/queue.php:130
 #: includes/actions/order-resend-email.php:47
 #: includes/rules/customer-active-membership-plans.php:21
 #: includes/rules/customer-city.php:19 includes/rules/customer-country.php:19
@@ -575,7 +575,7 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: admin/list-table.php:79 includes/customer.php:289 includes/guest.php:173
+#: admin/list-table.php:79 includes/customer.php:305 includes/guest.php:173
 #: includes/variables/customer-full-name.php:26
 #, php-format
 msgctxt "full name"
@@ -623,7 +623,7 @@ msgstr ""
 msgid "Last 7 Days"
 msgstr ""
 
-#: admin/reports/abstract-graph.php:53 admin/reports/opt-ins.php:56
+#: admin/reports/abstract-graph.php:53 admin/reports/opt-ins.php:59
 #: admin/views/meta-box-timing.php:170 includes/fields/date.php:15
 msgid "Date"
 msgstr ""
@@ -654,8 +654,8 @@ msgstr ""
 msgid "Items"
 msgstr ""
 
-#: admin/reports/carts.php:35 admin/views/modal-cart-info.php:105
-#: templates/email/cart-table.php:110
+#: admin/reports/carts.php:35 admin/views/modal-cart-info.php:109
+#: templates/email/cart-table.php:113
 msgid "Total"
 msgstr ""
 
@@ -674,8 +674,7 @@ msgstr ""
 
 #: admin/reports/carts.php:169 admin/reports/guests.php:170
 #: admin/reports/guests.php:181 admin/reports/logs.php:167
-#: admin/reports/opt-ins.php:68 admin/reports/queue.php:190
-#: admin/views/action.php:30
+#: admin/reports/queue.php:190 admin/views/action.php:30
 #: includes/actions/campaign-monitor-remove-subscriber.php:27
 msgid "Delete"
 msgstr ""
@@ -858,12 +857,24 @@ msgstr ""
 msgid "Time"
 msgstr ""
 
-#: admin/reports/opt-ins.php:17
+#: admin/reports/opt-ins.php:19
 msgid "Opt-in"
 msgstr ""
 
-#: admin/reports/opt-ins.php:17 admin/settings-tabs/general.php:31
+#: admin/reports/opt-ins.php:19 admin/settings-tabs/general.php:31
 msgid "Opt-out"
+msgstr ""
+
+#: admin/reports/opt-ins.php:23
+msgid "Search by email"
+msgstr ""
+
+#: admin/reports/opt-ins.php:73
+msgid "Set as opted-out"
+msgstr ""
+
+#: admin/reports/opt-ins.php:76
+msgid "Set as opted-in"
 msgstr ""
 
 #: admin/reports/queue.php:54 admin/views/modal-queued-event-info.php:25
@@ -1576,37 +1587,37 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:60 templates/email/cart-table.php:65
+#: admin/views/modal-cart-info.php:64 templates/email/cart-table.php:68
 msgid "Subtotal"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:62 templates/email/cart-table.php:67
+#: admin/views/modal-cart-info.php:66 templates/email/cart-table.php:70
 msgid "(incl. tax)"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:75 templates/email/cart-table.php:80
+#: admin/views/modal-cart-info.php:79 templates/email/cart-table.php:83
 #, php-format
 msgid "Coupon: %s"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:82 templates/email/cart-table.php:87
+#: admin/views/modal-cart-info.php:86 templates/email/cart-table.php:90
 msgid "Shipping"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:98 templates/email/cart-table.php:103
+#: admin/views/modal-cart-info.php:102 templates/email/cart-table.php:106
 msgid "Tax"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:107 templates/email/cart-table.php:112
+#: admin/views/modal-cart-info.php:111 templates/email/cart-table.php:115
 #, php-format
 msgid "(includes %s tax)"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:119 includes/privacy-exporters.php:124
+#: admin/views/modal-cart-info.php:123 includes/privacy-exporters.php:124
 msgid "Cart token"
 msgstr ""
 
-#: admin/views/modal-cart-info.php:120
+#: admin/views/modal-cart-info.php:124
 msgid "Cart created"
 msgstr ""
 
@@ -2915,16 +2926,20 @@ msgstr ""
 msgid "The cart has been filled with the items from your previous order."
 msgstr ""
 
-#: includes/frontend-form-handler.php:45
-msgid "Communication preferences changed successfully."
+#: includes/frontend-form-handler.php:53
+msgid "Your communication preferences were updated."
 msgstr ""
 
-#: includes/frontend-form-handler.php:54
-msgid "Your email address was not valid."
+#: includes/frontend-form-handler.php:62
+msgid "Please enter a valid email address."
 msgstr ""
 
-#: includes/frontend-form-handler.php:60
-msgid "Your signup was successful."
+#: includes/frontend-form-handler.php:69
+msgid "Thanks! Your signup was successful."
+msgstr ""
+
+#: includes/frontend-form-handler.php:72
+msgid "Saved successfully! You won't receive marketing communications from us."
 msgstr ""
 
 #: includes/installer.php:206
@@ -5415,20 +5430,20 @@ msgstr ""
 msgid "You are managing preferences for %s."
 msgstr ""
 
-#: templates/communication-preferences/communication-preferences-list.php:32
+#: templates/communication-preferences/communication-preferences-list.php:41
 msgid "Updates about products and promotions"
 msgstr ""
 
-#: templates/communication-preferences/communication-preferences-list.php:33
+#: templates/communication-preferences/communication-preferences-list.php:42
 msgid ""
 "Receive marketing communications that we think you will be interested in."
 msgstr ""
 
-#: templates/communication-preferences/communication-preferences-list.php:46
+#: templates/communication-preferences/communication-preferences-list.php:55
 msgid "Account and order information"
 msgstr ""
 
-#: templates/communication-preferences/communication-preferences-list.php:47
+#: templates/communication-preferences/communication-preferences-list.php:56
 msgid "Receive important information about your orders and account."
 msgstr ""
 

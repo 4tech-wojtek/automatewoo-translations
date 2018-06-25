@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo\n"
 "POT-Creation-Date: 2018-06-25 16:21+0930\n"
-"PO-Revision-Date: 2018-06-25 10:33+0200\n"
+"PO-Revision-Date: 2018-06-25 19:32+0930\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE@formal\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.8\n"
+"X-Generator: Poedit 1.8.12\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: automatewoo.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -6053,125 +6053,3 @@ msgstr "http://automatewoo.com"
 #. Description of the plugin/theme
 msgid "Powerful marketing automation for your WooCommerce store."
 msgstr "Leistungsstarke Marketing-Automation für Ihren WooCommerce-Shop."
-
-#~ msgid "The recipient is unsubscribed."
-#~ msgstr "Der Empfänger hat sich abgemeldet."
-
-#~ msgid ""
-#~ "Manually trigger a workflow for any subscriptions that match a date "
-#~ "range. USE WITH EXTREME CAUTION. For example this tool could be useful if "
-#~ "you created a workflow using the <strong>Subscription Payment Complete</"
-#~ "strong> trigger to queue a reminder email three days before the "
-#~ "subscription renewal. You could use this tool to <strong>manually "
-#~ "trigger</strong> and create the reminders the on all existing "
-#~ "subscriptions which would normally not be queued until the next renewal. "
-#~ msgstr ""
-#~ "Auslöser manuell starten für alle Abonnements, die in einer Zeitspanne "
-#~ "liegen. MIT EXTREMER VORSICHT ZU BENUTZEN. Dieses Werkzeug ist z.B. "
-#~ "hilfreich, wenn ein Workflow mit dem <strong>Abonnement-Zahlung erfolgt</"
-#~ "strong>-Auslöser genutzt wird, um eine Erinnerungs-E-Mail drei Tage for "
-#~ "einer Abonnement-Verlängerung zu senden. Sie können dieses Werkzeug "
-#~ "nutzen, um <strong>manuell zu starten</strong> und Erinnerung für alle "
-#~ "aktiven Abonnements zu erstellen, die normalerweise nicht bis zur "
-#~ "nächsten Verlängerung geplant würden. "
-
-#~ msgid "Customer is unsubscribed from this workflow."
-#~ msgstr "Der Kunde ist von diesem Workflow abgemeldet."
-
-#~ msgid "Communication preferences changed successfully."
-#~ msgstr "Kommunikations-Einstellungen erfolgreich geändert."
-
-#~ msgid "Your email address was not valid."
-#~ msgstr "Ihre E-Mail-Adresse war ungültig."
-
-#, fuzzy
-#~| msgid "Guest"
-#~ msgid "%s guest"
-#~ msgid_plural "%s guests"
-#~ msgstr[0] "Gast"
-#~ msgstr[1] "Gast"
-
-#~ msgid ""
-#~ "All emails sent from AutomateWoo workflows automatically include an "
-#~ "unsubscribe link in the email footer. This link allows any recipient, "
-#~ "both user or guest, to unsubscribe. <%s>Read more&hellip;<%s>"
-#~ msgstr ""
-#~ "Alle E-Mails, die von AutomateWoo-Workflows gesendet werden, enthalten "
-#~ "automatisch einen Link zum Abmelden im Fußbereich. Dieser Link erlaubt es "
-#~ "sowohl Benutzern als auch Gästen, sich abzumelden. <%s>Mehr "
-#~ "erfahren&hellip;<%s>"
-
-#~ msgid "Please select some customers to resubscribe."
-#~ msgstr "Wählen Sie mehrere Kunden, um sie wieder anzumelden."
-
-#~ msgid "IP"
-#~ msgstr "IP"
-
-#~ msgid "No Pages (disable)"
-#~ msgstr "Keine Seiten (deaktiviert)"
-
-#~ msgid ""
-#~ "Use cookies to track customers who aren't logged in. This is required for "
-#~ "tracking carts belonging to guest customers. This is also used by the "
-#~ "Refer A Friend add-on to reduce fraud."
-#~ msgstr ""
-#~ "Cookies benutzen, um Kunden zu tracken, die nicht angemeldet sind. Dies "
-#~ "wird benötigt, um Warenkörbe zu tracken, die zu Gast-Kunden gehören. Dies "
-#~ "wird auch von der Freunde-Werben-Erweiterung genutzt, um Betrug zu "
-#~ "reduzieren."
-
-#~ msgid "IP address"
-#~ msgstr "IP-Adresse"
-
-#~ msgid "HTTP user agent"
-#~ msgstr "HTTP User-Agent"
-
-#~ msgid "Shipping Methods"
-#~ msgstr "Versandarten"
-
-#~ msgid "Unsubscribe Importer"
-#~ msgstr "Abmeldungen-Importer"
-
-#~ msgid "Guest Leaves a Product Review [DEPRECATED]"
-#~ msgstr "Gast hinterlasst eine Produktbewertung [VERALTET]"
-
-#~ msgid "Please use the New Review Posted trigger."
-#~ msgstr ""
-#~ "Bitte benutzen Sie den neuen Auslöser „Neue Bewertung hinterlassen“."
-
-#~ msgid "User Leaves a Product Review [DEPRECATED]"
-#~ msgstr "Benutzer hinterlässt eine Produktbewertung [VERALTET]"
-
-#~ msgid "There was an error unsubscribing you."
-#~ msgstr "Bei Abmelden gab es einen Fehler."
-
-#~ msgid "Don't want to receive any more emails like this?"
-#~ msgstr "Möchten Sie keine weiteren E-Mails wie diese erhalten?"
-
-#~ msgid ""
-#~ "Please note: You will still receive general store notifications e.g. when "
-#~ "you place an order."
-#~ msgstr ""
-#~ "Bitte beachten Sie: Sie werden weiterhin normale Shop-Benachrichtigungen "
-#~ "erhalten, z.B. wenn Sie eine Bestellung aufgibst."
-
-#~ msgid "You have been unsubscribed."
-#~ msgstr "Sie wurden abgemeldet."
-
-#~ msgid "emails sent"
-#~ msgstr "gesendete E-Mails"
-
-#~ msgid "Enable email tracking"
-#~ msgstr "E-Mail-Tracking aktivieren"
-
-#~ msgid ""
-#~ "If checked clicks and opens will be tracked on any email sent to an email "
-#~ "address that belongs to one of the site's users. Reports will be visible "
-#~ "on the WooCommerce Reports page."
-#~ msgstr ""
-#~ "Wenn gewählt werden Klicks und Öffnungen von jeder E-Mail nachverfolgt, "
-#~ "die an einen Benutzer der Seite gesendet wird. Berichte werden auf der "
-#~ "WooCommerce Berichte-Seite sichtbar."
-
-#~ msgid "The email '%s' is blacklisted."
-#~ msgstr "Die E-Mail-Adresse „%s“ ist blacklisted."

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2018-05-28 15:31+0930\n"
+"POT-Creation-Date: 2018-06-25 16:21+0930\n"
 "PO-Revision-Date: 2015-11-03 10:01+1030\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -318,8 +318,8 @@ msgstr ""
 #, php-format
 msgid ""
 "Workflows that are not set to run immediately will be added to this queue. "
-"The queue processes %s items every 5 minutes so run times will vary "
-"slightly. <%s>Read more&hellip;<%s>"
+"The queue processes %s items every 5 minutes so actual run times may vary. <"
+"%s>Read more&hellip;<%s>"
 msgstr ""
 
 #: admin/controllers/queue.php:77
@@ -447,6 +447,7 @@ msgstr ""
 #: includes/actions/order-update-customer-shipping-note.php:17
 #: includes/actions/order-update-meta.php:17 includes/privacy-exporters.php:323
 #: includes/rules/order-billing-country.php:19
+#: includes/rules/order-coupon-count.php:20
 #: includes/rules/order-coupons-text-match.php:18
 #: includes/rules/order-coupons.php:17 includes/rules/order-created-via.php:20
 #: includes/rules/order-customer-provided-note.php:19
@@ -473,21 +474,21 @@ msgstr ""
 #: admin/reports/opt-ins.php:58 admin/reports/queue.php:130
 #: includes/actions/order-resend-email.php:47
 #: includes/rules/customer-active-membership-plans.php:21
-#: includes/rules/customer-city.php:19 includes/rules/customer-country.php:19
-#: includes/rules/customer-email.php:19
+#: includes/rules/customer-city.php:17 includes/rules/customer-company.php:17
+#: includes/rules/customer-country.php:17 includes/rules/customer-email.php:17
 #: includes/rules/customer-has-active-subscription.php:17
 #: includes/rules/customer-is-guest.php:17
 #: includes/rules/customer-is-mailchimp-subscriber.php:19
 #: includes/rules/customer-meta.php:17
 #: includes/rules/customer-order-count.php:19
 #: includes/rules/customer-order-statuses.php:19
-#: includes/rules/customer-postcode.php:19
+#: includes/rules/customer-phone.php:17 includes/rules/customer-postcode.php:17
 #: includes/rules/customer-purchased-categories.php:21
 #: includes/rules/customer-purchased-products.php:25
 #: includes/rules/customer-review-count.php:19
 #: includes/rules/customer-role.php:17
-#: includes/rules/customer-state-text-match.php:19
-#: includes/rules/customer-state.php:19 includes/rules/customer-tags.php:21
+#: includes/rules/customer-state-text-match.php:17
+#: includes/rules/customer-state.php:17 includes/rules/customer-tags.php:21
 #: includes/rules/customer-total-spent.php:19
 msgid "Customer"
 msgstr ""
@@ -575,8 +576,8 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: admin/list-table.php:79 includes/customer.php:305 includes/guest.php:173
-#: includes/variables/customer-full-name.php:26
+#: admin/list-table.php:79 includes/customer.php:305
+#: includes/data-layer.php:366 includes/guest.php:190
 #, php-format
 msgctxt "full name"
 msgid "%1$s %2$s"
@@ -1971,7 +1972,7 @@ msgid "%s The plugin requires WordPress version %s or newer."
 msgstr ""
 
 #: includes/abstracts/action.php:80 includes/abstracts/action.php:93
-#: includes/abstracts/trigger.php:283
+#: includes/abstracts/trigger.php:291
 #: includes/actions/change-post-status.php:18 includes/rules/rule.php:39
 msgid "Other"
 msgstr ""
@@ -1984,39 +1985,39 @@ msgstr ""
 msgid "Object must be saved before adding meta."
 msgstr ""
 
-#: includes/abstracts/trigger.php:379 includes/abstracts/trigger.php:409
+#: includes/abstracts/trigger.php:406 includes/abstracts/trigger.php:436
 #: includes/triggers/subscription-status-changed.php:34
 msgid "Recheck status before run"
 msgstr ""
 
-#: includes/abstracts/trigger.php:382
+#: includes/abstracts/trigger.php:409
 msgid ""
 "This is useful for Workflows that are not run immediately as it ensures the "
 "status of the order hasn't changed since initial trigger."
 msgstr ""
 
-#: includes/abstracts/trigger.php:396
+#: includes/abstracts/trigger.php:423
 msgid "Customer pause period (days)"
 msgstr ""
 
-#: includes/abstracts/trigger.php:397
+#: includes/abstracts/trigger.php:424
 msgid ""
 "Can be used to ensure that this trigger will only send once in a set period "
 "to a user or guest."
 msgstr ""
 
-#: includes/abstracts/trigger.php:412
+#: includes/abstracts/trigger.php:439
 #, php-format
 msgid ""
 "This is useful for workflows that are not run immediately as it ensures the "
 "status of the %s hasn't changed since initial trigger."
 msgstr ""
 
-#: includes/abstracts/trigger.php:428
+#: includes/abstracts/trigger.php:455
 msgid "Time of day"
 msgstr ""
 
-#: includes/abstracts/trigger.php:429
+#: includes/abstracts/trigger.php:456
 msgid ""
 "Set the time during each day for the workflow to be triggered. Your site's "
 "timezone will be used. If no time is set the workflow will run at midnight. "
@@ -2024,7 +2025,7 @@ msgid ""
 "run until tomorrow. The workflow will never be run twice in the same day."
 msgstr ""
 
-#: includes/abstracts/trigger.php:571
+#: includes/abstracts/trigger.php:598
 msgid "THIS TRIGGER IS DEPRECATED AND SHOULD NOT BE USED."
 msgstr ""
 
@@ -2678,8 +2679,8 @@ msgstr ""
 msgid "Empty message body"
 msgstr ""
 
-#: includes/actions/send-sms-twilio.php:71
-msgid "The recipient is unsubscribed."
+#: includes/actions/send-sms-twilio.php:71 includes/workflow-email.php:218
+msgid "The recipient is not opted-in to this workflow."
 msgstr ""
 
 #: includes/actions/send-sms-twilio.php:85
@@ -2692,6 +2693,7 @@ msgstr ""
 
 #: includes/actions/subscription-change-status.php:18
 #: includes/actions/subscription-send-invoice.php:19
+#: includes/actions/subscription-update-meta.php:18
 #: includes/triggers/abstract-subscriptions.php:30
 msgid "Subscriptions"
 msgstr ""
@@ -2707,6 +2709,10 @@ msgstr ""
 
 #: includes/actions/subscription-send-invoice.php:18
 msgid "Email the invoice to the subscription customer."
+msgstr ""
+
+#: includes/actions/subscription-update-meta.php:17
+msgid "Add / Update Subscription Meta"
 msgstr ""
 
 #: includes/actions/update-product-meta.php:16
@@ -2734,35 +2740,35 @@ msgstr ""
 msgid "Generated by AutomateWoo"
 msgstr ""
 
-#: includes/cron.php:212
+#: includes/cron.php:156
 msgid "One minute"
 msgstr ""
 
-#: includes/cron.php:217
+#: includes/cron.php:161
 msgid "Two minutes"
 msgstr ""
 
-#: includes/cron.php:222
+#: includes/cron.php:166
 msgid "Five minutes"
 msgstr ""
 
-#: includes/cron.php:227
+#: includes/cron.php:171
 msgid "Fifteen minutes"
 msgstr ""
 
-#: includes/cron.php:232
+#: includes/cron.php:176
 msgid "Thirty minutes"
 msgstr ""
 
-#: includes/cron.php:237
+#: includes/cron.php:181
 msgid "Two days"
 msgstr ""
 
-#: includes/cron.php:242
+#: includes/cron.php:186
 msgid "Four hours"
 msgstr ""
 
-#: includes/cron.php:247
+#: includes/cron.php:191
 msgid "Once weekly"
 msgstr ""
 
@@ -3469,12 +3475,12 @@ msgid "matches none"
 msgstr ""
 
 #: includes/rules/abstract-select.php:32 includes/rules/product.php:26
-#: includes/rules/rule.php:84 includes/rules/rule.php:112
+#: includes/rules/rule.php:93 includes/rules/rule.php:121
 msgid "is"
 msgstr ""
 
 #: includes/rules/abstract-select.php:33 includes/rules/product.php:27
-#: includes/rules/rule.php:85 includes/rules/rule.php:113
+#: includes/rules/rule.php:94 includes/rules/rule.php:122
 msgid "is not"
 msgstr ""
 
@@ -3524,15 +3530,19 @@ msgstr ""
 msgid "Customer's Active Memberships Plans"
 msgstr ""
 
-#: includes/rules/customer-city.php:18
+#: includes/rules/customer-city.php:16
 msgid "Customer City"
 msgstr ""
 
-#: includes/rules/customer-country.php:18
+#: includes/rules/customer-company.php:16
+msgid "Customer Company"
+msgstr ""
+
+#: includes/rules/customer-country.php:16
 msgid "Customer Country"
 msgstr ""
 
-#: includes/rules/customer-email.php:18
+#: includes/rules/customer-email.php:16
 msgid "Customer Email"
 msgstr ""
 
@@ -3564,7 +3574,11 @@ msgstr ""
 msgid "Customer's Current Order Statuses"
 msgstr ""
 
-#: includes/rules/customer-postcode.php:18
+#: includes/rules/customer-phone.php:16
+msgid "Customer Phone"
+msgstr ""
+
+#: includes/rules/customer-postcode.php:16
 msgid "Customer Postcode"
 msgstr ""
 
@@ -3588,11 +3602,11 @@ msgstr ""
 msgid "This Workflow's Run Count For Customer"
 msgstr ""
 
-#: includes/rules/customer-state-text-match.php:18
+#: includes/rules/customer-state-text-match.php:16
 msgid "Customer State - Text Match"
 msgstr ""
 
-#: includes/rules/customer-state.php:18
+#: includes/rules/customer-state.php:16
 msgid "Customer State"
 msgstr ""
 
@@ -3618,6 +3632,10 @@ msgstr ""
 
 #: includes/rules/order-billing-country.php:18
 msgid "Order Billing Country"
+msgstr ""
+
+#: includes/rules/order-coupon-count.php:19
+msgid "Order Coupon Count"
 msgstr ""
 
 #: includes/rules/order-coupons-text-match.php:17
@@ -3745,59 +3763,59 @@ msgstr ""
 msgid "Review Rating"
 msgstr ""
 
-#: includes/rules/rule.php:82
+#: includes/rules/rule.php:91
 msgid "contains"
 msgstr ""
 
-#: includes/rules/rule.php:83
+#: includes/rules/rule.php:92
 msgid "does not contain"
 msgstr ""
 
-#: includes/rules/rule.php:86
+#: includes/rules/rule.php:95
 msgid "starts with"
 msgstr ""
 
-#: includes/rules/rule.php:87
+#: includes/rules/rule.php:96
 msgid "ends with"
 msgstr ""
 
-#: includes/rules/rule.php:88
+#: includes/rules/rule.php:97
 msgid "is blank"
 msgstr ""
 
-#: includes/rules/rule.php:89
+#: includes/rules/rule.php:98
 msgid "is not blank"
 msgstr ""
 
-#: includes/rules/rule.php:99
+#: includes/rules/rule.php:108
 msgid "any contains"
 msgstr ""
 
-#: includes/rules/rule.php:100
+#: includes/rules/rule.php:109
 msgid "any matches exactly"
 msgstr ""
 
-#: includes/rules/rule.php:101
+#: includes/rules/rule.php:110
 msgid "any starts with"
 msgstr ""
 
-#: includes/rules/rule.php:102
+#: includes/rules/rule.php:111
 msgid "any ends with"
 msgstr ""
 
-#: includes/rules/rule.php:114
+#: includes/rules/rule.php:123
 msgid "is greater than"
 msgstr ""
 
-#: includes/rules/rule.php:115
+#: includes/rules/rule.php:124
 msgid "is less than"
 msgstr ""
 
-#: includes/rules/rule.php:125
+#: includes/rules/rule.php:134
 msgid "is a multiple of"
 msgstr ""
 
-#: includes/rules/rule.php:126
+#: includes/rules/rule.php:135
 msgid "is not a multiple of"
 msgstr ""
 
@@ -3893,93 +3911,110 @@ msgid_plural "%s guests will be deleted."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/tools/manual-orders-trigger.php:18
+#: includes/tools/manual-orders-trigger.php:17
 msgid "Manual Orders Trigger"
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:19
+#: includes/tools/manual-orders-trigger.php:18
 msgid ""
-"Manually trigger a workflow for any orders that match a date range. For "
-"example if you create a workflows using the Order Completed trigger and want "
-"to have that workflows apply to orders that are already completed."
+"Manually trigger a workflow for existing orders that match a date range. For "
+"example, if you create a workflow using the <b>Order Completed</b> trigger "
+"and want to have that workflow run for existing completed orders."
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:59
+#: includes/tools/manual-orders-trigger.php:58
 msgid "Order Created Date - Range From"
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:65
+#: includes/tools/manual-orders-trigger.php:64
 msgid "Order Created Date - Range To"
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:80
-#: includes/tools/manual-subscriptions-trigger.php:68
+#: includes/tools/manual-orders-trigger.php:79
+#: includes/tools/manual-subscriptions-trigger.php:63
 #: includes/tools/optout-importer.php:61
 msgid "Missing a required field."
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:86
-#: includes/tools/manual-subscriptions-trigger.php:74
+#: includes/tools/manual-orders-trigger.php:85
+#: includes/tools/manual-subscriptions-trigger.php:69
 msgid "The selected workflow is not currently active."
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:92
+#: includes/tools/manual-orders-trigger.php:91
 msgid "No orders were found matching the date range or required status."
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:179
+#: includes/tools/manual-orders-trigger.php:180
 #, php-format
 msgid ""
 "Are you sure you want to manually trigger the <strong>%s</strong> workflow "
 "for <strong>%s</strong> orders? This can not be undone."
 msgstr ""
 
-#: includes/tools/manual-orders-trigger.php:183
+#: includes/tools/manual-orders-trigger.php:184
 msgid ""
 "<strong>Please note:</strong> This list only indicates the orders that match "
 "your selected date period. These orders have yet to be validated against the "
 "selected workflow."
 msgstr ""
 
-#: includes/tools/manual-subscriptions-trigger.php:19
+#: includes/tools/manual-orders-trigger.php:196
+#, php-format
+msgctxt "1: order ID, 2: customer name"
+msgid "%1$s for %2$s"
+msgstr ""
+
+#: includes/tools/manual-orders-trigger.php:204
+#, php-format
+msgid "+%d more orders..."
+msgstr ""
+
+#: includes/tools/manual-subscriptions-trigger.php:18
 msgid "Manual Subscriptions Trigger"
 msgstr ""
 
-#: includes/tools/manual-subscriptions-trigger.php:20
+#: includes/tools/manual-subscriptions-trigger.php:19
 msgid ""
-"Manually trigger a workflow for any subscriptions that match a date range. "
-"USE WITH EXTREME CAUTION. For example this tool could be useful if you "
-"created a workflow using the <strong>Subscription Payment Complete</strong> "
-"trigger to queue a reminder email three days before the subscription "
-"renewal. You could use this tool to <strong>manually trigger</strong> and "
-"create the reminders the on all existing subscriptions which would normally "
-"not be queued until the next renewal. "
+"Manually trigger a workflow for existing subscriptions based on the date "
+"they were created."
 msgstr ""
 
-#: includes/tools/manual-subscriptions-trigger.php:47
+#: includes/tools/manual-subscriptions-trigger.php:42
 msgid "Subscription Start Date - Range From"
 msgstr ""
 
-#: includes/tools/manual-subscriptions-trigger.php:53
+#: includes/tools/manual-subscriptions-trigger.php:48
 msgid "Subscription Start Date - Range To"
 msgstr ""
 
-#: includes/tools/manual-subscriptions-trigger.php:80
+#: includes/tools/manual-subscriptions-trigger.php:75
 msgid "No subscriptions match that date range."
 msgstr ""
 
-#: includes/tools/manual-subscriptions-trigger.php:150
+#: includes/tools/manual-subscriptions-trigger.php:146
 #, php-format
 msgid ""
 "Are you sure you want to manually trigger the <strong>%s</strong> workflow "
 "for <strong>%s</strong> subscriptions? This can not be undone."
 msgstr ""
 
-#: includes/tools/manual-subscriptions-trigger.php:154
+#: includes/tools/manual-subscriptions-trigger.php:150
 msgid ""
 "<strong>Please note:</strong> This list only indicates the subscriptions "
 "that match your selected date period. These subscriptions have yet to be "
 "validated against the selected workflow."
+msgstr ""
+
+#: includes/tools/manual-subscriptions-trigger.php:163
+#, php-format
+msgctxt "1: subscription ID, 2: customer name"
+msgid "%1$s for %2$s"
+msgstr ""
+
+#: includes/tools/manual-subscriptions-trigger.php:171
+#, php-format
+msgid "+%d more subscriptions..."
 msgstr ""
 
 #: includes/tools/optin-importer.php:20
@@ -4030,19 +4065,21 @@ msgstr ""
 msgid "+ %d more items..."
 msgstr ""
 
-#: includes/tools/reset-workflow-records.php:20
+#: includes/tools/reset-workflow-records.php:18
 msgid "Reset Workflow Records"
 msgstr ""
 
-#: includes/tools/reset-workflow-records.php:21
-msgid "Delete all logs, queued events and unsubscribes for a workflow."
+#: includes/tools/reset-workflow-records.php:19
+msgid ""
+"Deletes all logs, queued events and conversions for a workflow. The workflow "
+"itself will not be deleted."
 msgstr ""
 
-#: includes/tools/reset-workflow-records.php:47
+#: includes/tools/reset-workflow-records.php:45
 msgid "Please select a workflow to reset."
 msgstr ""
 
-#: includes/tools/reset-workflow-records.php:69
+#: includes/tools/reset-workflow-records.php:67
 #, php-format
 msgid ""
 "Are you sure you want to reset all records for the workflow <strong>%s</"
@@ -4838,6 +4875,10 @@ msgstr ""
 msgid "Displays the type of the card e.g. Visa, MasterCard."
 msgstr ""
 
+#: includes/variables/cart-item-count.php:15
+msgid "Displays the number of the items in cart."
+msgstr ""
+
 #: includes/variables/cart-items.php:17
 msgid "Display a product listing of the items in the cart."
 msgstr ""
@@ -5003,6 +5044,10 @@ msgstr ""
 
 #: includes/variables/membership-plan-name.php:14
 msgid "Displays the plan name of the membership."
+msgstr ""
+
+#: includes/variables/membership-renewal-url.php:15
+msgid "Displays the renewal URL for the membership."
 msgstr ""
 
 #: includes/variables/membership-status.php:14
@@ -5407,10 +5452,6 @@ msgstr ""
 
 #: includes/workflow-email.php:205
 msgid "Workflow was not defined for email."
-msgstr ""
-
-#: includes/workflow-email.php:218
-msgid "Customer is unsubscribed from this workflow."
 msgstr ""
 
 #: templates/communication-preferences/communication-form-no-customer.php:15

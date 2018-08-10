@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo - Referrals Add-on\n"
-"POT-Creation-Date: 2018-08-09 5:26:38+00:00\n"
-"PO-Revision-Date: 2018-08-09 09:13+0200\n"
+"POT-Creation-Date: 2018-08-10 1:23:59+00:00\n"
+"PO-Revision-Date: 2018-08-10 09:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE\n"
@@ -462,6 +462,7 @@ msgstr "Verbleibendes Guthaben"
 #: templates/account-tab-referral-table-row.php:21,
 #: templates/account-tab-referral-tables.php:29,
 #: templates/account-tab-referral-tables.php:63,
+#: includes/triggers/abstract-base.php:71,
 #: includes/admin/list-tables/referrals.php:87,
 #: includes/admin/views/page-view-referral.php:143
 msgid "Customer"
@@ -533,7 +534,7 @@ msgstr ""
 "erneut zu senden."
 
 #: includes/actions/resend-invite-email.php:18,
-#: includes/admin/settings-tab.php:26, includes/triggers/abstract-base.php:17
+#: includes/admin/settings-tab.php:26, includes/triggers/abstract-base.php:18
 msgid "Refer A Friend"
 msgstr "Freunde werben"
 
@@ -1115,27 +1116,34 @@ msgstr "Über Facebook teilen"
 msgid "Share via Twitter"
 msgstr "Über Twitter teilen"
 
-#: includes/triggers/abstract-base.php:18
+#: includes/triggers/abstract-base.php:72
 msgid ""
-"This trigger essentially has two customers, the advocate and the friend. All "
-"variables and rules that are 'customer' based are for the 'friend customer' "
-"and the variables and rules that are 'advocate' based are apply to the "
-"'advocate customer'."
+"Since a referral has two customers, this field sets which customer's data is "
+"used in the workflow. The friend i.e. the referred customer or the advocate "
+"i.e. the customer who invited the friend."
 msgstr ""
-"Dieser Auslöser hat im Grunde zwei Kunden, den Werber und den Freund. Alle "
-"Variablen und Regeln nach „Kunde“ sind für den „Freund Kunden“ und die "
-"Variablen und Regeln nach „Werber“ sind für den „Werber Kunden“."
+"Da eine Empfehlung zwei Kunden hat, wird hier festgelegt, wessen Kundendaten "
+"im Workflow genutzt werden. Der Freund, also der geworbene Kunde, oder der "
+"Werber, also der bestehende Kunde."
 
-#: includes/triggers/abstract-base.php:56
+#: includes/triggers/abstract-base.php:75
+msgid "Friend (Invited customer)"
+msgstr "Freund (geworbener Kunde)"
+
+#: includes/triggers/abstract-base.php:76
+msgid "Advocate (Original customer)"
+msgstr "Werber (bestehender Kunde)"
+
+#: includes/triggers/abstract-base.php:91
 msgid "Leave blank for no limit"
 msgstr "Leer lassen für kein Limit"
 
-#: includes/triggers/abstract-base.php:55
+#: includes/triggers/abstract-base.php:90
 msgid "Limit how many times this workflow will ever run for each advocate."
 msgstr ""
 "Begrenze, wie oft dieser Workflow jemals pro Werber durchlaufen werden soll."
 
-#: includes/triggers/abstract-base.php:54
+#: includes/triggers/abstract-base.php:89
 msgid "Limit per advocate"
 msgstr "Pro Werber begrenzen"
 
@@ -1156,7 +1164,7 @@ msgid "New Referral Created"
 msgstr "Neue Empfehlung erstellt"
 
 #: includes/triggers/new-referral.php:31,
-#: includes/triggers/referral-status-changed.php:29
+#: includes/triggers/referral-status-changed.php:30
 msgid "Leave blank for any status"
 msgstr "Leer lassen für beliebigen Status"
 
@@ -1172,15 +1180,15 @@ msgstr ""
 msgid "Initial Status"
 msgstr "Ursprünglicher Status"
 
-#: includes/triggers/referral-status-changed.php:19
+#: includes/triggers/referral-status-changed.php:20
 msgid "Referral Status Changed"
 msgstr "Empfehlungs-Status geändert"
 
-#: includes/triggers/referral-status-changed.php:27
+#: includes/triggers/referral-status-changed.php:28
 msgid "From status"
 msgstr "Von Status"
 
-#: includes/triggers/referral-status-changed.php:35
+#: includes/triggers/referral-status-changed.php:36
 msgid "To status"
 msgstr "Zu Status"
 
@@ -1526,6 +1534,16 @@ msgstr "Kunden-Rabatt-Art"
 #: includes/admin/views/page-view-referral.php:171
 msgid "Customer discount amount"
 msgstr "Kunden-Rabatt-Betrag"
+
+#~ msgid ""
+#~ "This trigger essentially has two customers, the advocate and the friend. "
+#~ "All variables and rules that are 'customer' based are for the 'friend "
+#~ "customer' and the variables and rules that are 'advocate' based are apply "
+#~ "to the 'advocate customer'."
+#~ msgstr ""
+#~ "Dieser Auslöser hat im Grunde zwei Kunden, den Werber und den Freund. "
+#~ "Alle Variablen und Regeln nach „Kunde“ sind für den „Freund Kunden“ und "
+#~ "die Variablen und Regeln nach „Werber“ sind für den „Werber Kunden“."
 
 #~ msgid ""
 #~ "The reward given to the advocate for each time they successfully refer a "

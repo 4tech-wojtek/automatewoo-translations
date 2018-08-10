@@ -8,7 +8,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_US\n"
 "Language-Team: Prospress Translations <translations@prospress.com>\n"
-"POT-Creation-Date: 2018-08-09 5:26:38+00:00\n"
+"POT-Creation-Date: 2018-08-10 1:23:59+00:00\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -324,7 +324,7 @@ msgstr ""
 msgid "Remaining balance"
 msgstr ""
 
-#: templates/account-tab-referral-table-row.php:21, templates/account-tab-referral-tables.php:29, templates/account-tab-referral-tables.php:63, includes/admin/list-tables/referrals.php:87, includes/admin/views/page-view-referral.php:143
+#: templates/account-tab-referral-table-row.php:21, templates/account-tab-referral-tables.php:29, templates/account-tab-referral-tables.php:63, includes/triggers/abstract-base.php:71, includes/admin/list-tables/referrals.php:87, includes/admin/views/page-view-referral.php:143
 msgid "Customer"
 msgstr ""
 
@@ -384,7 +384,7 @@ msgstr ""
 msgid "Resend a referral invite email from the advocate to a specified email address. For example, this can be used to resend the invite email after a delay."
 msgstr ""
 
-#: includes/actions/resend-invite-email.php:18, includes/admin/settings-tab.php:26, includes/triggers/abstract-base.php:17
+#: includes/actions/resend-invite-email.php:18, includes/admin/settings-tab.php:26, includes/triggers/abstract-base.php:18
 msgid "Refer A Friend"
 msgstr ""
 
@@ -828,19 +828,27 @@ msgstr ""
 msgid "Share via Twitter"
 msgstr ""
 
-#: includes/triggers/abstract-base.php:18
-msgid "This trigger essentially has two customers, the advocate and the friend. All variables and rules that are 'customer' based are for the 'friend customer' and the variables and rules that are 'advocate' based are apply to the 'advocate customer'."
+#: includes/triggers/abstract-base.php:72
+msgid "Since a referral has two customers, this field sets which customer's data is used in the workflow. The friend i.e. the referred customer or the advocate i.e. the customer who invited the friend."
 msgstr ""
 
-#: includes/triggers/abstract-base.php:56
+#: includes/triggers/abstract-base.php:75
+msgid "Friend (Invited customer)"
+msgstr ""
+
+#: includes/triggers/abstract-base.php:76
+msgid "Advocate (Original customer)"
+msgstr ""
+
+#: includes/triggers/abstract-base.php:91
 msgid "Leave blank for no limit"
 msgstr ""
 
-#: includes/triggers/abstract-base.php:55
+#: includes/triggers/abstract-base.php:90
 msgid "Limit how many times this workflow will ever run for each advocate."
 msgstr ""
 
-#: includes/triggers/abstract-base.php:54
+#: includes/triggers/abstract-base.php:89
 msgid "Limit per advocate"
 msgstr ""
 
@@ -856,7 +864,7 @@ msgstr ""
 msgid "New Referral Created"
 msgstr ""
 
-#: includes/triggers/new-referral.php:31, includes/triggers/referral-status-changed.php:29
+#: includes/triggers/new-referral.php:31, includes/triggers/referral-status-changed.php:30
 msgid "Leave blank for any status"
 msgstr ""
 
@@ -868,15 +876,15 @@ msgstr ""
 msgid "Initial Status"
 msgstr ""
 
-#: includes/triggers/referral-status-changed.php:19
+#: includes/triggers/referral-status-changed.php:20
 msgid "Referral Status Changed"
 msgstr ""
 
-#: includes/triggers/referral-status-changed.php:27
+#: includes/triggers/referral-status-changed.php:28
 msgid "From status"
 msgstr ""
 
-#: includes/triggers/referral-status-changed.php:35
+#: includes/triggers/referral-status-changed.php:36
 msgid "To status"
 msgstr ""
 

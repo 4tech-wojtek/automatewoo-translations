@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AutomateWoo\n"
-"POT-Creation-Date: 2019-01-04 6:2:34+00:00\n"
-"PO-Revision-Date: 2019-01-04 11:31+0100\n"
+"POT-Creation-Date: 2019-01-29 4:47:53+00:00\n"
+"PO-Revision-Date: 2019-01-31 11:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: Christoph Rado, christophrado.de\n"
 "Language: de_DE@formal\n"
@@ -309,6 +309,7 @@ msgstr "Produkt"
 #: includes/actions/subscription-update-meta.php:19,
 #: includes/rules/subscription-created-date.php:35,
 #: includes/rules/subscription-end-date.php:36,
+#: includes/rules/subscription-has-payment-method.php:28,
 #: includes/rules/subscription-item-categories.php:18,
 #: includes/rules/subscription-items.php:19,
 #: includes/rules/subscription-last-payment-date.php:35,
@@ -1642,27 +1643,27 @@ msgstr "Bestellung aufgegeben"
 msgid "Order Total"
 msgstr "Bestellung Gesamtsumme"
 
-#: admin/reports/conversions.php:110
+#: admin/reports/conversions.php:109
 msgid "%s converted order value"
 msgstr "%s Conversion-Wert Bestellungen"
 
-#: admin/reports/conversions.php:116
+#: admin/reports/conversions.php:115
 msgid "%s converted orders"
 msgstr "%s konvertierte Bestellungen"
 
-#: admin/reports/conversions.php:135, admin/reports/email-tracking.php:187
+#: admin/reports/conversions.php:134, admin/reports/email-tracking.php:187
 msgid "Showing reports for:"
 msgstr "Zeige Berichte für:"
 
-#: admin/reports/conversions.php:169, admin/reports/email-tracking.php:221
+#: admin/reports/conversions.php:168, admin/reports/email-tracking.php:221
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: admin/reports/conversions.php:208
+#: admin/reports/conversions.php:207
 msgid "Conversion Number"
 msgstr "Conversion-Nummer"
 
-#: admin/reports/conversions.php:217
+#: admin/reports/conversions.php:216
 msgid "Conversion Value"
 msgstr "Conversion-Wert"
 
@@ -2476,7 +2477,7 @@ msgstr "Länge der Verzögerung"
 msgid "Minimum wait"
 msgstr "Minimale Wartezeit"
 
-#: admin/views/meta-box-timing.php:151, includes/rules/abstract-date.php:151
+#: admin/views/meta-box-timing.php:151, includes/rules/abstract-date.php:162
 msgid "Hours"
 msgstr "Stunden"
 
@@ -2484,7 +2485,7 @@ msgstr "Stunden"
 msgid "Minutes"
 msgstr "Minuten"
 
-#: admin/views/meta-box-timing.php:153, includes/rules/abstract-date.php:152
+#: admin/views/meta-box-timing.php:153, includes/rules/abstract-date.php:163
 msgid "Days"
 msgstr "Tage"
 
@@ -2715,23 +2716,31 @@ msgstr ""
 "Klicken Sie auf den %s+ Regel-Gruppe hinzufügen%s-Button, um eine Regel zu "
 "erstellen."
 
-#: admin/views/rules.php:44
+#: admin/views/rules.php:47
 msgid "[Select Rule]"
 msgstr "[Regel wählen]"
 
-#: admin/views/rules.php:120
+#: admin/views/rules.php:111
 msgid "key"
 msgstr "Schlüssel"
 
-#: admin/views/rules.php:121
+#: admin/views/rules.php:112
 msgid "value"
 msgstr "Wert"
 
-#: admin/views/rules.php:186
+#: admin/views/rules.php:175
 msgid "and"
 msgstr "und"
 
-#: admin/views/rules.php:198
+#: admin/views/rules.php:184
+msgid ""
+"This rule %1$s is no longer available and will be removed by saving this "
+"workflow."
+msgstr ""
+"Diese Regel %1$s ist nicht mehr verfügbar und wird beim Speichern des "
+"Workflows entfernt."
+
+#: admin/views/rules.php:196
 msgid "or"
 msgstr "oder"
 
@@ -3841,49 +3850,53 @@ msgstr "MM"
 msgid "User role"
 msgstr "Nutzerrolle"
 
-#: includes/rules/abstract-date.php:109
+#: includes/rules/abstract-date.php:116
 msgid "Is in the next"
 msgstr "Ist im nächsten"
 
-#: includes/rules/abstract-date.php:110
+#: includes/rules/abstract-date.php:117
 msgid "Is not in the next"
 msgstr "Ist nicht im nächsten"
 
-#: includes/rules/abstract-date.php:114
+#: includes/rules/abstract-date.php:121
 msgid "Is in the last"
 msgstr "Ist im letzten"
 
-#: includes/rules/abstract-date.php:115
+#: includes/rules/abstract-date.php:122
 msgid "Is not in the last"
 msgstr "Ist nicht im letzten"
 
-#: includes/rules/abstract-date.php:120
+#: includes/rules/abstract-date.php:127
 msgid "Is after"
 msgstr "Ist nach"
 
-#: includes/rules/abstract-date.php:125
+#: includes/rules/abstract-date.php:132
 msgid "Is before"
 msgstr "Ist vor"
 
-#: includes/rules/abstract-date.php:130
+#: includes/rules/abstract-date.php:137
 msgid "Is on"
 msgstr "Ist am"
 
-#: includes/rules/abstract-date.php:135
+#: includes/rules/abstract-date.php:142
 msgid "Is not on"
 msgstr "Ist nicht am"
 
-#: includes/rules/abstract-date.php:139
+#: includes/rules/abstract-date.php:146
 msgid "Is on day/s of the week"
 msgstr "Ist an Wochentag"
 
-#: includes/rules/abstract-date.php:143
+#: includes/rules/abstract-date.php:150
 msgid "Is in the range"
 msgstr "Ist im Bereich"
 
-#: includes/rules/abstract-date.php:147
+#: includes/rules/abstract-date.php:154
 msgid "Is not set"
 msgstr "Ist nicht gesetzt"
+
+#: includes/rules/abstract-date.php:158
+msgid "Is set"
+msgstr "Ist gesetzt"
 
 #: includes/rules/abstract-object.php:34
 msgid "Search..."
@@ -4290,6 +4303,10 @@ msgstr "Abonnement - Erstelldatum"
 #: includes/rules/subscription-end-date.php:35
 msgid "Subscription - End Date"
 msgstr "Abonnement - Enddatum"
+
+#: includes/rules/subscription-has-payment-method.php:27
+msgid "Subscription - Has Payment Method"
+msgstr "Abonnement - Hat Zahlungsart"
 
 #: includes/rules/subscription-item-categories.php:17
 msgid "Subscription - Item Categories"
@@ -5958,6 +5975,12 @@ msgstr "Zeigt den URL zur Startseite Ihres Shops."
 #: includes/variables/subscription-billing-address.php:15
 msgid "Displays the formatted billing address for the subscription."
 msgstr "Zeigt die formatierte Rechnungsadresse des Abonnements."
+
+#: includes/variables/subscription-change-payment-method-url.php:18
+msgid "Shows a URL to the subscription add/change payment method page."
+msgstr ""
+"Zeigt die URL zum Hinzufügen/Ändern der Zahlungsart des Abonnements im Konto-"
+"Bereich."
 
 #: includes/variables/subscription-end-date.php:16
 msgid "Displays the subscription end date in your website's timezone."
